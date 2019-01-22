@@ -30,7 +30,6 @@
     "postinstall": "./node_modules/.bin/webpack --mode=production",
     "start": "./node_modules/.bin/webpack --mode=production",
     "webpack": "webpack --watch --mode=development"
-
   },
   "engines": {
     "node": "10.13.0",
