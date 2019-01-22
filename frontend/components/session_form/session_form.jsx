@@ -36,20 +36,22 @@ class SessionForm extends React.Component{
 
   render(){
     return(
-      <form onSubmit={this.handleSubmit}>
-        Welcome to Pixtrest!
-        <br />
-        Please {this.props.formType}
+      <form className="sessionform" onSubmit={this.handleSubmit}>
+      <div>
+        <h1 className="sessionheader">{this.props.formType} to see more</h1>
+        <div className='sessiontext'>Access Pixtrest's best ideas with a <br/> free acount</div>
+      </div>
         {this.renderErrors()}
          <label>
-           Username:
-           <input type="text" value={this.state.email} onChange={this.update('email')}/>
+           
+           <input type="text" value={this.state.email}  placeholder="Email" onChange={this.update('email')}/>
          </label>
+         <br/>
         <label>
-          Password:
-           <input type="password" value={this.state.password} onChange={this.update('password')}/>
+           <input type="password" value={this.state.password} placeholder={this.props.formType === 'Log in' ? 'Password' : 'Create a password'} onChange={this.update('password')}/>
         </label>
-        <input type='submit' value={this.props.formType} />
+        <br/>
+        <input type='submit' value={this.props.formType === 'Log in' ? 'Log in' : 'Continue'} />
       </form>
     )}
 }

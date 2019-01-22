@@ -1,7 +1,6 @@
 import React from 'react'
 import NavBarContainer from '../components/nav_bar/nav_bar_container'
-import SignupFormContainer from './session_form/signup_form_container';
-import LoginFormContainer from './session_form/login_form_container';
+import LoginSignup from '../components/session_form/login_signup'
 import {
     Route,
     Redirect,
@@ -12,12 +11,12 @@ import {
 
   const App = () => (
     <div>
-        <header>
+        {/* <header>
             <NavBarContainer />
-        </header>
+        </header> */}
 
-        <Route path="/login" component={LoginFormContainer} />
-        <Route path="/signup" component={SignupFormContainer} />
+        <Route path="/" component={LoginSignup} />
+       
     
     </div>
   );

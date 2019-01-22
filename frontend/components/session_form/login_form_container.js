@@ -8,8 +8,7 @@ import React from 'react';
 const mapStateToProps = (state, ownProps) => {
   return ({
     errors: state.errors.session,
-    formType: 'login',
-    navLink: <Link to='/signup'></Link>
+    formType: 'Log in',
   });
 };
 
