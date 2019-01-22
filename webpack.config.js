@@ -3,8 +3,7 @@ const path = require('path');
 module.exports = {
     context: __dirname,
     entry: {
-        path: path.resolve(__dirname, 'frontend'),
-        filename: 'pixterest.jsx',
+        path: path.join(__dirname, 'frontend', 'pixterest.jsx')
     },
     output: {
         path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
