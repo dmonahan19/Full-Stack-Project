@@ -27,7 +27,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
     "postinstall": "./node_modules/.bin/webpack --mode=production",
     "start": "./node_modules/.bin/webpack --mode=production",
     "webpack": "webpack --watch --mode=development"
@@ -35,9 +34,6 @@
   "engines": {
     "node": "10.13.0",
     "npm": "6.4.0"
-=======
-    "start": "webpack --watch --mode=development"
->>>>>>> Auth
   },
   "repository": {
     "type": "git",
