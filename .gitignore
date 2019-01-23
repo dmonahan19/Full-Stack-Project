@@ -7,7 +7,10 @@
 # Ignore bundler config.
 /.bundle
 node_modules/
+<<<<<<< HEAD
 bundle.js*
+=======
+>>>>>>> Auth
 bundle.js
 bundle.js.map
 package-lock.json
