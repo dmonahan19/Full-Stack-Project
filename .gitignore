@@ -22,10 +22,9 @@ package-lock.json
 !/storage/.keep
 
 /node_modules
-/yarn-error.log
 
 /public/assets
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+# /config/master.key
