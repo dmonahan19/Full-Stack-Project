@@ -1,6 +1,4 @@
-
-
-.sessionform{
+.sessionform {
     margin: 0 auto;
     background: white;
     text-align: center;
@@ -14,21 +12,21 @@
 }
 
 input[type=text], input[type=password] {
-        width: 270px;
-        padding: 8px 10px;
-        margin: 10px 0;
-        box-sizing: border-box;
-        border: 1px solid black;
-        border-radius: 5px;
-        text-align: left;
-      }
+    width: 270px;
+    padding: 8px 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: left;
+}
 
 input[type=text]:focus, input[type=password]:focus {
     border: 4px solid #83bffc;
     box-shadow: 0 0 5px;
 }
 
-input[type=submit]{
+input[type=submit] {
     width: 270px;
     padding: 8px 10px;
     margin-top: 10px;
@@ -39,7 +37,8 @@ input[type=submit]{
     color: white;
     background-color: #e60000;
 }
-input[type=submit]:hover{
+
+input[type=submit]:hover {
     background-color: #d70025
 }
 
@@ -52,10 +51,9 @@ input[type=submit]:hover{
 .sessiontext {
     font-size: 16px;
     text-align: center;
-
 }
 
-.sessionbutton{
+.sessionbutton {
     width: 130px;
     padding: 12px 16px;
     box-sizing: border-box;
@@ -75,29 +73,29 @@ input[type=submit]:hover{
     cursor: pointer;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto Oxygen-Sans,Ubuntu,Cantarell,“Fira Sans”,“Droid Sans”,Helvetica Neue,Helvetica,"\30D2\30E9\30AE\30CE\89D2\30B4 Pro W3",Hiragino Kaku Gothic Pro,"\30E1\30A4\30EA\30AA",Meiryo,"\FF2D\FF33 \FF30\30B4\30B7\30C3\30AF",Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;;
 }
+
 .sessionbutton:hover {
     background-color: #e2e2e2;
 }
 
-.session-logo{
+.session-logo {
     width: 85px;
     text-align: center;
     margin: 10px auto;
     position: relative;
     top: 5px;
-
 }
 
-.session-space-1{
+.session-space-1 {
     margin-bottom: 15px;
 }
 
-.session-span{
+.session-span {
     color: #717171;
     cursor: pointer;
 }
 
-.session-span:hover{
+.session-span:hover {
     color: #8a8a8a;
     text-decoration: underline;
 }

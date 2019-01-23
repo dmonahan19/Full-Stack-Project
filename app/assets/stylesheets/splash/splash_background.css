@@ -4,67 +4,66 @@
     -ms-flex-wrap: wrap; 
     flex-wrap: wrap;
     padding: 0 4px;
-  }
+}
   
   
-  .column {
+.column {
     -ms-flex: 19%; 
     flex: 19%;
     max-width: 20%;
     padding: 0 4px;
-  }
+}
   
-  .column img {
+.column img {
     margin-top: 8px;
     vertical-align: middle;
+}
+
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width:100%;
   }
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    -ms-flex: 35%;
+    flex: 35%;
+    max-width: 100%;
+  }
+}
+
   
- 
-  @media screen and (max-width: 800px) {
-    .column {
-      -ms-flex: 25%;
-      flex: 25%;
-      max-width:100%;
-    }
+
+@media screen and (max-width: 300px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
   }
+}
 
-  @media screen and (max-width: 500px) {
-    .column {
-      -ms-flex: 35%;
-      flex: 35%;
-      max-width: 100%;
-    }
-  }
+.overlay{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0.8;
+} 
 
-  
-
-  @media screen and (max-width: 300px) {
-    .column {
-      -ms-flex: 100%;
-      flex: 100%;
-      max-width: 100%;
-    }
-  }
-
-  .overlay{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    opacity: 0.8;
-  } 
-
-  img{
-    border-radius: 10px;
-  }
+img{
+  border-radius: 10px;
+}
 
 
 
-    .overlay-content {
-        height: 100%;
-        overflow: scroll;
-    }
+.overlay-content {
+    height: 100%;
+    overflow: scroll;
 }
 
 .background-content{
