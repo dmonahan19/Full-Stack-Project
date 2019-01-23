@@ -17,7 +17,6 @@ class LoginSignup extends React.Component{
     }
     
     render(){
-        // if (this.props.currentUser === false){
         return(
         <> 
         <button className="sessionbutton" onClick={this.toggleSignup}>{this.state.signup ? 'Log in': 'Sign up'}</button>   
@@ -25,7 +24,6 @@ class LoginSignup extends React.Component{
         <SignupFormContainer toggleSignup={this.toggleSignup} />: <LoginFormContainer toggleSignup={this.toggleSignup} /> }
         </>
         )}
-    // }
    
 }
 

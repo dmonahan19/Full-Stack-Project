@@ -7,7 +7,7 @@ export const login = (user) => dispatch => {
     return ApiUtil.login(user)
         .then(
             currentUser => dispatch(receiveCurrentUser(currentUser)),
-            errors => dispatch(receiveErrors(errors))
+            errors => dispatch(receiveErrors(errors.responseJSON))
             );
 };
 

@@ -3,30 +3,24 @@ import { Link } from 'react-router-dom';
 
 
 const NavBar = (props) => {
-//   const sessionLinks = () => {
-//     return(
-//     <>
-//       <Link to='/'>Login</Link> or <Link to='/'>Sign up!</Link> 
-//     </>
-//     )};
 
-//   const showNavBar = () => {
     if (props.currentUserId){
+        const user = props.user.email.split("@")[0]
     return(
     <div>
         <>
         <nav className='nav'>
-        <div className= "left-nav">
-            <Link to="/"> <img className='nav-logo' src={window.logo} /></Link>
-            <div className='nav-searchbar'>
-                <input className="searchbar" type="search" placeholder="Search" name="search"/>
-            </div>
-        </div>
-            <ul className="left-nav">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/following">Following</Link></li>
-                <li><button onClick={props.logout}>Log Out</button></li>
-            </ul>
+                <ul className="left-nav">
+                    <li> <Link to="/"> <img className='nav-logo' src={window.logo} /></Link></li>
+                    <li><i className="fa fa-search fa-lg nav-icon"></i></li>
+                    <li className="searchbar"><input type="search" placeholder="Search" name="search"/></li>
+                    <ul className="navlinks">
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/following">Following</Link></li>
+                        <li><Link to="/users/:userId">{user}</Link></li>
+                        <li><button onClick={props.logout}>Log Out</button></li>
+                    </ul>
+                </ul>
         </nav>
         </>
     </div>
