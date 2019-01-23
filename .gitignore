@@ -10,7 +10,7 @@ node_modules/
 bundle.js
 bundle.js.map
 package-lock.json
-Gemfile.lock
+# Gemfile.lock
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*

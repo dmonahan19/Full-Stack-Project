@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBarContainer from '../components/nav_bar/nav_bar_container'
-import LoginSignup from '../components/session_form/login_signup'
+import Splash from './splash/splash'
 import {
     Route,
     Redirect,
@@ -15,7 +15,7 @@ import {
             <NavBarContainer />
         </header> */}
 
-        <Route path="/" component={LoginSignup} />
+        <Route path="/" component={Splash} />
        
     
     </div>

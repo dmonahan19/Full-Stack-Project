@@ -1,0 +1,65 @@
+
+
+.sessionform{
+    margin: 0 auto;
+    background: white;
+    text-align: center;
+    width: 440px;
+    height: 550px;
+    border-radius: 2%;
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", "Helvetica";
+}
+
+input[type=text], input[type=password] {
+        width: 270px;
+        padding: 8px 10px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 1px solid black;
+       border-radius: 5px;
+       text-align: left;
+      }
+
+input[type=submit]{
+    width: 270px;
+    padding: 8px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+   border-radius: 5px;
+   text-align: center;
+   color: white;
+   background-color: #e60000;
+}
+
+.sessionheader {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.sessiontext {
+    font-size: 16px;
+    text-align: center;
+
+}
+
+.sessionbutton{
+    width: 130px;
+    padding: 8px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+   border-radius: 3px;
+   text-align: center;
+   color: #363636;
+   background-color: #e2e2e2;
+   font-weight: bold;
+    float: right;
+    margin-right: 100px;
+}
+
+
+
+

@@ -36,7 +36,7 @@ class SessionForm extends React.Component{
 
   render(){
     return(
-      <form className="sessionform" onSubmit={this.handleSubmit}>
+      <form className="sessionform session" onSubmit={this.handleSubmit}>
       <div>
         <h1 className="sessionheader">{this.props.formType} to see more</h1>
         <div className='sessiontext'>Access Pixtrest's best ideas with a <br/> free acount</div>
