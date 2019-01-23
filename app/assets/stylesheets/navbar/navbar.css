@@ -54,8 +54,9 @@ input[type=search] {
 }
 
 input[type=search]:focus {
+    box-sizing: border-box;
     border: 4px solid #83bffc;
-    box-shadow: 0 0 5px;
+    box-shadow: 0 0 2px;
 }
 
 .navlinks {
