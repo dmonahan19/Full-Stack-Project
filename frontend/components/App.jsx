@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBarContainer from '../components/nav_bar/nav_bar_container'
-import Splash from './splash/splash'
+import Splash from './splash/splash_container'
 import {
     Route,
     Redirect,
@@ -11,13 +11,10 @@ import {
 
   const App = () => (
     <div>
-        {/* <header>
+        <header>
             <NavBarContainer />
-        </header> */}
-
-        <Route path="/" component={Splash} />
-       
-    
+        </header>
+        <Route path="/" component={Splash} /> 
     </div>
   );
   

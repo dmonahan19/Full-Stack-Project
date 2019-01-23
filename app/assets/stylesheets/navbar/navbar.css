@@ -1,0 +1,57 @@
+.nav-logo{
+    width: 55px;
+    align-items: center;
+}
+
+.nav{
+    display:flex;
+    padding: 10px 0;
+    position: relative;
+    justify-content: space-between;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,"ＭＳ Ｐゴシック",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-weight: bold;
+    color: #b3b3b3;
+}
+
+.left-nav{
+    display: flex;
+    align-items: center;
+    margin: 5px 10px;
+   justify-content: space-between;
+}
+
+.left-nav > li{
+    padding: 10px;
+}
+
+
+.nav-searchbar{
+
+}
+
+.searchbar{
+    background: #efefef;
+    
+}
+
+input[type=search]{
+    width: 700px;
+    padding: 12px 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: left;
+  }
+
+input[type=search]:focus {
+border: 4px solid #83bffc;
+box-shadow: 0 0 5px;
+}
+
+
+.nav-icon{
+    color: #8e8e8e;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}

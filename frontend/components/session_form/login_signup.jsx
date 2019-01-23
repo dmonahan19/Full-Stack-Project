@@ -15,16 +15,17 @@ class LoginSignup extends React.Component{
         const signup= this.state.signup;
         this.setState({signup: !signup});
     }
-
+    
     render(){
+        // if (this.props.currentUser === false){
         return(
         <> 
         <button className="sessionbutton" onClick={this.toggleSignup}>{this.state.signup ? 'Log in': 'Sign up'}</button>   
         {this.state.signup ? 
         <SignupFormContainer toggleSignup={this.toggleSignup} />: <LoginFormContainer toggleSignup={this.toggleSignup} /> }
         </>
-        )
-    }
+        )}
+    // }
    
 }
 
