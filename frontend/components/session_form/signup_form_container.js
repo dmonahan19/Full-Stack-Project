@@ -7,6 +7,8 @@ import React from 'react';
 
 const mapStateToProps = (state, ownProps) => {
   return ({
+    signup: ownProps.signup,
+    toggleSignup: ownProps.toggleSignup,
     errors: state.errors.session,
     formType: 'Sign up',
   });

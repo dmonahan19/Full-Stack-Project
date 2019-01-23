@@ -24,6 +24,12 @@ class SessionForm extends React.Component{
     };
   }
 
+  // toggleSpan(){
+  //   this.props.formType === 'Log in' ? <SignupFormContainer/>: <LoginFormContainer/> }
+  // }
+
+
+
   renderErrors(){
     return(
     <ul>
@@ -37,10 +43,11 @@ class SessionForm extends React.Component{
   render(){
     return(
       <form className="sessionform session" onSubmit={this.handleSubmit}>
-      <div>
-        <h1 className="sessionheader">{this.props.formType} to see more</h1>
-        <div className='sessiontext'>Access Pixtrest's best ideas with a <br/> free acount</div>
-      </div>
+        <div className="session-space-1">
+          <img className='session-logo' src={window.logo} />
+          <h1 className="sessionheader">{this.props.formType} to see more</h1>
+          <div className='sessiontext'>Access Pixtrest's best ideas with a <br/> free acount</div> 
+        </div>
         {this.renderErrors()}
          <label>
            
@@ -52,6 +59,12 @@ class SessionForm extends React.Component{
         </label>
         <br/>
         <input type='submit' value={this.props.formType === 'Log in' ? 'Log in' : 'Continue'} />
+        <br/>
+
+        <> 
+        <span className="session-span" onClick={this.props.toggleSignup}>{this.props.formType === 'Log in' ? 'Not on Pixtrest yet? Sign up': 'Already a member? Log in'}</span>   
+        </>
+
       </form>
     )}
 }

@@ -21,7 +21,7 @@ class LoginSignup extends React.Component{
         <> 
         <button className="sessionbutton" onClick={this.toggleSignup}>{this.state.signup ? 'Log in': 'Sign up'}</button>   
         {this.state.signup ? 
-        <SignupFormContainer/>: <LoginFormContainer/> }
+        <SignupFormContainer toggleSignup={this.toggleSignup} />: <LoginFormContainer toggleSignup={this.toggleSignup} /> }
         </>
         )
     }
