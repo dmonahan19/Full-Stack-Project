@@ -7,7 +7,7 @@ const Splash = (props) => {
         <>
         <div className='container'>
             <div >{<LoginSignup/>}</div>
-            <div></div>
+            <div className='black-opacity'></div>
             <div>{<SplashBackground/>}</div>
         </div>
         </>

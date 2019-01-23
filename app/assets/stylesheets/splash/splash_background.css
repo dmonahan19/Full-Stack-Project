@@ -59,6 +59,8 @@
     border-radius: 10px;
   }
 
+
+
     .overlay-content {
         height: 100%;
         overflow: scroll;
@@ -68,5 +70,12 @@
 .background-content{
     height: 100%;
     overflow: auto;
+}
+
+.black-opacity{
+  background: rgba(0, 0, 0, 0.4);
+  height: 900px;
+  position: relative;
+  z-index: 5;
 }
 
