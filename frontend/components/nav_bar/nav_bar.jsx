@@ -18,7 +18,7 @@ const NavBar = (props) => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/following">Following</Link></li>
                         <li><Link to="/users/:userId">{user}</Link></li>
-                        <li><button onClick={props.logout}>Log Out</button></li>
+                        <li ><button className='buttonnav' onClick={props.logout}>Log Out</button></li>
                     </ul>
                 </ul>
         </nav>
