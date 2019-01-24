@@ -1,0 +1,67 @@
+.profileform {
+    margin: 100px auto;
+    background: white;
+    width: 800px;
+    height: fit-content;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,"ＭＳ Ｐゴシック",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.pro-h1{
+    text-align:center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    right: 205px;
+    margin-bottom: 10px;
+}
+
+.names-input{
+    display: flex;
+    justify-content: row;
+    position: relative;
+    left: 122px;
+    color: #333333
+    
+}
+
+.name-input{
+    width: 280px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid #8e8e8e;
+    border-radius: 5px;
+    text-align: left;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.location{
+    width: 300px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #8e8e8e;
+    border-radius: 5px;
+    text-align: left;
+    height: 40px;
+}
+
+.profile-about{
+    width: 280px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid #8e8e8e;
+    border-radius: 5px;
+    text-align: left;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+
+
