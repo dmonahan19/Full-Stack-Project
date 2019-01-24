@@ -1,6 +1,8 @@
 import React from 'react'
 import NavBarContainer from '../components/nav_bar/nav_bar_container'
 import Splash from './splash/splash_container'
+import ProfileContainer from './profile/profile_container'
+import { ProtectedRoute } from '../util/route_util';
 import {
     Route,
     Redirect,
@@ -14,7 +16,10 @@ import {
         <header>
             <NavBarContainer />
         </header>
-        <Route path="/" component={Splash} /> 
+        <Switch>
+            <Route exact path="/" component={Splash} />
+            <ProtectedRoute exact path="/users/:currentUserId" component={ProfileContainer}/>
+        </Switch>
     </div>
   );
   
