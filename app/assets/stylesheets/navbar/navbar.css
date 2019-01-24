@@ -72,10 +72,8 @@ input[type=search]:focus {
 
 .navlinks > li:hover {
     background: #f0f0f0;
-    /* -webkit-border-radius: 8px;
-    -moz-border-radius: 8px; */
     border-radius: 25px;
-    /* position:absolute; */
+    cursor: pointer;
 }
 
 .buttonnav{

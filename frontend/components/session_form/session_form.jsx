@@ -9,6 +9,7 @@ class SessionForm extends React.Component{
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.loginDemoUser = this.loginDemoUser.bind(this);
   }
 
   handleSubmit(e){
@@ -16,6 +17,15 @@ class SessionForm extends React.Component{
     const user = Object.assign({},this.state);
     this.props.processForm(user);
   }
+
+  loginDemoUser(e){
+    e.preventDefault();
+    this.setState({email:'demouser', password:'password'}, () => {
+      this.props.login(this.state);
+    });
+    // this.props.login();
+  }
+
 
   update(field){
     return (e) => {
@@ -51,18 +61,21 @@ class SessionForm extends React.Component{
           <h1 className="sessionheader">{this.props.formType} to see more</h1>
           <div className='sessiontext'>Access Pixtrest's best ideas with a <br/> free acount</div> 
         </div>
-        {this.renderErrors()}
+    
          <label>
            
            <input type="text" value={this.state.email}  placeholder="Email" onChange={this.update('email')}/>
          </label>
          <br/>
+         <div className='session-errors'>
+          {this.renderErrors()}
+        </div>
         <label>
            <input type="password" value={this.state.password} placeholder={this.props.formType === 'Log in' ? 'Password' : 'Create a password'} onChange={this.update('password')}/>
         </label>
         <br/>
         <input type='submit' value={this.props.formType === 'Log in' ? 'Log in' : 'Continue'} />
-        <input type='submit' value="Demo User" onClick />
+        <button className="demo-user" onClick={this.loginDemoUser}>Demo User</button>
         <br/>
 
         <> 
