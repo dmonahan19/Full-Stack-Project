@@ -1,23 +1,24 @@
-/* .container{
+.container{
 
-} */
+}
 
 .session{
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
-    margin: auto;
-    position: absolute;
     left: 0;
     right: 0;
+    margin: auto;
     z-index:10;
 
 }
 
 
 .spash{
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        z-index: -1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
 }
