@@ -58,7 +58,7 @@ input[type=submit]:hover {
     position: fixed;
     right: -40px;
     top: 70px;
-    overflow:hidden;
+    overflow: hidden;
     width: 130px;
     padding: 12px 16px;
     box-sizing: border-box;
@@ -103,9 +103,6 @@ input[type=submit]:hover {
     text-decoration: underline;
 }
 
-.overlay-session{
-   
-}
 
 
 
