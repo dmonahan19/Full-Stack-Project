@@ -87,3 +87,7 @@ li >a:focus {
     color: black;
 }
 
+.nav-container{
+    position: absolute;
+    z-index: 20;
+}

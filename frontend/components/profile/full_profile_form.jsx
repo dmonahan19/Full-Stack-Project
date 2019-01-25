@@ -18,7 +18,6 @@ class FullProfileForm extends React.Component{
       }
 
       handleFile(e){
-        // debugger
         const showPicture= this.state.showPicture;
         this.setState({photoFile: e.currentTarget.files[0], showPicture: !showPicture})
    

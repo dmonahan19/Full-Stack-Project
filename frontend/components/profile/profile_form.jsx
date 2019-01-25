@@ -18,7 +18,6 @@ class ProfileForm extends React.Component{
       formData.append('user[last_name]',this.state.last_name)
       formData.append('user[about_you]',this.state.about_you)
       formData.append('user[location]',this.state.location)
-      // debugger
       if (this.props.photoFile){
         formData.append('user[photo]',this.props.photoFile)
       }
@@ -71,7 +70,7 @@ class ProfileForm extends React.Component{
             <div className='picture-label'>Picture</div> 
             <div className='photo-combo2'>
               <li><img className="profile-picture2" src={this.props.user.photo}/></li>
-              <button onClick={this.props.showPicture} className='change-picture'>Change Picture</button>
+              <button onClick={this.props.showPicture} className='change-picture'>Change picture</button>
             </div>
 
           </div>

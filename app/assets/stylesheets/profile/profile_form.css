@@ -40,16 +40,6 @@
     margin-top: 5px;
 }
 
-.photo-combo{
-    /* display: flex;
-    justify-content: column; */
-}
-
-.photo-combo2{
-    /* display: flex;
-    align-items: space-between;
-    width: 100px; */
-}
 
 .profile-picture2{
     border-radius: 50%;
@@ -57,7 +47,7 @@
     height: 80px;
     position: relative;
     left: 130px;
-    top: -15px;
+
    
 }
 
@@ -74,7 +64,7 @@
     cursor: pointer;
     height: 40px;
     position: relative;
-    top: -75px;
+    top: -65px;
     left: 230px;
 }
 .change-picture:hover{
@@ -89,16 +79,7 @@
 
 
 
-.location{
-    width: 300px;
-    padding: 5px 10px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    border: 1px solid #8e8e8e;
-    border-radius: 5px;
-    text-align: left;
-    height: 40px;
-}
+
 
 .profile-about{
     width: 580px;

@@ -14,7 +14,7 @@ import {
 
   const App = () => (
     <div>
-        <header>
+        <header className='nav-container' >
             <NavBarContainer />
         </header>
         <Switch>
