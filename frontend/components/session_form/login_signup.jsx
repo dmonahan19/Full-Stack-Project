@@ -7,13 +7,14 @@ class LoginSignup extends React.Component{
         super(props)
         this.state = {
             signup: true,
+            errors: this.props.errors
         }
         this.toggleSignup = this.toggleSignup.bind(this)
     }
 
     toggleSignup(){
         const signup= this.state.signup;
-        this.setState({signup: !signup});
+        this.setState({signup: !signup, errors: []});
     }
     
     render(){
@@ -21,7 +22,7 @@ class LoginSignup extends React.Component{
         <> 
         <button className="sessionbutton" onClick={this.toggleSignup}>{this.state.signup ? 'Log in': 'Sign up'}</button>   
         {this.state.signup ? 
-        <SignupFormContainer toggleSignup={this.toggleSignup} />: <LoginFormContainer toggleSignup={this.toggleSignup} /> }
+        <SignupFormContainer toggleSignup={this.toggleSignup}  />: <LoginFormContainer toggleSignup={this.toggleSignup} /> }
         </>
         )}
    

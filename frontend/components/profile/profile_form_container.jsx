@@ -2,18 +2,26 @@ import { connect } from "react-redux";
 import { updateUser } from "../../actions/user_actions"
 import ProfileForm from './profile_form'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, {photoFile}) => {
   let currentUserId = state.session.id;
+  let defaultUser = {
+    first_name: '',
+    last_name: '',
+    about_you: '',
+    location: '',
+    photoFile: null,
+  }
   return({
     currentUserId: currentUserId,
-    user: state.entities.users[currentUserId],
+    user: state.entities.users[currentUserId] || defaultUser,
     errors: state.errors.session,
+    photoFile
   });
 };
 
   const mapDispatchToProps = (dispatch) => {
     return ({
-        updateUser: (user)=> dispatch(updateUser(user))
+        updateUser: (user,userId)=> dispatch(updateUser(user,userId))
     });
   };
   

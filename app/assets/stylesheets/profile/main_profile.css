@@ -2,10 +2,13 @@
 
 .main-profile {
     display: flex;
+    flex-direction: column;
     font-family: -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,"ＭＳ Ｐゴシック",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     color: #909090;
+    margin: 0 300px;
     margin-top: 85px;
-    width: 100%;
+    width: 500px;
+    
 }
 
 .left-edit{
@@ -19,8 +22,6 @@
 .editlinks {
     display: flex;
     justify-content: row;
-    position: fixed;
-    left: 300px;
 }
 
 .editlinks > li {
@@ -52,32 +53,139 @@
     height: 30px;
 }
 
-
-
-/* .plus{
-        display: flex;
-        color: #8e8e8e;
-        font-size: 45px;
-        padding-right: 20px;
-}
-
-.edit-img{
+.profile-user-info {
     display: flex;
-    position: absolute;
-    top: 4px;
-    width: 30px;
-    filter: brightness(120%)
+    width: 100%;
+    justify-content: space-between;
+    width: 780px;
+
 }
 
-.profile-icon > li{
+.profile-user{
+    font-size: 36px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.follow-links{
+    display: flex;
+    justify-content: row;
+    padding: 0;
     box-sizing: border-box;
+    height: 30px;
+    border-radius: 50%;
+    width: 100%;
+    color: #333333;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-.profile-icon {
-   display: flex;
-   align-items: center;
-   justify-content: left;
-   position: absolute;
-   top: 100px;
-   left: 225px;
-} */
+
+.follow1{
+    margin-right: 5px;
+}
+
+.follow2{
+    margin-right: 5px;
+}
+
+.dot {
+        height: 3px;
+        width: 3px;
+        background-color: #333333;
+        border-radius: 50%;
+        display: inline-block;
+        margin-bottom: 2px;
+}
+
+      
+.follow1:hover{
+    text-decoration: underline;
+}
+.follow3:hover{
+    text-decoration: underline;
+}
+
+.about-links{
+    display: flex;
+    justify-content: row;
+    padding: 0;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 50%;
+    width: 100%;
+    color: #333333;
+    font-size: 14px;
+}
+
+.about-location{
+    margin-right: 5px;
+}
+
+.dot2{
+    margin-right: 5px;
+}
+
+.profile-picture{
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    /* display: block; */
+}
+
+.profile-user-info2{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 700px;
+}
+
+.boardpin-links{
+    display: flex;
+    padding: 0;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 50%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 20px;
+    color: #909090;
+}
+
+.boardpin-links:focus {
+    color: #333333;
+}
+
+
+.board-link:hover{
+    background: #f0f0f0eb;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.board-link{
+    margin-right: 20px;
+}
+
+.pin-link:hover{
+    background: #f0f0f0b1;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+.menu{
+    color: #333333;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.824);
+    border-radius: 3px;
+    padding: 4px 14px;
+    text-align: center;
+    border: 3px solid  rgba(232, 228, 228, 0.625);
+}
+

@@ -4,10 +4,10 @@ import * as ApiUtil from '../util/session_api_util';
 import { receiveCurrentUser, receiveErrors } from './session_actions';
 
 
-export const updateUser = (user) => dispatch => {
-    return UserApiUtil.updateUser(user)
+export const updateUser = (user,userId) => dispatch => {
+    return UserApiUtil.updateUser(user,userId)
         .then(
-            user => dispatch(receiveCurrentUser(user))
-            // errors => dispatch(receiveErrors(errors.responseJSON))
+            user => dispatch(receiveCurrentUser(user)),
+            errors => dispatch(receiveErrors(errors.responseJSON))
             );
 };

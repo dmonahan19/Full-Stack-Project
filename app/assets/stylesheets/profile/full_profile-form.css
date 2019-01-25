@@ -1,0 +1,30 @@
+.profile-form{
+   z-index: 9;
+}
+
+.change-pic{
+    position: absolute;
+    margin: 0 auto;
+    z-index:11;
+}
+
+.profile-black-opacity{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    background-color: black;
+    opacity: 0.5;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+

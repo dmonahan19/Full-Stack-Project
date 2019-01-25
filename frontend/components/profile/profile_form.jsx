@@ -1,19 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import ChangePicture from './change_picture'
 
 class ProfileForm extends React.Component{
   
     constructor(props){
       super(props);
-      this.state = {
-        first_name: '',
-        last_name: '',
-        about_you: '',
-        location: '',
-        photoFile: null
-      };
+      this.state = this.props.user
       this.handleSubmit = this.handleSubmit.bind(this);
-      this.handleFile = this.handleFile.bind(this);
       
     }
   
@@ -24,14 +18,13 @@ class ProfileForm extends React.Component{
       formData.append('user[last_name]',this.state.last_name)
       formData.append('user[about_you]',this.state.about_you)
       formData.append('user[location]',this.state.location)
-      if (this.state.photoFile){
-        formData.append('user[photo]',this.state.photo)
+      // debugger
+      if (this.props.photoFile){
+        formData.append('user[photo]',this.props.photoFile)
       }
+      this.props.updateUser(formData,this.props.currentUserId)
     }
-
-    handleFile(e){
-      this.setState({photoFile: e.currentTarget.files[0]})
-    }
+    
   
   
     update(field){
@@ -72,14 +65,26 @@ class ProfileForm extends React.Component{
             </label>
           </div>
           <br/>
-            <div className='picture-label'>Picture</div>
-          <br/>
-            <button className='change-picture'>Change Picture</button>
+        
+          <div className="photo-combo">
+            <div></div>
+            <div className='picture-label'>Picture</div> 
+            <div className='photo-combo2'>
+              <li><img className="profile-picture2" src={this.props.user.photo}/></li>
+              <button onClick={this.props.showPicture} className='change-picture'>Change Picture</button>
+            </div>
+
+          </div>
+
           <br/>
           <label className="combined-location">
               <div className="aboutyou-label">About you</div>
               <br/>
-             <input className="profile-about" type="text" value={this.state.about_you} onChange={this.update('about_you')}/>
+            <div>
+              <div>
+                <input className="profile-about" type="text" value={this.state.about_you} onChange={this.update('about_you')}/>
+             </div>
+            </div>
           </label>
           <br/>
           <label>

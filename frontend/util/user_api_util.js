@@ -1,8 +1,8 @@
-export const updateUser = (user) => {
+export const updateUser = (user,userId) => {
     return $.ajax({
         method: "PATCH",
-        url: `api/users/${user.id}`,
-        data: formData,
+        url: `api/users/${userId}`,
+        data: user,
         contentType: false,
         processData: false
     });

@@ -1,0 +1,75 @@
+.all-boxes{
+    display:flex;
+    overflow:hidden;
+    margin: 0 auto;
+}
+
+.all-boxes2{
+    display:flex;
+    justify-content: row;
+}
+
+
+.pop-change{
+    background: white;
+    text-align: left;
+    padding: 20px;
+    width: 260px;
+    border-top: 1px solid rgb(201, 198, 198);
+    border-right: 1px solid rgb(201, 198, 198);
+    border-left: 1px solid rgb(201, 198, 198);
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto Oxygen-Sans,Ubuntu,Cantarell,“Fira Sans”,“Droid Sans”,Helvetica Neue,Helvetica,"\30D2\30E9\30AE\30CE\89D2\30B4 Pro W3",Hiragino Kaku Gothic Pro,"\30E1\30A4\30EA\30AA",Meiryo,"\FF2D\FF33 \FF30\30B4\30B7\30C3\30AF",Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    margin-bottom: 15px;
+  
+}
+
+.bottom-border{
+    background: white;
+    width: 258px;
+    height: 75px;
+    border: 1px solid rgb(201, 198, 198);
+    position: relative;
+    top: -18px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.x-button{
+    color: #8e8e8e;
+    z-index: 15px;
+    font-size: 35px;
+    position: relative;
+    top: -145px;
+    left: 225px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.choose-photo-button{
+    background: red;
+    display: inline-block;
+    padding: 12px;
+    cursor: pointer;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,"ＭＳ Ｐゴシック",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    border-radius: 4px;
+    position: relative;
+    top: -115px;
+    left: 25px;
+    z-index: 10;
+}
+
+/* .profile-picture-button{
+    background: red;
+    width: 300px;
+    height: 50px;
+    color: white;
+} */

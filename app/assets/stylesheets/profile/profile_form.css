@@ -40,6 +40,55 @@
     margin-top: 5px;
 }
 
+.photo-combo{
+    /* display: flex;
+    justify-content: column; */
+}
+
+.photo-combo2{
+    /* display: flex;
+    align-items: space-between;
+    width: 100px; */
+}
+
+.profile-picture2{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 130px;
+    top: -15px;
+   
+}
+
+.change-picture{
+    width: 145px;
+    padding: 12px 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: center;
+    color: #363636;
+    background-color: #fcfcfc;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    height: 40px;
+    position: relative;
+    top: -75px;
+    left: 230px;
+}
+.change-picture:hover{
+    background: rgba(226, 226, 226, 0.337);
+}
+
+.picture-label{
+    position: relative;
+    left: 122px;
+    top: -5px;
+}
+
+
+
 .location{
     width: 300px;
     padding: 5px 10px;
@@ -61,6 +110,7 @@
     text-align: left;
     position: relative;
     left: 122px;
+    top: -50px;
 
 }
 
@@ -75,27 +125,22 @@
     margin-top: 5px;
     position: relative;
     left: 122px;
+    top: -50px;
 }
 
 .aboutyou-label{
     position: relative;
     left: 120px;
-    top: 15px;
+    top: -40px;
 
 }
 
 .location-label{
     position: relative;
     left: 122px;
-    top: 20px;
+    top: -35px;
 }
 
-
-.picture-label{
-    position: relative;
-    left: 122px;
-    top: 20px;
-}
 
 .bottom-buttons{
     display: flex;
@@ -129,17 +174,3 @@
     cursor: pointer;
 }
 
-.change-picture{
-    width: 145px;
-    padding: 12px 8px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    text-align: center;
-    color: #363636;
-    background-color: #f0eded;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    position: relative;
-    left: 200px;
-}
