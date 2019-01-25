@@ -21,7 +21,7 @@ class SessionForm extends React.Component{
   loginDemoUser(e){
     e.preventDefault();
     this.setState({email:'demouser', password:'password'}, () => {
-      this.props.login(this.state);
+    this.props.login(this.state);
     });
     // this.props.login();
   }
@@ -74,7 +74,7 @@ class SessionForm extends React.Component{
            <input className="session-inputs" type="password" value={this.state.password} placeholder={this.props.formType === 'Log in' ? 'Password' : 'Create a password'} onChange={this.update('password')}/>
         </label>
         <br/>
-        <input type='submit' value={this.props.formType === 'Log in' ? 'Log in' : 'Continue'} />
+        <input className='session-submit' type='submit' value={this.props.formType === 'Log in' ? 'Log in' : 'Continue'} />
         <button className="demo-user" onClick={this.loginDemoUser}>Demo User</button>
         <br/>
 
