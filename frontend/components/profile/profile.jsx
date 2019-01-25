@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Profile = (props) => {
     if (props.currentUserId){
         let user
+        let photo
         if(props.user.first_name && props.user.last_name){
             user = `${props.user.first_name} ${props.user.last_name}`
         }
@@ -12,6 +13,13 @@ const Profile = (props) => {
         }
         else{
             user = props.user.email.split("@")[0]
+        }
+
+        if(props.user.photo){
+            photo = props.user.photo
+        }
+        else{
+            photo= window.empty
         }
     return(
         <>
@@ -38,7 +46,7 @@ const Profile = (props) => {
                     </ul>
                 </div>
                 <ul>
-                    <li><img className="profile-picture" src={props.user.photo}/></li>
+                    <li><img className="profile-picture" src={photo}/></li>
                 </ul>
             </div>
             <div className= "profile-user-info2">
