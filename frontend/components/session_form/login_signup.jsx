@@ -7,14 +7,14 @@ class LoginSignup extends React.Component{
         super(props)
         this.state = {
             signup: true,
-            errors: this.props.errors
         }
         this.toggleSignup = this.toggleSignup.bind(this)
     }
 
     toggleSignup(){
+        // this.props.clearSessionErrors()
         const signup= this.state.signup;
-        this.setState({signup: !signup, errors: []});
+        this.setState({signup: !signup});
     }
     
     render(){
