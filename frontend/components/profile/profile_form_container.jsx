@@ -4,12 +4,13 @@ import ProfileForm from './profile_form'
 
 const mapStateToProps = (state, {photoFile}) => {
   let currentUserId = state.session.id;
-  let defaultUser = {
+  const defaultUser = {
     first_name: '',
     last_name: '',
     about_you: '',
     location: '',
     photoFile: null,
+    photoUrl: null
   }
   return({
     currentUserId: currentUserId,
