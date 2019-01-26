@@ -3,9 +3,21 @@ import { Link } from 'react-router-dom';
 
 
 const NavBar = (props) => {
-
-    if (props.currentUserId){
-        const user = props.user.email.split("@")[0]
+    let photo
+    let user
+    if (props.currentUserId){   
+        if(props.user.photo){
+                photo = <img className="nav-profile-picture" src={props.user.photo}/>
+            }
+        else{
+                photo = <div className="nav-photo">{props.user.email[0]}</div>
+        }
+       if(props.user.first_name){
+            user = props.user.first_name
+        }
+        else{
+            user = props.user.email.split("@")[0]  
+        }
     return(
     <div>
         <>
@@ -17,7 +29,11 @@ const NavBar = (props) => {
                     <ul className="navlinks">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/following">Following</Link></li>
-                        <li><Link to="/users/:userId">{user}</Link></li>
+
+                        <div className="nav-photo-name">
+                            <li><Link to="/users/:userId">{photo}</Link></li>
+                            <li><Link to="/users/:userId">{user}</Link></li>
+                        </div>
                         <li ><button className='buttonnav' onClick={props.logout}>Log Out</button></li>
                     </ul>
                 </ul>
