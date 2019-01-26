@@ -4,7 +4,7 @@ const ChangePicture = (props) => {
     return(
     <>
     <div className="all-boxes">
-        <div classNme='all-boxes-2"'>
+        <div className='all-boxes-2"'>
             <div>
                 <h2 className="pop-change">Change your picture</h2>
                 <div className='bottom-border'></div>
@@ -17,7 +17,6 @@ const ChangePicture = (props) => {
         </div>
     </div>   
     </>
-    )
-}
+        )}
 
 export default ChangePicture;

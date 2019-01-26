@@ -10,21 +10,29 @@ class FullProfileForm extends React.Component{
             photoFile: null
         }
         this.showPicture = this.showPicture.bind(this)
-      this.handleFile = this.handleFile.bind(this);
+        this.handleFile = this.handleFile.bind(this);
     }
     showPicture(){
         const showPicture= this.state.showPicture;
         this.setState({showPicture: !showPicture});
       }
 
-      handleFile(e){
+    handleFile(e){
         const showPicture= this.state.showPicture;
-        this.setState({photoFile: e.currentTarget.files[0], showPicture: !showPicture})
-   
-      }
-  
+        const file = e.currentTarget.files[0];
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {
 
+            this.setState({photoFile: file, photoUrl: fileReader.result, showPicture: !showPicture});
+        };
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
+    }
+    
+      
     render(){
+        const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
         return(
 
             <>
@@ -33,11 +41,9 @@ class FullProfileForm extends React.Component{
                 <>
                 <div className='change-pic'>{<ChangePicture handleFile={this.handleFile} showPicture={this.showPicture}/>}</div>
                 <div className='profile-black-opacity'></div>
-                <div className='profile-form'>{<ProfileForm photoFile={this.state.photoFile} showPicture={this.showPicture}/>}</div>
                 </> 
-                :
-            
-                <div className='profile-form'>{<ProfileForm photoFile={this.state.photoFile} showPicture={this.showPicture}/>}</div> }
+                : null}
+                   <div className='profile-form'>{<ProfileForm photoFile={this.state.photoFile} photoUrl={this.state.photoUrl} showPicture={this.showPicture}/>}</div>
             </div>
             </>
             )

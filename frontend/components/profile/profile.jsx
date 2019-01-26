@@ -42,7 +42,7 @@ const Profile = (props) => {
                     <ul className='about-links'>
                         <li className="about-location">{props.user.location}</li>
                         <li><span className="dot dot2"></span></li>
-                        <li>{props.user.about_you}</li>
+                        <li>{props.user.about_you || ""}</li>
                     </ul>
                 </div>
                 <ul>

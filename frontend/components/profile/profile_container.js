@@ -5,7 +5,7 @@ const mapStateToProps = (state) => {
     let currentUserId = state.session.id;
     return({
       currentUserId: currentUserId,
-      user: state.entities.users[currentUserId]
+      user: state.entities.users[currentUserId] || defaultUser
     });
   };
   

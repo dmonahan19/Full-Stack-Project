@@ -49,7 +49,7 @@ class ProfileForm extends React.Component{
   
   
     render(){
-   
+
       return(
         <form className="profileform" onSubmit={this.handleSubmit}>
             <h2 className='pro-h1'>Profile</h2> 
@@ -66,12 +66,12 @@ class ProfileForm extends React.Component{
             </label>
           </div>
           <br/>
-        
           <div className="photo-combo">
             <div></div>
             <div className='picture-label'>Picture</div> 
             <div className='photo-combo2'>
-            {this.props.user.photo ? 
+            {this.props.photoUrl ? 
+              <img className="profile-picture2" src={this.props.photoUrl} /> : this.props.user.photo ?
               <img className="profile-picture2" src={this.props.user.photo}/> : 
               <img className="profile-picture2" src={window.empty}/> }
               <button onClick={this.props.showPicture} className='change-picture'>Change picture</button>
