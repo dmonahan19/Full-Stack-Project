@@ -9,6 +9,9 @@ const NavBar = (props) => {
         if(props.user.photo){
                 photo = <img className="nav-profile-picture" src={props.user.photo}/>
             }
+        else if(props.user.first_name){
+            photo = <div className="nav-photo">{props.user.first_name[0]}</div>
+        }
         else{
                 photo = <div className="nav-photo">{props.user.email[0]}</div>
         }
