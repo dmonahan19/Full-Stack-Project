@@ -1,0 +1,65 @@
+
+
+
+.create-board-page{
+  position: fixed;
+  top: 60%;
+  left: 15%;
+}
+
+.red-plus {
+    width: 40px;
+    height: 40px;
+    background-color: #e90000;
+    border-radius: 50%;
+    box-shadow: 0 6px 10px 0 #666;
+
+  
+    font-size: 42px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 38%;
+    left: 40%;
+  
+   
+  }
+
+ .create-board-square{
+    
+    width: 320px;
+    height: 240px;
+    border-radius: 4px;
+ }
+
+ .create-board-square:hover{
+        
+ }
+ 
+
+
+ .create-small-square{
+     width: 300px;
+     height: 200px;
+     padding: 10px;
+     box-sizing: border-box;
+     background: #f2f2f2;
+     border-radius: 4px;
+ }
+
+  /* .create-small-square:hover{
+    background:  #e0e0e0;
+   
+}  */
+
+ .create-board-h1{
+    padding-top: 5px;
+    color: #939292;
+    font-size: 18px;
+    font-family:  "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", arial, sans-serif;;
+ }
+
+ /* .create-board-h1:hover{
+    background:  #f0efef;
+ } */
