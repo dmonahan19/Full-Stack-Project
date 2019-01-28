@@ -1,6 +1,7 @@
 import React from 'react';
 
 const CreateBoard = (props) => {
+    if(props.boards.length < 1) {
     return(
     <>
     <div className="create-board-page">
@@ -13,5 +14,8 @@ const CreateBoard = (props) => {
     </div> 
     </>
         )}
+    else{
+        return null
+    }}
 
 export default CreateBoard;
