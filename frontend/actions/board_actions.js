@@ -19,8 +19,8 @@ const receiveAllBoards = boards => ({
     boardId
   });
   
-  export const fetchBoards = (userId) => dispatch => (
-    BoardApiUtil.fetchBoards(userId).then( boards => dispatch(receiveAllBoards(boards)))
+  export const fetchBoards = () => dispatch => (
+    BoardApiUtil.fetchBoards().then( boards => dispatch(receiveAllBoards(boards)))
   );
   
   export const fetchBoard = id => dispatch => (

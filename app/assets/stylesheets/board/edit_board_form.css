@@ -1,16 +1,17 @@
-.board-form{
-    width: 525px;
-    height: 200px;
+.edit-board-form{
+    width: 550px;
+    height: 320px;
     background: white;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     position: relative;
     align-items: center;
-    width: 100%
+    /* width: 100%; */
+    z-index: 10;
 }
 
-.board-x{
+.edit-board-x{
     position: absolute;
     left: 480px;
     top: 10px;
@@ -19,28 +20,28 @@
     cursor: pointer;
 }
 
-.board-form-h2{
+.edit-board-form-h2{
     font-size: 24px;
     font-weight: bold;
     display: block;
     color:  #333;
 }
 
-.top-board-form{
+.top-board-edit-form{
     display: flex;
     justify-content: row;
     padding: 15px;
 }
 
-.board-form-buttons{
+.edit-board-form-buttons{
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    margin-top: 30px;
-    margin-right: 20px;
+    margin-right: 23px;
+    
 }
 
-.board-submit{
+.edit-board-submit{
     width: 75px;
     padding: 10px 10px;
     box-sizing: border-box;
@@ -50,10 +51,11 @@
     background-color: #e60000;
     font-size: 16px;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 
-.cancel-submit{
+.edit-cancel-submit{
     width: 75px;
     padding: 10px 10px;
     box-sizing: border-box;
@@ -64,9 +66,10 @@
     margin-right: 15px;
     font-size: 16px;
     font-weight: bold;
+    margin-left: 40px;
 }
 
-.board-form label{
+.edit-board-form label{
     width: 95%;
     display: flex;
     justify-content: space-between;
@@ -75,14 +78,22 @@
     margin-top: 20px;
 }
 
-.board-form-input{
-    width: 370px;
+.edit-board-form-input{
+    width: 400px;
     border-radius: 4px;
     border: 1px solid #333;
     font-size: 16px;
 }
 
-.board-form-input::placeholder{
+.edit-board-form-input-des{
+    width: 400px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    font-size: 16px;
+    height: 100px;
+}
+
+.edit-board-form-input::placeholder{
   font-size: 16px;
   color:  #a2a2a2;
 }

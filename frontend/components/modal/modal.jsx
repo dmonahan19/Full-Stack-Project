@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import BoardFormContainer from '../boards/board_form_container';
+import EditBoardFormContainer from '../boards/board_edit_form_container';
 
 
 function Modal({modal, closeModal}) {
@@ -12,6 +13,9 @@ function Modal({modal, closeModal}) {
   switch (modal) {
     case 'boardform':
       component = <BoardFormContainer />;
+      break;
+    case 'editboardform':
+      component = <EditBoardFormContainer />;
       break;
     default:
       return null;
