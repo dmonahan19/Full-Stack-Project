@@ -4,9 +4,9 @@ export const RECEIVE_ALL_BOARDS = "RECEIVE_ALL_BOARDS";
 export const RECEIVE_BOARD = "RECEIVE_BOARD";
 export const REMOVE_BOARD = "REMOVE_BOARD";
 
-const receiveAllBoards = boards => ({
+const receiveAllBoards = payload => ({
     type: RECEIVE_ALL_BOARDS,
-    boards
+    payload
   });
   
   const receiveBoard = board => ({

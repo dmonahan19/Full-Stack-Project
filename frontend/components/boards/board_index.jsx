@@ -11,11 +11,12 @@ class BoardIndex extends React.Component{
   
     
     render(){
+      debugger
       const boards = this.props.boards.map((board,i) => {
         return (
             <BoardIndexItem
               key={i}
-              board={Object.values(board)[0]}
+              board={board}
               deleteBoard={this.props.deleteBoard}
               openModal={this.props.openModal}
             />

@@ -4,6 +4,7 @@ import { closeModal } from "../../actions/modal_actions"
 import EditBoardForm from '../boards/board_edit_form'
 
 const mapStateToProps = (state) => {
+ 
   return({
     boards: Object.values(state.entities.boards)
   });
