@@ -10,7 +10,7 @@ function Modal({modal, closeModal}) {
   }
   let component;
   switch (modal) {
-    case 'boardForm':
+    case 'boardform':
       component = <BoardFormContainer />;
       break;
     default:

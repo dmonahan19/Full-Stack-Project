@@ -10,7 +10,7 @@
 #
 
 class Board < ApplicationRecord
-    validates :user_id, presence: true;
+    validates :title, :user_id, presence: true;
 
     has_many :pins,
         foreign_key: :board_id,

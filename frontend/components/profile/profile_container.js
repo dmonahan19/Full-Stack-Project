@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import Profile from './profile'
+import { openModal } from '../../actions/modal_actions'
 
 const mapStateToProps = (state) => {
     let currentUserId = state.session.id;
@@ -9,10 +10,10 @@ const mapStateToProps = (state) => {
     });
   };
   
-//   const mapDispatchToProps = (dispatch) => {
-//     return ({
-     
-//     });
-//   };
+  const mapDispatchToProps = (dispatch) => {
+    return ({
+      openModal: (modal)=> dispatch(openModal(modal))
+    });
+  };
   
-  export default connect(mapStateToProps, null)(Profile);
+  export default connect(mapStateToProps, mapDispatchToProps)(Profile);

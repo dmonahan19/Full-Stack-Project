@@ -1,0 +1,29 @@
+.drop-down{
+    background: white;
+    color: black;
+    font-weight: bold;
+    z-index: 15;
+    box-shadow: 2px 2px #dcdcdc;
+    width: 200px;
+    position: fixed;
+    top:130px;
+    padding-left: 10px;
+
+}
+
+.create-pin:hover{
+    background: #eeeeee;
+}
+.create-board:hover{
+    background: #eeeeee;
+}
+
+.create-pin{
+    padding-bottom: 10px;
+}
+
+.create-board{
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

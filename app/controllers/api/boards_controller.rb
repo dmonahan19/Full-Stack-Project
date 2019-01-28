@@ -1,6 +1,6 @@
 class Api::BoardsController < ApplicationController
     def index
-        @boards = Board.all
+        @boards = current_user.boards
       end
     
       def show
@@ -8,7 +8,7 @@ class Api::BoardsController < ApplicationController
       end
     
       def create
-        @board = Board.new(board_params)
+        @board = current_user.boards.new(board_params)
     
         if @board.save
           render :show
@@ -37,7 +37,7 @@ class Api::BoardsController < ApplicationController
       private
     
       def board_params
-        params.require(:board).permit(:title, :user_id)
+        params.require(:board).permit(:title)
       end
 
 end 

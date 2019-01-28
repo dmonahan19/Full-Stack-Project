@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import DropDown from './drop_down'
 
 const Profile = (props) => {
     if (props.currentUserId){
@@ -26,10 +27,8 @@ const Profile = (props) => {
            <div className='main-profile'>
            <ul className='left-edit'>
                 <ul className="editlinks">
-                  <li><button className="plus">+</button></li> 
-                  <li><Link to="/settings"><img className="edit-img" src={window.pencil} /></Link></li>
-
-                </ul>
+                  <DropDown openModal={props.openModal}/>
+            </ul>
             </ul>
             <div className="profile-user-info">
                 <div>

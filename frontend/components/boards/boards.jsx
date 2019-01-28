@@ -1,6 +1,6 @@
 import React from 'react';
 import ProfileContainer from '../profile/profile_container'
-import CreateBoard from './create_board'
+import CreateBoardContainer from './create_board_container'
 
 
 class Boards extends React.Component{
@@ -18,7 +18,7 @@ class Boards extends React.Component{
                 <>
                 <div className="board-profile-divs">
                     <div>{<ProfileContainer  />}</div>
-                    <div>{<CreateBoard />} </div>
+                    <div>{<CreateBoardContainer />} </div>
                 </div>
                 </>    
             </div>

@@ -5,7 +5,6 @@ import CreateBoard from '../boards/create_board'
 
   const mapDispatchToProps = (dispatch) => {
     return ({
-       
         openModal: (modal)=> dispatch(openModal(modal))
     });
   };
