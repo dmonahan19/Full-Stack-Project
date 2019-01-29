@@ -4,7 +4,10 @@ import { fetchBoards } from '../../actions/board_actions';
 import { openModal } from '../../actions/modal_actions';
 
 
+
+
 const mapStateToProps = (state) => {
+
     return({
         boards: Object.values(state.entities.boards)
     });
@@ -18,4 +21,4 @@ const mapStateToProps = (state) => {
     });
   };
   
-  export default connect(mapStateToProps, mapDispatchToProps)(BoardIndex);
+  export default (connect(mapStateToProps, mapDispatchToProps)(BoardIndex));

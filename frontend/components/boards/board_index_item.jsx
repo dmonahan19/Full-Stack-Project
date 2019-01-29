@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
 const BoardIndexItem = ({ board, deleteBoard, openModal }) => {
 
     return (

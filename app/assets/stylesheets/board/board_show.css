@@ -1,0 +1,188 @@
+.board-show-top {
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,"ＭＳ Ｐゴシック",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: #909090;
+    margin: 0 300px;
+    margin-top: 85px;
+    width: 500px;
+    
+}
+
+.left-board-show-edit{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: row;
+}
+
+
+.show-editlinks {
+    display: flex;
+    justify-content: row;
+}
+
+.show-editlinks > li {
+    padding: 0px;
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 10px
+}
+
+.show-editlinks > li:hover {
+    background: #f0f0f0;
+    cursor: pointer;
+}
+
+.show-edit-img{
+    width: 30px;
+    height: 30px;
+    filter: brightness(120%);
+    margin-top: 2px;
+}
+
+.plus{
+    color: #8e8e8e;
+    font-size: 45px;
+    position: relative;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+}
+
+.show-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    width: 780px;
+
+}
+
+.board-show-title{
+    font-size: 36px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.follow-pin-links{
+    display: flex;
+    justify-content: row;
+    padding: 0;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 50%;
+    width: 100%;
+    color: #333333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.pin-follow1{
+    margin-right: 5px;
+}
+
+.pin-follow2{
+    margin-right: 5px;
+}
+
+.dot {
+        height: 3px;
+        width: 3px;
+        background-color: #333333;
+        border-radius: 50%;
+        display: inline-block;
+        margin-bottom: 2px;
+}
+
+      
+.pin-follow1:hover{
+    text-decoration: underline;
+}
+.pin-follow3:hover{
+    text-decoration: underline;
+}
+
+.show-about-links{
+    display: flex;
+    justify-content: row;
+    padding: 0;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 50%;
+    width: 100%;
+    color: #333333;
+    font-size: 14px;
+}
+
+.about-description{
+    margin-right: 5px;
+}
+
+.dot2{
+    margin-right: 5px;
+}
+
+.show-profile-picture{
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    /* display: block; */
+}
+
+.show-profile-user-info2{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 700px;
+}
+
+.boardpin-links{
+    display: flex;
+    padding: 0;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
+    color: #909090;
+}
+
+.show-boardpin-links:focus {
+    color: #333333;
+}
+
+
+.show-board-link:hover{
+    background: #f0f0f0eb;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.show-board-link{
+    margin-right: 20px;
+}
+
+.show-pin-link:hover{
+    background: #f0f0f0b1;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+.show-menu{
+    color: #333333;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.824);
+    border-radius: 3px;
+    padding: 4px 14px;
+    text-align: center;
+    border: 3px solid  rgba(232, 228, 228, 0.625);
+}
+

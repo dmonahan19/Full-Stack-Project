@@ -2,12 +2,17 @@ import { connect } from "react-redux";
 import BoardShow from './board_show';
 import { deleteBoard, fetchBoard } from '../../actions/board_actions';
 import { fetchPins } from '../../actions/pin_actions';
-import { fetchItems } from '../../actions/item_actions';
+import { withRouter } from 'react-router-dom';
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+    const board = state.entities.boards[ownProps.match.params.boardId] || {};
+    let currentUserId = state.session.id;
     return({
+        board: board,
         pins: Object.values(state.entities.pins),
+        user: state.entities.users[currentUserId]
+      
     });
   };
   
@@ -19,4 +24,4 @@ const mapStateToProps = (state) => {
     });
   };
   
-  export default connect(mapStateToProps, mapDispatchToProps)(BoardShow);
+  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BoardShow));

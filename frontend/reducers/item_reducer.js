@@ -5,7 +5,6 @@
 //     Object.freeze(oldState);
 //     switch (action.type) {
 //       case RECEIVE_ITEM:
-//       debugger
 //         return merge({}, oldState, {[action.item.id]: action.item});
 //       default:
 //         return oldState;
