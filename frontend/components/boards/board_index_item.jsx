@@ -7,7 +7,6 @@ const BoardIndexItem = ({ board, deleteBoard, openModal }) => {
 
     return (
     <li>
-     <h2 className='name'>Name</h2>
      <div className='board-index'>
         <ul className="left-board-index">
             <div className="picture-name">
@@ -29,7 +28,7 @@ const BoardIndexItem = ({ board, deleteBoard, openModal }) => {
                         <p>7 days ago</p>
                     </Link></li> 
 
-                    <li className='dontshow'><button onClick={() => openModal('editboardform')} >
+                    <li className='dontshow'><button onClick={() => openModal('editboardform', board.id )} >
                         <img className="edit-img" src={window.pencil} />
                     </button></li> 
                 </ul>

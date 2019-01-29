@@ -24,6 +24,7 @@ class BoardIndex extends React.Component{
   
       return (
         <div >
+          <h2 className='name'>Name</h2>
           <ul className=''>
             { boards }
           </ul>

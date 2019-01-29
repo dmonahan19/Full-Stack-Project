@@ -5,12 +5,20 @@ import { withRouter } from 'react-router-dom';
 class BoardEditForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: '',
-      description: '',
-    };
+    this.state = props.board;
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  componentDidMount() {
+    this.props.fetchBoard(this.props.board.id);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.board.id != this.props.board.id) {
+      this.props.fetchBoard(this.props.board.id);
+    }
+  }
+
 
   update(field) {
     return e => this.setState({

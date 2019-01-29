@@ -34,7 +34,7 @@ class DropDown extends React.Component{
                     <button onClick={this.doubleClick} className=""> Create board </button>
                     </li>
                     <li className='create-pin'>
-                        <button>Create Pin</button>
+                        <Link to='/pin-builder'>Create Pin</Link>
                     </li>
                 </ul>
               </>

@@ -34,8 +34,8 @@ const NavBar = (props) => {
                         <li><Link to="/following">Following</Link></li>
 
                         <div className="nav-photo-name">
-                            <li><Link to="/users/:userId">{photo}</Link></li>
-                            <li><Link to="/users/:userId">{user}</Link></li>
+                            <li><Link to={`/users/${props.currentUserId}`}>{photo}</Link></li>
+                            <li><Link to={`/users/${props.currentUserId}`}>{user}</Link></li>
                         </div>
                         <li ><button className='buttonnav' onClick={props.logout}>Log Out</button></li>
                     </ul>

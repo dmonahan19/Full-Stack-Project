@@ -1,0 +1,163 @@
+
+.pin-background{
+    background: #efefef;
+    width: 100%;
+    margin-top: 63px;
+    height: 1200px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.pin-form{
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 700px;
+    background-color: white;
+    border-radius: 5px;
+}
+  
+
+.pin-form-float{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between */
+}       
+
+
+.pin-builder-left-side{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    padding-left: 50px;
+}
+
+.pin-profile-info{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.pin-profile-picture{
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+}
+
+.pin-name-followers{
+ padding-left: 10px;
+}
+
+.say-more-about-pin{
+    width: 375px;
+    height: 150px;
+    text-align: left;
+    font-size: 24px;
+}
+.say-more-about-pin::placeholder{
+  position: relative;
+  top: -50px;  
+}
+
+
+
+.pin-title{
+    font-weight: bold;
+    font-size: 50px;
+    padding: 100px;
+    width: 375px;
+}
+
+
+.pin-photo{
+   background: #efefef;
+   width: 350px;
+   height: 450px;
+   box-sizing: border-box;
+   margin-left: 55px;
+   margin-top: 100px;
+   text-align: center;
+   font-size: 20px;
+   font-weight: bold;
+   padding-top: 200px;
+
+}
+
+.pin-form-username{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.pin-form-follower{
+    font-size: 18px;
+}
+
+.bottom-pin-form{
+    width: 200px;
+    margin-top: 20px;
+}
+
+.pin-url{
+    border: 1px solid black;
+    width: 380px;;
+    margin-bottom: 20px;
+}
+
+.pin-selector{
+    border: 1px solid black;
+    width: 380px;;
+    margin-bottom: 20px;
+    height: 45px;
+    font-size: 16px;
+}
+
+.pin-submit{
+    width: 80px;
+    padding: 10px 10px;
+    padding-left: 23px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-color: #e60000;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 15px;
+
+}
+.pin-icon{
+  z-index: 5;
+  position: relative;
+  left: 20px;
+  color: white;
+
+}
+
+.pin-buttons{
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.pin-home-button{
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    padding: 3px 10px;
+}
+
+.pin-home-button:hover{
+    background: #979797
+}
+
