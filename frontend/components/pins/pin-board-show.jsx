@@ -1,53 +1,83 @@
-// import React from 'react';
+import React from 'react';
+import PinIndexItem from './pin_index_item'
 
-// const PinBoardShow = (props) => {
-//     const col1 = this.props.pins.map((pin, i) => {
-//         if (i % 4 === 0) {
-//             <li key={i}><img src={pin.photo} /></li>
-//         }
-//     })
+const PinBoardShow = (props) => {
+    let col1 = [];
+    let col2 = [];
+    let col3 = [];
+    let col4 = [];
+    props.pins.forEach((pin, i) => {
+        if (i % 4 === 0) {
+            col1.push(<PinIndexItem key={i}
+                  pin={pin}
+                openModal={props.openModal}/>);
+        }
+        if (i % 4 === 1) {
+            col2.push(<PinIndexItem key={i}
+                pin={pin}
+                openModal={props.openModal} />);
+        }
+        if (i % 4 === 2) {
+            col3.push(<PinIndexItem key={i}
+                pin={pin}
+                openModal={props.openModal} />);
+        }
+        if (i % 4 === 3) {
+            col4.push(<PinIndexItem key={i}
+                pin={pin}
+                openModal={props.openModal} />);
+        }
+    });
 
-//     const col2 = this.props.pins.map((pin, i) => {
-//         if (i % 4 === 1) {
-//             <li key={i}><img src={pin.photo} /></li>
-//         }
-//     })
-//     const col3 = this.props.pins.map((pin, i) => {
-//         if (i % 4 === 3) {
-//             <li key={i}><img src={pin.photo} /></li>
-//         }
-//     })
-//     const col4 = this.props.pins.map((pin, i) => {
-//         if (i % 4 === 4) {
-//             <img src={pin.photo} />
-//         }
-//     })
-//     return (
-//         <>
+    // return (
+    //     <>
         
 
+    //     <div className='splash2'>
+    //         <div className='show2'>
+    //             <ul className="column1">
+    //                 {col1}
+    //             </ul>
 
-//             <div className=''>
-//                 <div className="row2">
+    //             <ul className="column1">
+    //                 {col2}
+    //             </ul>
 
-//                     <div className="column1"></div>
-//                     {col1}
-//                 </div>
+    //             <ul className="column1">
+    //                 {col3}
+    //             </ul>
 
-//                 <div className="column2">
-//                     {col2}
-//                 </div>
+    //             <ul className="column1">
+    //                 {col4}
+    //             </ul>
+    //         </div>
+    //     </div>
+    //     </>
+    // )
+    return (
+        <>
+        
+            <div className='splash2'>
+                <div className="row2">
+                    <div className="column2">
+                        {col1}
+                    </div>
+                    <div className="column2">
+                        {col2}
+                    </div>
+                    <div className="column2">
+                        {col3}
+                    </div>
+                    <div className="column2">
+                        {col4}
+                    </div>     
+                </div>
+            </div>
+      
+      
+        
+        </>
+    )
+}
 
-//                 <div className="column3">
-//                     {col3}
-//                 </div>
-
-//                 <div className="column4">
-//                     {col4}
-//                 </div>
-//             </div>
-//         </>
-//     )
-// }
-
-// export default PinBoardShow;
+export default PinBoardShow;

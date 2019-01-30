@@ -7,6 +7,7 @@ import { ProtectedRoute } from '../util/route_util';
 import BoardsContainer from './boards/boards_container'
 import EditBoardFormContainer from './boards/board_edit_form_container'
 import BoardShowContainer from './boards/board_show_container'
+import PinShowContainer from './pins/pin_show_container'
 import PinBuilderContainer from './pins/pin_builder_container'
 import Modal from './modal/modal'
 
@@ -32,6 +33,7 @@ import {
             <ProtectedRoute path='/users/:userId/boards/:boardId/edit' component={EditBoardFormContainer} />
             <ProtectedRoute path='/boards/:boardId' component={BoardShowContainer} />
             <ProtectedRoute path='/pin-builder' component={PinBuilderContainer} />
+            <ProtectedRoute path='/pin/:pinId' component={PinShowContainer} />
         </Switch>
     </div>
   );

@@ -1,0 +1,31 @@
+.pin-photo-img{
+    width: 550px;
+    height: 550px;
+    margin-top: 70px;
+    margin-left: 30px;
+}
+
+.pin-show{
+ position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 700px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.edit-show-img{
+     width: 30px;
+    height: 30px;
+    filter: brightness(120%);
+    margin-top: 2px;
+}
+
+.splash2{
+   position: absolute;
+    top: 45%;
+    left: 12%;
+    z-index: -1;}
+

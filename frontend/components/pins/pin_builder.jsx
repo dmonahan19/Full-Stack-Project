@@ -5,18 +5,18 @@ class PinBuilder extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-          title: '',
-          description: '',
-          website_url: '',
-          boardId: "0",
-          photoFile: null,
-          photoUrl: null
+            title: '',
+            description: '',
+            website_url: '',
+            boardId: "0",
+            photoFile: null,
+            photoUrl: null
         };
         this.handleSubmit = this.handelSubmit.bind(this)
         this.handleFile = this.handleFile.bind(this)
-      }
+    }
 
-      componentDidMount(){
+    componentDidMount() {
         this.props.fetchBoards();
 
     }
@@ -29,18 +29,6 @@ class PinBuilder extends React.Component{
           [field]: e.currentTarget.value
         });}
       }
-    
-    handleFile(e) {
-        const file = e.currentTarget.files[0];
-        const fileReader = new FileReader();
-        fileReader.onloadend = () => {
-          this.setState({photoFile: file, photoUrl: fileReader.result});
-        };
-        if (file) {
-        fileReader.readAsDataURL(file);
-        }
-    }
-    
       
     handelSubmit(e){
         e.preventDefault();
@@ -51,6 +39,17 @@ class PinBuilder extends React.Component{
         formData.append('item[website_url]', this.state.website_url);
         formData.append('item[photo]', this.state.photoFile);
         this.props.createItem(formData);
+    }
+
+    handleFile(e) {
+        const file = e.currentTarget.files[0];
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {
+            this.setState({ photoFile: file, photoUrl: fileReader.result });
+        };
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
     }
 
     render(){

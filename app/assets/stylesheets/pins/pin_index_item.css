@@ -8,9 +8,55 @@
 
 .show-pins-group{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(250px, 10fr));
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
 
 }
 
 
+
+.pin-index-submit{
+    width: 80px;
+    padding: 10px 10px;
+    padding-left: 23px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-color: #e60000;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+
+.pin-index-icon{
+  z-index: 5;
+  position: relative;
+  left: 10px;
+  top: 30px;
+  color: white;
+
+}
+
+.whole-pin-button{
+    z-index: 5;
+    position: relative;
+
+}
+
+.pin-show-image:hover{
+    background: rgba(226, 226, 226, 0.337);
+
+
+}
+
+.whole-image-save{
+    position: relative;
+}
+
+.button4{
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
 

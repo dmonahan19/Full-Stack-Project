@@ -19,14 +19,15 @@ class BoardShow extends React.Component{
 
     render(){
 
-        const pins = this.props.pins.map((pin,i) => {
-            return (
-                <PinIndexItem
-                  key={i}
-                  pin={pin} 
-                 />
-            );
-          });
+        // const pins = this.props.pins.map((pin,i) => {
+        //     return (
+        //         <PinIndexItem
+        //           key={i}
+        //           pin={pin} 
+        //         openModal={this.props.openModal}
+        //          />
+        //     );
+        //   });
 
           return (
             <>
@@ -65,8 +66,11 @@ class BoardShow extends React.Component{
                     </div>
 
                 </div>
+                 {/* <div className="wrapper">
+                    <ul className="show-pins-group">{pins}</ul>
+                </div> */}
 
-                <ul class="show-pins-group">{pins}</ul>
+                <PinBoardShow pins={this.props.pins} openModal={this.props.openModal}/>
             </>
         )
     }
