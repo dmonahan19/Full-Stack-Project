@@ -72,7 +72,7 @@ class PinBuilder extends React.Component{
                 </div>
               <div className='pin-form-float'>
                 
-
+                {this.state.photoUrl ? <label className='pin-photo-preview'><img className='pin-photo-preview'src={this.state.photoUrl} /></label> :
                 <label className='pin-photo'>
                 <i className="fas fa-camera fa-lg"></i>
                 <br/>
@@ -82,7 +82,7 @@ class PinBuilder extends React.Component{
                         value={this.state.photo}
                         onChange={this.handleFile.bind(this)}
                         />
-                </label>  
+                        </label>  }
    
 
 

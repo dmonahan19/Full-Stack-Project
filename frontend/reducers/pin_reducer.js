@@ -13,7 +13,7 @@ import {
     Object.freeze(oldState);
     switch (action.type) {
       case RECEIVE_ALL_PINS:
-        return merge({}, action.pins);
+        return merge({}, action.payload.pins);
       case RECEIVE_PIN:
         return merge({}, oldState, {[action.pin.id]: action.pin});
       case RECEIVE_ITEM:

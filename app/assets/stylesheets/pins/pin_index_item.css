@@ -1,0 +1,16 @@
+.pin-item{
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    
+    
+}
+
+.show-pins-group{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 10fr));
+
+}
+
+
+

@@ -43,4 +43,3 @@ const SplashBackground = (props) => {
 
 export default SplashBackground;
 
-<img src={window.img1} />

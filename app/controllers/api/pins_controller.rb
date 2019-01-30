@@ -5,7 +5,7 @@ class Api::PinsController < ApplicationController
       elsif params[:user_id]
         @pins = Board.all.where(user_id: params[:user_id]).pins
       end
-        render :index
+        # render :index
       end
     
       def show

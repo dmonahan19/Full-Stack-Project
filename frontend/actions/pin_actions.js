@@ -3,9 +3,9 @@ export const RECEIVE_ALL_PINS = "RECEIVE_ALL_PINS"
 export const RECEIVE_PIN = "RECEIVE_PIN";
 export const REMOVE_PIN = "REMOVE_PIN";
 
-    const receiveAllPins = pins => ({
-        type: RECEIVE_ALL_Pins,
-        pins
+    const receiveAllPins = payload => ({
+        type: RECEIVE_ALL_PINS,
+        payload
     })
 
 

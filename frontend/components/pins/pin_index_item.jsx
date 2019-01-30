@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-const PinIndexItem = () => {
+const PinIndexItem = (props) => {
     return (
       <li className='pin-item'>
-        <div className='margin-holder'>
+        <div>
           <img src={props.pin.photo}/>
           <div>{props.pin.title}</div>
         </div>

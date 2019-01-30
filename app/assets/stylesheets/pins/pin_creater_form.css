@@ -90,6 +90,13 @@
 
 }
 
+.pin-photo-preview{
+    width: 350px;
+    height: 450px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
 .pin-form-username{
     font-weight: bold;
     font-size: 18px;

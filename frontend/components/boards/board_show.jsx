@@ -1,5 +1,7 @@
 import React from 'react';
 import DropDownTwo from './drop_down_two'
+import PinIndexItem from '../pins/pin_index_item'
+import PinBoardShow from '../pins/pin-board-show'
 
 
 class BoardShow extends React.Component{
@@ -11,15 +13,16 @@ class BoardShow extends React.Component{
 
     componentDidMount() {
         this.props.fetchBoard(this.props.match.params.boardId);
+        this.props.fetchPins(this.props.match.params.boardId)
     }
     
 
     render(){
 
-        const pins = this.props.pins.map(pin => {
+        const pins = this.props.pins.map((pin,i) => {
             return (
                 <PinIndexItem
-                  key={pin.id}
+                  key={i}
                   pin={pin} 
                  />
             );
@@ -62,6 +65,8 @@ class BoardShow extends React.Component{
                     </div>
 
                 </div>
+
+                <ul class="show-pins-group">{pins}</ul>
             </>
         )
     }
