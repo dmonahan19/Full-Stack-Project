@@ -15,26 +15,20 @@ class BoardShow extends React.Component{
         this.props.fetchBoard(this.props.match.params.boardId);
         this.props.fetchPins(this.props.match.params.boardId)
     }
+
+
     
 
     render(){
 
-        // const pins = this.props.pins.map((pin,i) => {
-        //     return (
-        //         <PinIndexItem
-        //           key={i}
-        //           pin={pin} 
-        //         openModal={this.props.openModal}
-        //          />
-        //     );
-        //   });
+
 
           return (
             <>
                 <div className='board-show-top'>
                     <ul className='left-board-show-edit'>
                         <ul className="show-editlinks">
-                            <DropDownTwo />
+                              <DropDownTwo openModal={this.props.openModal} />
                         </ul>
                     </ul>
                     <div className="show-info">
@@ -66,9 +60,7 @@ class BoardShow extends React.Component{
                     </div>
 
                 </div>
-                 {/* <div className="wrapper">
-                    <ul className="show-pins-group">{pins}</ul>
-                </div> */}
+          
 
                 <PinBoardShow pins={this.props.pins} openModal={this.props.openModal}/>
             </>

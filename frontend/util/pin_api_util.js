@@ -20,9 +20,9 @@ export const fetchPins = (boardId) => (
     })
   );
   
-  export const createPin = (itemId) => (
+  export const createPin = (pin) => (
     $.ajax({
-      url: `/api/items/${itemId}/pins`,
+      url: `/api/items/${pin.item_id}/pins`,
       method: 'POST',
       data: { pin }
     })

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 class PinBuilder extends React.Component{
 
@@ -63,7 +64,7 @@ class PinBuilder extends React.Component{
             <div className='pin-background'>
               <form className='pin-form' onSubmit={this.handleSubmit} >
                 <div className='pin-buttons'>
-                    <button className= 'pin-home-button'>Home</button>
+                        <Link to={`/users/${this.props.currentUserId}/boards`}><button className= 'pin-home-button'>Home</button></Link>
                     <div>
                         <icon className='fas fa-thumbtack pin-icon'></icon>
                         <input className="pin-submit" type="submit" value="Save"/>

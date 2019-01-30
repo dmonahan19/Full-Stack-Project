@@ -3,7 +3,7 @@ class Api::PinsController < ApplicationController
       if params[:board_id]
         @pins = Board.find(params[:board_id]).pins 
       elsif params[:user_id]
-        @pins = Board.all.where(user_id: params[:user_id]).pins
+        @pins = Pin.joins(:board).where("boards.user_id = #{params[:user_id]}")
       end
         # render :index
       end

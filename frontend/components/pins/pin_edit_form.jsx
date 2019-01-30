@@ -1,11 +1,11 @@
-import React from 'react'
-import {withRouter} from 'react-router-dom'
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 
-class CreatePinForm extends React.Component {
+class PinEditForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = props.board;
+        this.state = this.props.pin;
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -14,8 +14,8 @@ class CreatePinForm extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.board.id != this.props.board.id) {
-            this.props.fetchBoard(this.props.board.id);
+        if (prevProps.pin.id != this.props.pin.id) {
+            this.props.fetchPin(this.props.pin.id);
         }
     }
 
@@ -28,8 +28,8 @@ class CreatePinForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const board = Object.assign({}, this.state);
-        this.props.updateBoard(board).then(this.props.closeModal);
+        const pin = Object.assign({}, this.state);
+        this.props.updatePin(pin).then(this.props.closeModal);
     }
 
 
@@ -39,7 +39,7 @@ class CreatePinForm extends React.Component {
                 <form className='edit-board-form' onSubmit={this.handleSubmit} >
                     <div className='edit-board-x' onClick={this.props.closeModal}>X</div>
                     <div className='top-board-edit-form'>
-                        <h2 className='edit-board-form-h2'>Edit Your Board</h2>
+                        <h2 className='edit-board-form-h2'>Edit Your Pin</h2>
                     </div>
 
                     <label>Name
@@ -68,8 +68,4 @@ class CreatePinForm extends React.Component {
     }
 }
 
-export default withRouter(CreatePinForm);
-
-
-
-
+export default withRouter(PinEditForm);

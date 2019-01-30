@@ -60,3 +60,8 @@
     right: 8px;
 }
 
+.image4-hover:hover{
+   filter: brightness(80%)
+   
+}
+

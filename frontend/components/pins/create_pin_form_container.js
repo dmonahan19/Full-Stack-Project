@@ -5,10 +5,8 @@ import { fetchBoards } from "../../actions/board_actions"
 import CreatePinForm from './create_pin_form'
 
 const mapStateToProps = (state) => {
-    debugger
     let currentUserId = state.session.id;
     return ({
-        // pin: state.entities.pin[],
         boards: Object.values(state.entities.boards),
         user: state.entities.users[currentUserId]
     });

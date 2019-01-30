@@ -23,6 +23,11 @@ export const REMOVE_PIN = "REMOVE_PIN";
     PinApiUtil.fetchPins(boardId).then(pins => dispatch(receiveAllPins(pins)))
   )
 
+  export const fetchUserPins = (userId) => dispatch => (
+  PinApiUtil.fetchUserPins(userId).then(pins => dispatch(receiveAllPins(pins)))
+)
+
+
   export const fetchPin = id => dispatch => (
     PinApiUtil.fetchPin(id).then(pin => dispatch(receivePin(pin)))
   );
@@ -34,4 +39,5 @@ export const REMOVE_PIN = "REMOVE_PIN";
   export const deletePin = pinId => dispatch => (
     PinApiUtil.deletePin(pinId).then(pinId => dispatch(removePin(pinId)))
   );
+
   

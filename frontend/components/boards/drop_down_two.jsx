@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import {withRouter} from 'react-router-dom'
 
 class DropDownTwo extends React.Component {
     constructor(props) {
@@ -32,7 +33,9 @@ class DropDownTwo extends React.Component {
                         : null}
                     <ul className="editlinks">
                         <li><button onClick={this.showDropDowntwo} className="plus">+</button></li>
-                        <li><Link to="/settings"><img className="edit-img" src={window.pencil} /></Link></li>
+                        <li className='dontshow'><button onClick={() => this.props.openModal('editboardform', this.props.match.params.boardId)} >
+                            <img className="edit-img" src={window.pencil} />
+                        </button></li> 
                     </ul>
                 </div>
             </>
@@ -42,4 +45,4 @@ class DropDownTwo extends React.Component {
 
 }
 
-export default DropDownTwo
+export default withRouter(DropDownTwo)

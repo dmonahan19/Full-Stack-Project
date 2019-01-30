@@ -5,24 +5,35 @@ import { Link } from 'react-router-dom';
 
 
 const BoardIndexItem = ({ board, deleteBoard, openModal }) => {
+    let photo
+    if (board.photo) {
+       photo = <li><Link to={`/boards/${board.id}`}>
+            <img src={board.photo} />
+
+        </Link></li> 
+    } 
+    
+    else {
+        photo= <li className='no-photo'><Link to={`/boards/${board.id}`}>
+            <div className='no-photo'></div>
+
+            </Link></li>
+    }
+
+
+
 
     return (
     <li>
      <div className='board-index'>
         <ul className="left-board-index">
             <div className="picture-name">
-                <li><Link to={`/boards/${board.id}`}>
-                <img src={window.img3}/>
-                </Link></li>
-
-                <li><Link to={`/boards/${board.id}`}>
-                    <p className='board-title'>{board.title}</p>
-                </Link></li>
+                {photo}
             </div>
                 <ul className= "right-board-index">
                    
                    <li> <Link to={`/boards/${board.id}`}>
-                        <p> 0 pins </p>
+                        <p> {board.numPins} Pins </p>
                     </Link></li>          
                     
                     <li><Link to={`/boards/${board.id}/edit`}>

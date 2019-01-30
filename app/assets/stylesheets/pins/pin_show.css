@@ -1,7 +1,7 @@
 .pin-photo-img{
-    width: 550px;
+    width: fit-content;
     height: 550px;
-    margin-top: 70px;
+    margin-top: 20px;
     margin-left: 30px;
 }
 
@@ -20,12 +20,36 @@
      width: 30px;
     height: 30px;
     filter: brightness(120%);
-    margin-top: 2px;
+    margin-top: 20px;
+    margin-left: 40px;
 }
 
 .splash2{
    position: absolute;
     top: 45%;
     left: 12%;
-    z-index: -1;}
+    z-index: -1;
+}
+
+.pin-show-selector{
+    margin-left: 650px;
+    border: none;
+    width: 300x;;
+    height: 45px;
+    font-size: 16px;
+}
+
+
+.pin-show-submit{
+    width: 80px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-color: #e60000;
+    font-size: 18px;
+    font-weight: bold;
+
+}
 
