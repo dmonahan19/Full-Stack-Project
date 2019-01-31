@@ -52,7 +52,7 @@ import { closeModal } from '../modal/modal'
                 onMouseLeave={this.offHover}>
                 {this.state.showSave ? (
                     <button className='button4' onClick={() => {
-                        
+
                         const pin = this.state;
                         pin.board_id = this.props.board.id;
                         this.props.createPin(this.state)}} >
@@ -67,7 +67,7 @@ import { closeModal } from '../modal/modal'
                         <ul className="left-board-index2">
                             <div className="picture-name2">
                                 {photo}
-                                <li>>
+                                <li>
                                     <h2 className='board-title2'>{this.props.board.title} </h2>
                                 </li>
                             </div>

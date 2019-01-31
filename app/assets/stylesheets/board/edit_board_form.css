@@ -36,7 +36,7 @@
 .edit-board-form-buttons{
     display: flex;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-right: 23px;
     
 }
@@ -67,6 +67,22 @@
     font-size: 16px;
     font-weight: bold;
     margin-left: 40px;
+
+}
+
+.edit-delete-submit{
+    width: 75px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    background-color: rgb(237, 235, 235);
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 40px;
+   
 }
 
 .edit-board-form label{

@@ -46,23 +46,17 @@ class CreatePinForm extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                     <div className='pin-create-board-x' onClick={this.props.closeModal}>X</div>
                     <h1 className='pin-create-form-h1'> Choose a board </h1>
-                    {/* <label>
-                        <select className='pin-show-selector' value={this.state.board_id} onChange={this.update('board_id')}>
-                            <option value='0' disabled={true}>Choose a board (required)</option>
-                            {boards}
-                        </select>
-    
-                    </label> */}
-                    <div  className='group-together'>
-                        <img className='pin-create-form-photo' src={this.props.pin.photo}></img>
-                        <div className='board_index_pin_form'>
-                            <BoardIndexTwoContainer pin={this.props.pin} />
-                        </div>
+                    <div className='pin-show-selector'>
+                        <BoardIndexTwoContainer pin={this.props.pin} />
                     </div>
                     {/* <input className='pin-show-submit'  type='submit' value='Save'></input> */}
                     </form>
     
-                
+                <div class-name='photo-fit'>
+                    <div className='pin-show-photo'>
+                        <img className='pin-photo-img' src={this.props.pin.photo}></img>
+                    </div>
+                </div>
                
             </div>
       

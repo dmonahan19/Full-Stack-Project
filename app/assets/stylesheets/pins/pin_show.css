@@ -4,23 +4,28 @@
     height: auto;
     max-height: 500px;
     margin-left: 30px;
+    margin-bottom: 100px;
 }
 
 .home-pin-show{
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 80px;
     margin-top: 20px;
     position: relative;
     z-index: 10;
 }
 
+.back-button{
+    padding-left: 15px;
+}
+
 .pin-show{
- position: absolute;
+    position: absolute;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1000px;
+    width: 800px;
     height: fit-content;
     background-color: white;
     border-radius: 10px;
@@ -43,24 +48,13 @@
 }
 
 .pin-show-selector{
-    margin-left: 650px;
+    margin-left: 500px;
+    margin-top: 70px;
     border: none;
-    width: 300x;;
+    width: 500x;;
     height: 45px;
     font-size: 16px;
 }
 
 
-.pin-show-submit{
-    width: 80px;
-    padding: 10px 10px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    text-align: center;
-    color: white;
-    background-color: #e60000;
-    font-size: 18px;
-    font-weight: bold;
-
-}
 

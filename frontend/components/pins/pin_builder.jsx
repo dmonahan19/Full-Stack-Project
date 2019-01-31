@@ -67,7 +67,7 @@ class PinBuilder extends React.Component{
                         <Link to={`/users/${this.props.currentUserId}/boards`}><button className= 'pin-home-button'>Home</button></Link>
                     <div>
                         <icon className='fas fa-thumbtack pin-icon'></icon>
-                        <input className="pin-submit" type="submit" value="Save"/>
+                            <input className="pin-submit" type="submit" value="Save" />
                     </div>
                 </div>
               <div className='pin-form-float'>

@@ -64,9 +64,12 @@ class BoardEditForm extends React.Component {
                 placeholder= "What's your board about?"
               />
             </label>
+    
             <div className='edit-board-form-buttons'>
+                
+                <button className='edit-delete-submit' onClick={this.doubleClick}>Delete</button>
               <div>
-              <button onClick={this.doubleClick}>Delete</button>
+            
                 <button onClick={this.props.closeModal} className='edit-cancel-submit'>Cancel</button>
                 <input className="edit-board-submit" type="submit" value="Save" />
               </div>
