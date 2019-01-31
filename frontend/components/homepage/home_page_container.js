@@ -6,6 +6,7 @@ import { fetchUsersPins } from '../../actions/pin_actions';
 const mapStateToProps = (state) => {
 
     let currentUserId = state.session.id;
+
     return ({
         currentUserId: currentUserId,
         user: state.entities.users[currentUserId],
@@ -14,8 +15,9 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
+ 
     return ({
-        fetchUsersPins: () => dispatch(fetchUserPins()),
+        fetchUsersPins: () => dispatch(fetchUsersPins()),
       
     });
 };

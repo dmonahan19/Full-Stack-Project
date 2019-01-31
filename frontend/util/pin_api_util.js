@@ -45,7 +45,7 @@ export const fetchPins = (boardId) => (
   
   export const fetchUsersPins = () => (
     $.ajax({
-      url: `/api/users/${userId}/pins`,
+      url: `/api/pins`,
       method: 'GET'
     })
   );

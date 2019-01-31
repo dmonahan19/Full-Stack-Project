@@ -1,0 +1,99 @@
+.splash3{
+     position: absolute;
+    top: 12%;
+    left: 8%;
+    z-index: -1;
+    width: fit-content;
+}
+
+.row3 {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0 4px;
+    /* padding-bottom: 5px; */
+}
+  
+  
+.column3 {
+ -ms-flex: 20%; /* IE10 */
+  flex: 20%;
+  max-width: 20%;
+  padding: 0 10px;
+}
+  
+.column3 img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 800px) {
+  .column3 {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width:100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .column3 {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+  
+
+@media screen and (max-width: 300px) {
+  .column3 {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.overlay{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0.8;
+} 
+
+img{
+  border-radius: 10px;
+}
+
+
+
+.overlay-content3 {
+    height: 100%;
+    overflow: scroll;
+}
+
+.background-content3{
+    height: 100%;
+    overflow: auto;
+}
+
+.black-opacity3{
+  background: rgba(0, 0, 0, 0.4);
+  height: 900px;
+  position: relative;
+  z-index: 5;
+}
+
+
+
+
+
+
+
+
+
+

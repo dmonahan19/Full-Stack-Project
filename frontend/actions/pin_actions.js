@@ -19,6 +19,11 @@ export const REMOVE_PIN = "REMOVE_PIN";
         pinId
     });
 
+export const fetchUsersPins = () => dispatch => (
+  PinApiUtil.fetchUsersPins().then(pins => dispatch(receiveAllPins(pins)))
+)
+
+
   export const fetchPins = (boardId) => dispatch => (
     PinApiUtil.fetchPins(boardId).then(pins => dispatch(receiveAllPins(pins)))
   )
