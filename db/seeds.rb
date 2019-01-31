@@ -62,8 +62,8 @@ item2 = Item.create!(
     website_url: ""
 )
 
-pic_1 = File.open("/Users/daniellemonahan/Desktop/pixtrest/pic1.jpg")
-item1.photo.attach(io: pic_1, filename: 'pic1.jpg')
+# pic_1 = File.open("/Users/daniellemonahan/Desktop/pixtrest/pic1.jpg")
+# item1.photo.attach(io: pic_1, filename: 'pic1.jpg')
 
 
 pin1 = Pin.create!(
