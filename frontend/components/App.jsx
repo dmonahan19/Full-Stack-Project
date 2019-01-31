@@ -28,9 +28,9 @@ import {
         <header className='nav-container' >
             <NavBarContainer />
         </header>
-        <Switch>
+  
             <Route exact path="/" component={Splash} />
-              <ProtectedRoute exact path="/home" component={HomePageContainer} />
+            <ProtectedRoute exact path="/" component={HomePageContainer} />
             <ProtectedRoute exact path="/users/:userId" component={BoardsContainer}/>
             <ProtectedRoute exact path="/settings" component={FullProfileForm}/>
             <ProtectedRoute exact path="/users/:userId/boards" component={BoardsContainer}/>
@@ -39,7 +39,7 @@ import {
             <ProtectedRoute path='/pin-builder' component={PinBuilderContainer} />
             <ProtectedRoute path='/pin/:pinId' component={PinShowContainer} />
             <ProtectedRoute path='/users/:userId/pins' component={ProfileAllPins} />
-        </Switch>
+      
     </div>
   );
   

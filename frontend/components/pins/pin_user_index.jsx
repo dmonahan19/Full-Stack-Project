@@ -18,35 +18,37 @@ class PinUserIndex extends React.Component{
         let col2 = [];
         let col3 = [];
         let col4 = [];
+        col1.push(<CreatePin />);
+        let i = 1;
 
-        this.props.pins.forEach((pin, i) => {
-            if (i % 4 === 0) {
+        this.props.pins.forEach((pin) => {
+            if (i % 4 === 1) {
                 col1.push(<PinUserIndexItem key={i}
                     pin={pin}
-                    />);
+                />);
             }
-            if (i % 4 === 1) {
+            if (i % 4 === 2) {
                 col2.push(<PinUserIndexItem  key={i}
                     pin={pin}
                     />);
             }
-            if (i % 4 === 2) {
+            if (i % 4 === 3) {
                 col3.push(<PinUserIndexItem key={i}
                     pin={pin}
                      />);
             }
-            if (i % 4 === 3) {
+            if (i % 4 === 0) {
                 col4.push(<PinUserIndexItem key={i}
                     pin={pin}
                      />);
             }
-         
+            i++;
         });
 
         return (
             <>
 
-                <div className='splash2'>
+                <div className='row2'>
                     <div className="row">
                         <div className="column2">
                             {col1}

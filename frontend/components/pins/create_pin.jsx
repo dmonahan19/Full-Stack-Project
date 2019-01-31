@@ -11,7 +11,7 @@ const CreatePin = (props) => {
                         <div className="create-small-square2">
                             <Link to='/pin-builder'> <button className="red-plus2"> + </button> </Link>
                         </div>
-                        <h2 className="create-board-h12">Create Pin</h2>
+                        <h2 className="create-board-h12">Create a Pin</h2>
                     </div>
                 </div>
             </>

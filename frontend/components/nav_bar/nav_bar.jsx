@@ -30,7 +30,7 @@ const NavBar = (props) => {
                     <li><i className="fa fa-search fa-lg nav-icon"></i></li>
                     <li className="searchbar"><input type="search" placeholder="Search" name="search"/></li>
                     <ul className="navlinks">
-                        <li><Link to="/home">Home</Link></li>
+                        <li><Link to="/">Home</Link></li>
                         <li><Link to="/following">Following</Link></li>
 
                         <div className="nav-photo-name">
