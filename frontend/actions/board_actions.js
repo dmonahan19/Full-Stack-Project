@@ -37,7 +37,6 @@ const receiveAllBoards = payload => ({
   );
   
   export const deleteBoard = (boardId) => dispatch => {
-    debugger
     return(
     BoardApiUtil.deleteBoard(boardId).then( (boardId) => dispatch(removeBoard(boardId))))
   };
