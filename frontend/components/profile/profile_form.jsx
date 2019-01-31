@@ -6,7 +6,14 @@ class ProfileForm extends React.Component{
   
     constructor(props){
       super(props);
-      this.state = this.props.user
+      this.state = {
+        first_name: props.user.first_name || '',
+        last_name: props.user.last_name || '',
+        about_you: props.user.about_you || '',
+        location: props.user.location || '',
+        photoFile: props.user.photoFile ||null,
+        photoUrl: props.user.photoUrl || null
+      }
       this.handleSubmit = this.handleSubmit.bind(this);
       
     }
@@ -57,12 +64,12 @@ class ProfileForm extends React.Component{
             <label>
               First Name
               <br/>
-              <input className="name-input" type="text" value={this.state.first_name} onChange={this.update('first_name')}/>
+              <input className="name-input" type="text" value={this.state.first_name || ''} onChange={this.update('first_name')}/>
             </label>
             <label>
                 Last Name
                 <br/>
-              <input className="name-input" type="text" value={this.state.last_name} onChange={this.update('last_name')}/>
+              <input className="name-input" type="text" value={this.state.last_name || ''} onChange={this.update('last_name')}/>
             </label>
           </div>
           <br/>
@@ -74,7 +81,7 @@ class ProfileForm extends React.Component{
               <img className="profile-picture2" src={this.props.photoUrl} /> : this.props.user.photo ?
               <img className="profile-picture2" src={this.props.user.photo}/> : 
               <img className="profile-picture2" src={window.empty}/> }
-              <button onClick={this.props.showPicture} className='change-picture'>Change picture</button>
+              <div onClick={this.props.showPicture} className='change-picture'>Change picture</div>
             </div>
 
           </div>
@@ -85,7 +92,7 @@ class ProfileForm extends React.Component{
               <br/>
             <div>
               <div>
-                <input className="profile-about" type="text" value={this.state.about_you} onChange={this.update('about_you')}/>
+                <input className="profile-about" type="text" value={this.state.about_you || ''} onChange={this.update('about_you')}/>
              </div>
             </div>
           </label>
@@ -93,7 +100,7 @@ class ProfileForm extends React.Component{
           <label>
               <div className="location-label">Location</div>
               <br/>
-             <input className="location" type="text" value={this.state.location} onChange={this.update('location')}/>
+             <input className="location" type="text" value={this.state.location || ''} onChange={this.update('location')}/>
           </label>
           <br/>
           <div className="bottom-buttons">

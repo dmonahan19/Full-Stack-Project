@@ -19,4 +19,4 @@ const BoardList = (props) => {
     );
 };
 
-export default PinIndexItem;
+export default BoardList;

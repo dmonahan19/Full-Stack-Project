@@ -11,6 +11,7 @@
  -ms-flex: 20%; /* IE10 */
   flex: 20%;
   max-width: 20%;
+  min-width: 20%;
   padding: 0 10px;
 }
 
