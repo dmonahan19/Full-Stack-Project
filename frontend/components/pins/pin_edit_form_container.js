@@ -5,10 +5,9 @@ import PinEditForm from './pin_edit_form'
 
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
-
+   
     const defaultPin= { title: '', description: '' };
-    const pin = state.entities.boards[state.ui.pinEdit] || defaultPin
+    const pin = state.entities.pins[state.ui.pinEdit] || defaultPin
     return ({
         pin: pin
     });

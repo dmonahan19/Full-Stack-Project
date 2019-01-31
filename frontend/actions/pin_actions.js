@@ -28,9 +28,15 @@ export const REMOVE_PIN = "REMOVE_PIN";
 )
 
 
+
   export const fetchPin = id => dispatch => (
     PinApiUtil.fetchPin(id).then(pin => dispatch(receivePin(pin)))
   );
+
+
+export const updatePin = pin => dispatch => (
+  PinApiUtil.updatePin(pin).then(pin => dispatch(receivePin(pin)))
+);
   
   export const createPin = pin => dispatch => (
     PinApiUtil.createPin(pin).then(pin => dispatch(receivePin(pin)))

@@ -29,6 +29,9 @@ const BoardIndexItem = ({ board, deleteBoard, openModal }) => {
         <ul className="left-board-index">
             <div className="picture-name">
                 {photo}
+             <li><Link to={`/boards/${board.id}`}>
+                <h2 className='board-title'>{board.title} </h2>
+            </Link></li> 
             </div>
                 <ul className= "right-board-index">
                    
@@ -36,7 +39,7 @@ const BoardIndexItem = ({ board, deleteBoard, openModal }) => {
                         <p> {board.numPins} Pins </p>
                     </Link></li>          
                     
-                    <li><Link to={`/boards/${board.id}/edit`}>
+                    <li><Link to={`/boards/${board.id}`}>
                         <p>7 days ago</p>
                     </Link></li> 
 

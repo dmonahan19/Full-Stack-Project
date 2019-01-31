@@ -1,6 +1,7 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom';
 import CreatePin from './create_pin'
+import { Link } from 'react-router-dom';
 
 class PinShow extends React.Component {
 
@@ -46,9 +47,10 @@ class PinShow extends React.Component {
        
         return (
             <div className='pin-background'>
+                <Link to={`/boards/${this.props.pin.board_id}`}><button className='home-pin-show'>Home</button></Link>
                 <div className='pin-show' >
                     <li className='dontshow'><button onClick={() => this.props.openModal('pineditform', this.props.match.params.pinId )} >
-                        <img className="edit-img" src={window.pencil} />
+                        <img className="edit-show-img" src={window.pencil} />
                     </button></li> 
                     <form onSubmit={this.handleSubmit}>
                     <label>

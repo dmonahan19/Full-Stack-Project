@@ -31,7 +31,7 @@ class PinIndexItem extends React.Component {
             onMouseLeave={this.offHover}
           > 
             {this.state.showSave ? (
-              <button className='button4' onClick={() => this.props.openModal('createpinform')} >
+              <button className='button4' onClick={() => this.props.openModal('pincreateform', this.props.pin.id)} >
                 <div className='whole-pin-button'>
                   <icon className='fas fa-thumbtack pin-index-icon'></icon>
                 <h1 className="pin-index-submit">Save</h1>

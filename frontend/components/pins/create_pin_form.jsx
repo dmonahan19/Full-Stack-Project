@@ -5,67 +5,62 @@ import {withRouter} from 'react-router-dom'
 class CreatePinForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = props.board;
+        this.state = this.props.pin;
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+
     componentDidMount() {
-        this.props.fetchPin(this.props.pin.id);
+        this.props.fetchPin(this.props.pin.id).then(() => {
+            this.setState(this.props.pin)
+        })
+        this.props.fetchBoards();
     }
-
-    componentDidUpdate(prevProps) {
-        if (prevProps.board.id != this.props.board.id) {
-            this.props.fetchBoard(this.props.board.id);
-        }
-    }
-
 
     update(field) {
-        return e => this.setState({
-            [field]: e.currentTarget.value
-        });
+        return (e) => {
+            this.setState({
+                [field]: e.target.value
+            });
+        };
     }
+
 
     handleSubmit(e) {
         e.preventDefault();
-        const board = Object.assign({}, this.state);
-        this.props.updateBoard(board).then(this.props.closeModal);
+        const pin = Object.assign({}, this.state);
+        this.props.createPin(pin).then(this.props.closeModal);
     }
-
 
     render() {
+    
+        const boards = this.props.boards.map((board, i) => {
+            return (
+                <option value={board.id} key={i}> {board.title} </option>
+            );
+        });
+       
         return (
-            <div >
-                <form className='edit-board-form' onSubmit={this.handleSubmit} >
+            <div className='pin-background'>
+                    <form onSubmit={this.handleSubmit}>
                     <div className='edit-board-x' onClick={this.props.closeModal}>X</div>
-                    <div className='top-board-edit-form'>
-                        <h2 className='edit-board-form-h2'>Edit Your Board</h2>
-                    </div>
-
-                    <label>Name
-              <input className='edit-board-form-input' type="text"
-                            value={this.state.title}
-                            onChange={this.update('title')}
-                            placeholder='Like "Places to Go" or "Recipies to Make"'
-                        />
+                    <label>
+                        <select className='pin-show-selector' value={this.state.board_id} onChange={this.update('board_id')}>
+                            <option value='0' disabled={true}>Choose a board (required)</option>
+                            {boards}
+                        </select>
+    
                     </label>
-                    <label>Description
-              <input className='edit-board-form-input-des' type="text"
-                            value={this.state.description}
-                            onChange={this.update('description')}
-                            placeholder="What's your board about?"
-                        />
-                    </label>
-                    <div className='edit-board-form-buttons'>
-                        <div>
-                            <button onClick={this.props.closeModal} className='edit-cancel-submit'>Cancel</button>
-                            <input className="edit-board-submit" type="submit" value="Save" />
+                    <input className='pin-show-submit'  type='submit' value='Save'></input>
+                    </form>
+                    <div class-name='photo-fit'>
+                        <div className='pin-show-photo'>
+                            <img className='pin-photo-img' src={ this.props.pin.photo }></img>
                         </div>
                     </div>
-                </form>
             </div>
-        );
-    }
+      
+                      )}
 }
 
 export default withRouter(CreatePinForm);

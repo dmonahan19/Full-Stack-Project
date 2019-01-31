@@ -21,13 +21,10 @@ class PinUserIndex extends React.Component{
 
         this.props.pins.forEach((pin, i) => {
             if (i % 4 === 0) {
-                if (i === 0) {
-                    col1.push(<CreatePin />)
-                }else{
                 col1.push(<PinUserIndexItem key={i}
                     pin={pin}
                     />);
-            }}
+            }
             if (i % 4 === 1) {
                 col2.push(<PinUserIndexItem  key={i}
                     pin={pin}

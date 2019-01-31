@@ -10,6 +10,7 @@ import BoardShowContainer from './boards/board_show_container'
 import PinShowContainer from './pins/pin_show_container'
 import PinBuilderContainer from './pins/pin_builder_container'
 import ProfileAllPins from './pins/profile_all_pins'
+import CreatePinFromContainer from './pins/create_pin_form_container'
 import Modal from './modal/modal'
 
 import {
@@ -33,9 +34,9 @@ import {
             <ProtectedRoute exact path="/users/:userId/boards" component={BoardsContainer}/>
             <ProtectedRoute path='/users/:userId/boards/:boardId/edit' component={EditBoardFormContainer} />
             <ProtectedRoute path='/boards/:boardId' component={BoardShowContainer} />
-            <ProtectedRoute path='/pin-builder' component={PinBuilderContainer} />
+        <ProtectedRoute path='/pin-builder' component={PinBuilderContainer} />
             <ProtectedRoute path='/pin/:pinId' component={PinShowContainer} />
-              <ProtectedRoute path='/users/:userId/pins' component={ProfileAllPins} />
+            <ProtectedRoute path='/users/:userId/pins' component={ProfileAllPins} />
         </Switch>
     </div>
   );

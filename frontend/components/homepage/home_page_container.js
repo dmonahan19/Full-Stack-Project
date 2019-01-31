@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
-import PinUserIndex from './pin_user_index';
-import { fetchUserPins } from '../../actions/pin_actions';
+import HomePage from './home_page'
+import { fetchUsersPins } from '../../actions/pin_actions';
 
 
 const mapStateToProps = (state) => {
- 
+
     let currentUserId = state.session.id;
     return ({
         currentUserId: currentUserId,
@@ -15,9 +15,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        fetchUserPins: (userId) => dispatch(fetchUserPins(userId)),
-        openModal: (modal, pinId) => dispatch(openModal(modal, pinId))
+        fetchUsersPins: () => dispatch(fetchUserPins()),
+      
     });
 };
 
-export default (connect(mapStateToProps, mapDispatchToProps)(PinUserIndex));
+export default (connect(mapStateToProps, mapDispatchToProps)(HomePage));

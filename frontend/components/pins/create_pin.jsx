@@ -1,20 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const CreatePin = (props) => {
 
         return (
             <>
-                <div className="create-board-page">
-                    <div className="create-board-square">
-                        <div className="create-small-square">
-                            <Link to='/pin-builder'> <button className="red-plus"> + </button> </Link>
+                <div className="create-board-page2">
+                    <div className="create-board-square2">
+                        <div className="create-small-square2">
+                            <Link to='/pin-builder'> <button className="red-plus2"> + </button> </Link>
                         </div>
-                        <h2 className="create-board-h1">Create Pin</h2>
+                        <h2 className="create-board-h12">Create Pin</h2>
                     </div>
                 </div>
             </>
         )
     }
+    
   
 
 export default CreatePin;

@@ -1,8 +1,19 @@
 .pin-photo-img{
     width: fit-content;
-    height: 550px;
+    max-width: 550px;
+    height: fit-content;
+    max-height: 600;
     margin-top: 20px;
     margin-left: 30px;
+}
+
+.home-pin-show{
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
 }
 
 .pin-show{
@@ -20,8 +31,8 @@
      width: 30px;
     height: 30px;
     filter: brightness(120%);
-    margin-top: 20px;
-    margin-left: 40px;
+    margin-top: 50px;
+    margin-left: 50px;
 }
 
 .splash2{

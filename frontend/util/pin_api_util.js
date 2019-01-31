@@ -28,9 +28,9 @@ export const fetchPins = (boardId) => (
     })
   );
 
-  export const updatePin = (id) => (
+  export const updatePin = (pin) => (
     $.ajax({
-      url: `/api/pins/${id}/`,
+      url: `/api/pins/${pin.id}`,
       method: 'PATCH',
       data: { pin }
     })
@@ -43,9 +43,9 @@ export const fetchPins = (boardId) => (
     })
   );
   
-//   export const fetchUsersPins = () => (
-//     $.ajax({
-//       url: ,
-//       method: 'GET'
-//     })
-//   );
+  export const fetchUsersPins = () => (
+    $.ajax({
+      url: `/api/users/${userId}/pins`,
+      method: 'GET'
+    })
+  );

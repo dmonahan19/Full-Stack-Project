@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 class BoardEditForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = props.board;
+    this.state = this.props.board;
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
