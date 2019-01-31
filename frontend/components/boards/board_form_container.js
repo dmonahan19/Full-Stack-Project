@@ -15,6 +15,7 @@ const mapStateToProps = (state) => {
     return ({
         createBoard: (board)=> dispatch(createBoard(board)),
         closeModal: () => dispatch(closeModal()),
+  
         // otherForm: (
         //   <button onClick={() => dispatch(openModal('boardform'))}>
         //     Create Board

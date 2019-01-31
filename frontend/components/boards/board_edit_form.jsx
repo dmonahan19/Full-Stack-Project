@@ -7,6 +7,7 @@ class BoardEditForm extends React.Component {
     super(props);
     this.state = this.props.board;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.doubleClick = this.doubleClick.bind(this)
   }
 
   componentDidMount() {
@@ -31,6 +32,13 @@ class BoardEditForm extends React.Component {
     const board = Object.assign({}, this.state);
     this.props.updateBoard(board).then(this.props.closeModal);
   }
+
+  doubleClick(){
+    this.props.closeModal();
+    this.props.deleteBoard(this.props.board.id);
+  }
+
+
 
 
   render() {
@@ -58,6 +66,7 @@ class BoardEditForm extends React.Component {
             </label>
             <div className='edit-board-form-buttons'>
               <div>
+              <button onClick={this.doubleClick}>Delete</button>
                 <button onClick={this.props.closeModal} className='edit-cancel-submit'>Cancel</button>
                 <input className="edit-board-submit" type="submit" value="Save" />
               </div>

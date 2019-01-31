@@ -14,9 +14,10 @@ const receiveAllBoards = payload => ({
     board
   });
   
-  const removeBoard = boardId => ({
+  const removeBoard = (payload) => ({
     type: REMOVE_BOARD,
-    boardId
+    boardId: payload.id,
+    userId: payload.user_id
   });
   
   export const fetchBoards = () => dispatch => (
@@ -35,6 +36,8 @@ const receiveAllBoards = payload => ({
     BoardApiUtil.updateBoard(board).then(board => dispatch(receiveBoard(board)))
   );
   
-  export const deleteBoard = boardId => dispatch => (
-    BoardApiUtil.deleteBoard(boardId).then(board => dispatch(removeBoard(boardId)))
-  );
+  export const deleteBoard = (boardId) => dispatch => {
+    debugger
+    return(
+    BoardApiUtil.deleteBoard(boardId).then( (boardId) => dispatch(removeBoard(boardId))))
+  };

@@ -7,8 +7,8 @@ class BoardIndex extends React.Component{
         this.props.fetchBoards()
     
     }
-
   
+
     
     render(){
       const boards = this.props.boards.map((board,i) => {

@@ -31,7 +31,7 @@ class Api::BoardsController < ApplicationController
         @board = Board.find(params[:id])
         @board.destroy
     
-        render :show
+        render json: {id: @board.id, user_id: @board.user_id}
       end
     
       private

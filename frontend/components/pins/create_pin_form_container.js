@@ -5,7 +5,6 @@ import { closeModal } from "../../actions/modal_actions"
 import CreatePinForm from './create_pin_form'
 
 const mapStateToProps = (state,ownProps) => {
-    debugger
     const pin = state.entities.pins[state.ui.pinEdit] || {}
 
     return ({

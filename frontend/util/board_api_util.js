@@ -28,7 +28,7 @@ export const fetchBoard = id => {
     })
 };
   
-  export const deleteBoard = id => {
+  export const deleteBoard = (id) => {
    return $.ajax({
       url: `api/boards/${id}`,
       method: 'DELETE'

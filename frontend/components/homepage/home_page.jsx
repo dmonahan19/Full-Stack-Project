@@ -11,6 +11,7 @@ class HomePage extends React.Component {
     
     componentDidMount() {
         this.props.fetchUsersPins()
+        this.props.fetchBoards()
 
     }
 
@@ -26,22 +27,26 @@ class HomePage extends React.Component {
             if (i % 4 === 0) {
                 col1.push(<PinHomeIndexItem key={i}
                     pin={pin}
-                    openModal={this.props.openModal} />);
+                    openModal={this.props.openModal}
+                    boards={this.props.boards} />);
             }
             if (i % 4 === 1) {
                 col2.push(<PinHomeIndexItem key={i}
                     pin={pin}
-                    openModal={this.props.openModal} />);
+                    openModal={this.props.openModal}
+                    boards={this.props.boards} />);
             }
             if (i % 4 === 2) {
                 col3.push(<PinHomeIndexItem key={i}
                     pin={pin}
-                    openModal={this.props.openModal} />);
+                    openModal={this.props.openModal} 
+                    boards={this.props.boards}/>);
             }
             if (i % 4 === 3) {
                 col4.push(<PinHomeIndexItem key={i}
                     pin={pin}
-                    openModal={this.props.openModal} />);
+                    openModal={this.props.openModal}
+                    boards={this.props.boards} />);
             }
         });
 

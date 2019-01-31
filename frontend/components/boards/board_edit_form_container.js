@@ -5,10 +5,12 @@ import EditBoardForm from '../boards/board_edit_form'
 
 
 const mapStateToProps = (state, ownProps) => {
-
+  let currentUserId = state.session.id;
   const defaultBoard = { title: '', description: '' };
   const board = state.entities.boards[state.ui.boardEdit] || defaultBoard
   return({
+    currentUserId: currentUserId,
+    user: state.entities.users[currentUserId],
     board: board
   });
 };
@@ -17,7 +19,7 @@ const mapStateToProps = (state, ownProps) => {
     return ({
         fetchBoard: (id) => dispatch(fetchBoard(id)),
         updateBoard: (board)=> dispatch(updateBoard(board)),
-        deleteBoard: (id) => dispatch(deleteBoard(id)),
+        deleteBoard: (boardId) => dispatch(deleteBoard(boardId)),
         closeModal: () => dispatch(closeModal()),
 
     });

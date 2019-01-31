@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class PinEditForm extends React.Component {
@@ -7,6 +8,7 @@ class PinEditForm extends React.Component {
         super(props);
         this.state = this.props.pin;
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.doubleClick = this.doubleClick.bind(this)
     }
 
     componentDidMount() {
@@ -17,6 +19,11 @@ class PinEditForm extends React.Component {
         if (prevProps.pin.id != this.props.pin.id) {
             this.props.fetchPin(this.props.pin.id);
         }
+    }
+
+    doubleClick() {
+        this.props.closeModal();
+        this.props.deletePin(this.props.pin.id);
     }
 
 
@@ -34,6 +41,7 @@ class PinEditForm extends React.Component {
 
 
     render() {
+     
         return (
             <div >
                 <form className='edit-board-form' onSubmit={this.handleSubmit} >
@@ -58,6 +66,7 @@ class PinEditForm extends React.Component {
                     </label>
                     <div className='edit-board-form-buttons'>
                         <div>
+                            <Link to={`/boards/${this.props.pin.board_id}`}><button onClick={this.doubleClick}>Delete</button></Link>
                             <button onClick={this.props.closeModal} className='edit-cancel-submit'>Cancel</button>
                             <input className="edit-board-submit" type="submit" value="Save" />
                         </div>

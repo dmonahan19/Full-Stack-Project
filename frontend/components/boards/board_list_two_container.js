@@ -1,8 +1,6 @@
 import { connect } from "react-redux";
-import HomePage from './home_page'
-import { fetchUsersPins } from '../../actions/pin_actions';
+import BoardListTwo from './board_list_two'
 import { fetchBoards } from '../../actions/board_actions'
-import { openModal } from "../../actions/modal_actions"
 
 
 const mapStateToProps = (state) => {
@@ -11,20 +9,18 @@ const mapStateToProps = (state) => {
     return ({
         currentUserId: currentUserId,
         user: state.entities.users[currentUserId],
-        pins: Object.values(state.entities.pins), 
         boards: Object.values(state.entities.boards),
-        openModal: (modal) => dispatch(openModal(modal)),
-   
+
     });
 };
 
 const mapDispatchToProps = (dispatch) => {
- 
+
     return ({
-        fetchUsersPins: () => dispatch(fetchUsersPins()),
+    
         fetchBoards: () => dispatch(fetchBoards())
-      
+
     });
 };
 
-export default (connect(mapStateToProps, mapDispatchToProps)(HomePage));
+export default (connect(mapStateToProps, mapDispatchToProps)(BoardListTwo));

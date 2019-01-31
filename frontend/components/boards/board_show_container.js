@@ -7,7 +7,6 @@ import { openModal } from '../../actions/modal_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
     const board = state.entities.boards[ownProps.match.params.boardId] || {};
     const pin = state.entities.pins[state.ui.pinEdit] || {}
     let currentUserId = state.session.id;
@@ -23,7 +22,7 @@ const mapStateToProps = (state, ownProps) => {
   
   const mapDispatchToProps = (dispatch) => {
     return ({
-        deleteBoard: id => dispatch(deleteBoard(id)),
+        deleteBoard: (id) => dispatch(deleteBoard(id)),
         fetchBoard: id => dispatch(fetchBoard(id)),
         fetchPins: boardId => dispatch(fetchPins(boardId)),
         openBoardModal: (modal, boardId) => dispatch(openModal(modal, {boardId})),

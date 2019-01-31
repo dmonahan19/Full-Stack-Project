@@ -9,7 +9,6 @@ const PinBoardShow = (props) => {
     let col4 = [];
     let i = 0 ;
     props.pins.forEach((pin) => {
-        debugger
         if (pin.board_id == props.match.params.boardId){
             if (i % 4 === 0) {
                 col1.push(<PinIndexItem key={i}
