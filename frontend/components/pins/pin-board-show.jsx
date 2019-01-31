@@ -1,31 +1,37 @@
 import React from 'react';
 import PinIndexItem from './pin_index_item'
+import {withRouter} from 'react-router-dom'
 
 const PinBoardShow = (props) => {
     let col1 = [];
     let col2 = [];
     let col3 = [];
     let col4 = [];
-    props.pins.forEach((pin, i) => {
-        if (i % 4 === 0) {
-            col1.push(<PinIndexItem key={i}
-                  pin={pin}
-                openModal={props.openModal}/>);
-        }
-        if (i % 4 === 1) {
-            col2.push(<PinIndexItem key={i}
-                pin={pin}
-                openModal={props.openModal} />);
-        }
-        if (i % 4 === 2) {
-            col3.push(<PinIndexItem key={i}
-                pin={pin}
-                openModal={props.openModal} />);
-        }
-        if (i % 4 === 3) {
-            col4.push(<PinIndexItem key={i}
-                pin={pin}
-                openModal={props.openModal} />);
+    let i = 0 ;
+    props.pins.forEach((pin) => {
+        debugger
+        if (pin.board_id == props.match.params.boardId){
+            if (i % 4 === 0) {
+                col1.push(<PinIndexItem key={i}
+                    pin={pin}
+                    openModal={props.openModal}/>);
+            }
+            if (i % 4 === 1) {
+                col2.push(<PinIndexItem key={i}
+                    pin={pin}
+                    openModal={props.openModal} />);
+            }
+            if (i % 4 === 2) {
+                col3.push(<PinIndexItem key={i}
+                    pin={pin}
+                    openModal={props.openModal} />);
+            }
+            if (i % 4 === 3) {
+                col4.push(<PinIndexItem key={i}
+                    pin={pin}
+                    openModal={props.openModal} />);
+            }
+            i++;
         }
     });
 
@@ -80,4 +86,4 @@ const PinBoardShow = (props) => {
     )
 }
 
-export default PinBoardShow;
+export default withRouter(PinBoardShow);

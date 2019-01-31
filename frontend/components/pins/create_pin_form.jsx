@@ -33,6 +33,7 @@ class CreatePinForm extends React.Component {
     }
 
     render() {
+        debugger
     
         const boards = this.props.boards.map((board, i) => {
             return (

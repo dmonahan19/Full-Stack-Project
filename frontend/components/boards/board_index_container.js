@@ -17,7 +17,7 @@ const mapStateToProps = (state) => {
     return ({
         fetchBoards: () => dispatch(fetchBoards()),
         deleteBoard: (id) => dispatch(deleteBoard(id)),
-        openModal: (modal,boardId)=> dispatch(openModal(modal,boardId))
+        openModal: (modal,boardId)=> dispatch(openModal(modal,{boardId}))
     });
   };
   

@@ -20,15 +20,12 @@ class BoardShow extends React.Component{
     
 
     render(){
-
-
-
           return (
             <>
                 <div className='board-show-top'>
                     <ul className='left-board-show-edit'>
                         <ul className="show-editlinks">
-                              <DropDownTwo openModal={this.props.openModal} />
+                              <DropDownTwo openModal={this.props.openBoardModal} />
                         </ul>
                     </ul>
                     <div className="show-info">
@@ -62,7 +59,7 @@ class BoardShow extends React.Component{
                 </div>
           
 
-                <PinBoardShow pins={this.props.pins} openModal={this.props.openModal}/>
+                <PinBoardShow pins={this.props.pins} openModal={this.props.openPinModal}/>
             </>
         )
     }

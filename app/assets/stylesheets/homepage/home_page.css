@@ -12,7 +12,6 @@
     -ms-flex-wrap: wrap; 
     flex-wrap: wrap;
     padding: 0 4px;
-    /* padding-bottom: 5px; */
 }
   
   
@@ -21,6 +20,11 @@
   flex: 20%;
   max-width: 20%;
   padding: 0 10px;
+
+}
+
+.column3 .whole-image-save{
+  padding-bottom: 50px;
 }
   
 .column3 img {
