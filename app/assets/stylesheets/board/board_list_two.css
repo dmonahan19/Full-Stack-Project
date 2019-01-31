@@ -1,0 +1,60 @@
+.board-index2 {
+    /* display:flex;
+    font-family: -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,"ＭＳ Ｐゴシック",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    border: 1px solid #efefef;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    box-sizing: border-box; */
+    padding: 5px;
+    padding-top: 10px; 
+    align-items: center;
+    width: 400px;
+
+}
+
+.board-index2:hover{
+    background: rgb(237, 237, 237);
+}
+
+.picture-name2{
+    display: flex;
+    align-items: center;
+}
+
+.picture-name2 img{
+    width: 50px;
+    height: 50px;
+}
+
+.left-board-index2{
+    width: 80%;
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+}
+
+
+
+
+.board-title2{
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.name2{
+    color: #909090;
+    margin-left: 300px;
+    margin-top: 20px;
+
+}
+
+.no-photo2{
+
+     background: #efefef;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}

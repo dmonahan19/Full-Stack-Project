@@ -18,7 +18,7 @@ const mapDispatchToProps = (dispatch) => {
     return ({
         fetchPin: id => dispatch(fetchPin(id)),
         fetchBoards: () => dispatch(fetchBoards()),
-        createPin: (itemId) => dispatch(createPin(itemId)),
+        createPin: (pin) => dispatch(createPin(pin)),
         closeModal: () => dispatch(closeModal()),
 
     });
