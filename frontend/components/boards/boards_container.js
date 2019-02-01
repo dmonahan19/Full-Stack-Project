@@ -1,12 +1,13 @@
 import { connect } from "react-redux";
 import Boards from './boards'
 import {closeModal } from "../../actions/modal_actions"
+import { withRouter } from 'react-router-dom'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     let currentUserId = state.session.id;
     return({
       currentUserId: currentUserId,
-      user: state.entities.users[currentUserId],
+      user: state.entities.users[ownProps.match.params.userId],
     });
   };
   
@@ -16,4 +17,4 @@ const mapStateToProps = (state) => {
     });
   };
   
-  export default connect(mapStateToProps, mapDispatchToProps)(Boards);
+  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Boards));

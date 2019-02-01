@@ -2,6 +2,7 @@ class Api::UsersController < ApplicationController
 
     def index
      @users = User.where(email: params[:search_query])
+     render "api/users/index"
     end 
 
     def create

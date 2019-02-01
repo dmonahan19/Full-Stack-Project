@@ -12,8 +12,16 @@ export const updateUser = (user,userId) => dispatch => {
             );
 };
 
-export const fetchSearchUsers = (searchQuery) => {
+export const fetchSearchUsers = (searchQuery, history) => {
     return dispatch => {
-        return UserApiUtil.fetchSearchUsers(searchQuery).then(users => dispatch(receiveSearchUsers(users)));
+        return UserApiUtil.fetchSearchUsers(searchQuery).then(users => {
+            dispatch(receiveSearchUsers(users));
+            history.push(`/users/${Object.keys(users)[0]}`);
+        });
     };
 };
+
+export const receiveSearchUsers = (users) => ({
+    type: RECEIVE_SEARCH_USERS,
+    users
+})

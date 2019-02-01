@@ -13,7 +13,7 @@ const usersReducer = (state={},action) => {
             newState[action.userId].board_ids = newState[action.userId].board_ids.filter(id => id != action.boardId);
             return newState
         case RECEIVE_SEARCH_USERS:
-            return Object.values(action.users);
+            return merge({}, state, action.users);
         default:
             return state;
     }

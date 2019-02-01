@@ -158,14 +158,17 @@
 }
 
 
-.board-link:hover{
+.board-link a:hover{
     background: #f0f0f0eb;
     border-radius: 25px;
     cursor: pointer;
     text-decoration: underline;
 }
+.board-link a{
+    padding: 10px; 
+}
 
-.board-link{
+.board-link {
     margin-right: 20px;
 }
 

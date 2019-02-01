@@ -160,11 +160,9 @@
     font-weight: bold;
     margin-left: 10px;
     font-size: 18px;
-    border-radius: 50%;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 4px;
-    padding-right: 4px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top:10px;
   
 }
 

@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import { logout } from '../../actions/session_actions';
 import { fetchSearchUsers } from '../../actions/user_actions'
 import NavBar from './nav_bar'
+import { withRouter } from 'react-router-dom'
 
 
 
@@ -13,11 +14,12 @@ const mapStateToProps = (state) => {
   });
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
+  const history = ownProps.history
   return ({
     logout: () => dispatch(logout()),
-    fetchSearchUsers: () => dispatch((fetchSearchUsers))
+    fetchSearchUsers: (searchQuery) => dispatch((fetchSearchUsers(searchQuery, history)))
   });
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar));

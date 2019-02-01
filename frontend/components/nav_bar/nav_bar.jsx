@@ -9,7 +9,7 @@ class NavBar extends React.Component{
             this.state = {
                 searchUser: ''
             }
-        
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     update(field) {
@@ -18,6 +18,14 @@ class NavBar extends React.Component{
                 [field]: e.target.value
             });
         };
+    }
+
+    handleSubmit(e){
+        e.preventDefault();
+        this.props.fetchSearchUsers(this.state.searchUser);
+        this.setState({
+            searchUser: ''
+        });
     }
 
 
@@ -48,7 +56,12 @@ class NavBar extends React.Component{
                 <ul className="left-nav">
                     <li> <Link to="/"> <img className='nav-logo' src={window.logo} /></Link></li>
                     <li><i className="fa fa-search fa-lg nav-icon"></i></li>
-                        <li className="searchbar"><input type="search" value={this.state.searchUser} onChange={this.update('searchUser')} placeholder="Search"/></li>
+                        <li className="searchbar">
+                            <form onSubmit={this.handleSubmit}>
+                                <input type="search" value={this.state.searchUser} onChange={this.update('searchUser')} placeholder="Search" />
+                                <input type="submit" hidden={true} value=""/>
+                            </form>
+                        </li>
                     <ul className="navlinks">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/following">Following</Link></li>

@@ -13,6 +13,6 @@ export const fetchSearchUsers = (searchQuery) => {
     return $.ajax({
         method: "GET",
         url: "/api/users",
-        data: { searchQuery }
+        data: { search_query: searchQuery }
     });
 };
