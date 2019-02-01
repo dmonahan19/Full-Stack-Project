@@ -34,11 +34,7 @@ class CreatePinForm extends React.Component {
     }
 
     render() {
-        //  const boards = this.props.boards.map((board, i) => {
-        //     return (
-        //         <option value={board.id} key={i}> {board.title} </option>
-        //     );
-        // });
+ 
        
         return (
 
@@ -49,7 +45,6 @@ class CreatePinForm extends React.Component {
                     <div className='pin-show-selector'>
                         <BoardIndexTwoContainer pin={this.props.pin} />
                     </div>
-                    {/* <input className='pin-show-submit'  type='submit' value='Save'></input> */}
                     </form>
     
                 <div class-name='photo-fit'>

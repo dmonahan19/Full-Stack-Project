@@ -6,6 +6,7 @@ const Profile = (props) => {
     if (props.currentUserId){
         let user
         let photo
+        let dot
         if(props.user.first_name && props.user.last_name){
             user = `${props.user.first_name} ${props.user.last_name}`
         }
@@ -21,6 +22,10 @@ const Profile = (props) => {
         }
         else{
             photo= window.empty
+        }
+
+        if(props.user.location && props.user.about_you){
+            dot = <li><span className="dot dot2"></span></li>
         }
     return(
         <>
@@ -40,7 +45,7 @@ const Profile = (props) => {
                     </ul>
                     <ul className='about-links'>
                         <li className="about-location">{props.user.location}</li>
-                        <li><span className="dot dot2"></span></li>
+                        {dot}
                         <li>{props.user.about_you || ""}</li>
                     </ul>
                 </div>
