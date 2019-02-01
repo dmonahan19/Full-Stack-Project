@@ -11,7 +11,7 @@
  -ms-flex: 20%; /* IE10 */
   flex: 20%;
   max-width: 20%;
-  min-width: 20%;
+  min-width: 200px;;
   padding: 0 10px;
 }
 
@@ -82,7 +82,10 @@ img{
   z-index: 5;
 }
 
-
+.pin-user-index-container{
+  position: relative;
+  left: 10%;
+}
 
 
 

@@ -72,6 +72,21 @@
 
 .edit-delete-submit{
     width: 75px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    background-color: rgb(237, 235, 235);
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 40px;
+
+}
+
+.edit-delete-submit{
+    width: 75px;
     box-sizing: border-box;
     border-radius: 5px;
     text-align: center;

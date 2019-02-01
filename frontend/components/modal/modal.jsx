@@ -24,6 +24,7 @@ function Modal({modal, closeModal}) {
       component = <PinEditFormContainer  />
       break;
     case 'pincreateform':
+    debugger
       component = <CreatePinFormContainer />
       break;
     case 'boardList':

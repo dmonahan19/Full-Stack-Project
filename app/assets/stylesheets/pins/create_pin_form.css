@@ -1,7 +1,10 @@
 .pin-create-form-background{
     width: 800px;
-    height: 800px;
+    height: 720px;
     background: white;
+
+
+    /* you were fixing the height of the show */
 }
 
 .pin-create-form-photo{
@@ -9,6 +12,7 @@
     height: auto;
     margin-left: 50px;
     border-top: 1px solid grey;
+    margin-bottom: 30px;
 }
 
 .pin-create-form-h1{

@@ -31,8 +31,8 @@ class PinHomeIndexItem extends React.Component {
             >
                 {this.state.showSave ? (
                     <>
-                        {/* <button className='drop-down-boards' onClick={() => this.props.openModal('boardList')}>{this.props.boards[0].title}</button> */}
-                    <button className='button4' >
+                        
+                        <button className='button4' onClick={() => this.props.openModal('pincreateform', this.props.pin.id)}>
                         <div className='whole-pin-button'>
                             <icon className='fas fa-thumbtack pin-index-icon'></icon>
                             <h1 className="pin-index-submit">Save</h1>

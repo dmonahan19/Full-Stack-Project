@@ -18,27 +18,31 @@ class PinUserIndex extends React.Component{
         let col2 = [];
         let col3 = [];
         let col4 = [];
-        col1.push(<CreatePin />);
+        col1.push(<CreatePin key={0} />);
         let i = 1;
 
         this.props.pins.forEach((pin) => {
             if (i % 4 === 1) {
                 col1.push(<PinUserIndexItem key={i}
                     pin={pin}
+                    openModal={this.props.openModal}
                 />);
             }
             if (i % 4 === 2) {
                 col2.push(<PinUserIndexItem  key={i}
                     pin={pin}
+                    openModal={this.props.openModal}
                     />);
             }
             if (i % 4 === 3) {
                 col3.push(<PinUserIndexItem key={i}
+                    openModal={this.props.openModal}
                     pin={pin}
                      />);
             }
             if (i % 4 === 0) {
                 col4.push(<PinUserIndexItem key={i}
+                    openModal={this.props.openModal}
                     pin={pin}
                      />);
             }

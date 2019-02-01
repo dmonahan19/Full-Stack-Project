@@ -18,7 +18,7 @@ class ProfileAllPins extends React.Component {
                     <>
                         <div className="board-profile-divs">
                             <div>{ < ProfileContainer />}</div>
-                            <div>{<PinUserIndexContainer />} </div> :
+                            <div className='pin-user-index-container'>{<PinUserIndexContainer />} </div> :
                         </div>
                     </>
                 </div>

@@ -65,8 +65,8 @@ class PinEditForm extends React.Component {
                         />
                     </label>
                     <div className='edit-board-form-buttons'>
+                        <Link to={`/boards/${this.props.pin.board_id}`}><button className='edit-delete-submit' onClick={this.doubleClick}>Delete</button></Link>
                         <div>
-                            <Link to={`/boards/${this.props.pin.board_id}`}><button onClick={this.doubleClick}>Delete</button></Link>
                             <button onClick={this.props.closeModal} className='edit-cancel-submit'>Cancel</button>
                             <input className="edit-board-submit" type="submit" value="Save" />
                         </div>
