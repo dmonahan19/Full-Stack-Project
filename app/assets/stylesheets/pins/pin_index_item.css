@@ -41,6 +41,7 @@
 .whole-pin-button{
     z-index: 5;
     position: relative;
+    left: -10px;
 
 }
 
