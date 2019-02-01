@@ -6,6 +6,7 @@ import EditBoardFormContainer from '../boards/board_edit_form_container';
 import PinEditFormContainer from '../pins/pin_edit_form_container';
 import CreatePinFormContainer from '../pins/create_pin_form_container'
 import BoardListTwoContainer from '../boards/board_list_two_container'
+import HomePageCreatePinContainer from '../homepage/home_page_create_pin_container';
 
 
 function Modal({modal, closeModal}) {
@@ -29,6 +30,9 @@ function Modal({modal, closeModal}) {
     case 'boardList':
       component = <BoardListTwoContainer />
       break;
+    case 'boardListHomePage':
+      component = <HomePageCreatePinContainer />
+      break; 
     default:
       return null;
   }

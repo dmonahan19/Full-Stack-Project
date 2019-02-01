@@ -34,11 +34,11 @@ class CreatePinForm extends React.Component {
     }
 
     render() {
-         const boards = this.props.boards.map((board, i) => {
-            return (
-                <option value={board.id} key={i}> {board.title} </option>
-            );
-        });
+        //  const boards = this.props.boards.map((board, i) => {
+        //     return (
+        //         <option value={board.id} key={i}> {board.title} </option>
+        //     );
+        // });
        
         return (
 
