@@ -39,7 +39,7 @@ class PinHomeIndexItem extends React.Component {
                         </div>
                     </button> </>) : (null)}
 
-                <Link to={`/pin/${this.props.pin.id}`}><img className='image4-hover' src={this.props.pin.photo} /></Link>
+                        <img className='image4-hover' src={this.props.pin.photo} />
                 <div className='pin-show-page-title'>{this.props.pin.title}</div>
             </div>
 

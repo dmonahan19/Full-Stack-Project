@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
         user: state.entities.users[currentUserId],
         pins: Object.values(state.entities.pins), 
         boards: Object.values(state.entities.boards),
-        openModal: (modal) => dispatch(openModal(modal)),
+       
    
     });
 };
@@ -22,8 +22,8 @@ const mapDispatchToProps = (dispatch) => {
  
     return ({
         fetchUsersPins: () => dispatch(fetchUsersPins()),
-        fetchBoards: () => dispatch(fetchBoards())
-      
+        fetchBoards: () => dispatch(fetchBoards()),
+       openModal: (modal, pinId) => dispatch(openModal(modal, { pinId }))
     });
 };
 
