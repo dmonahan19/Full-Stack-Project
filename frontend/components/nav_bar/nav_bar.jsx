@@ -2,24 +2,44 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const NavBar = (props) => {
+class NavBar extends React.Component{ 
+
+    constructor(props){
+        super(props)
+            this.state = {
+                searchUser: ''
+            }
+        
+    }
+
+    update(field) {
+        return (e) => {
+            this.setState({
+                [field]: e.target.value
+            });
+        };
+    }
+
+
+
+    render(){
     let photo
     let user
-    if (props.currentUserId){   
-        if(props.user.photo){
-                photo = <img className="nav-profile-picture" src={props.user.photo}/>
+    if (this.props.currentUserId){   
+        if(this.props.user.photo){
+                photo = <img className="nav-profile-picture" src={this.props.user.photo}/>
             }
-        else if(props.user.first_name){
-            photo = <div className="nav-photo">{props.user.first_name[0]}</div>
+        else if(this.props.user.first_name){
+            photo = <div className="nav-photo">{this.props.user.first_name[0]}</div>
         }
         else{
-                photo = <div className="nav-photo">{props.user.email[0]}</div>
+                photo = <div className="nav-photo">{this.props.user.email[0]}</div>
         }
-       if(props.user.first_name){
-            user = props.user.first_name
+       if(this.props.user.first_name){
+            user = this.props.user.first_name
         }
         else{
-            user = props.user.email.split("@")[0]  
+            user = this.props.user.email.split("@")[0]  
         }
     return(
     <div>
@@ -28,21 +48,23 @@ const NavBar = (props) => {
                 <ul className="left-nav">
                     <li> <Link to="/"> <img className='nav-logo' src={window.logo} /></Link></li>
                     <li><i className="fa fa-search fa-lg nav-icon"></i></li>
-                    <li className="searchbar"><input type="search" placeholder="Search" name="search"/></li>
+                        <li className="searchbar"><input type="search" value={this.state.searchUser} onChange={this.update('searchUser')} placeholder="Search"/></li>
                     <ul className="navlinks">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/following">Following</Link></li>
 
                         <div className="nav-photo-name">
-                            <li><Link to={`/users/${props.currentUserId}`}>{photo}</Link></li>
-                            <li><Link to={`/users/${props.currentUserId}`}>{user}</Link></li>
+                            <li><Link to={`/users/${this.props.currentUserId}`}>{photo}</Link></li>
+                            <li><Link to={`/users/${this.props.currentUserId}`}>{user}</Link></li>
                         </div>
-                        <li ><button className='buttonnav' onClick={props.logout}>Log Out</button></li>
+                        <li ><button className='buttonnav' onClick={this.props.logout}>Log Out</button></li>
                     </ul>
                 </ul>
         </nav>
         </>
+          
     </div>
+    
     )}
     else{
         return null;
@@ -50,5 +72,7 @@ const NavBar = (props) => {
 
 //   return props.currentUser ? showNavBar() : sessionLinks()
     }
+
+}
 
 export default NavBar;

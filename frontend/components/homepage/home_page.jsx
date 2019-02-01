@@ -18,7 +18,7 @@ class HomePage extends React.Component {
 
 
     render() {
-        debugger
+        
         let col1 = [];
         let col2 = [];
         let col3 = [];

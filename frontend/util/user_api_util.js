@@ -7,3 +7,12 @@ export const updateUser = (user,userId) => {
         processData: false
     });
 };
+
+
+export const fetchSearchUsers = (searchQuery) => {
+    return $.ajax({
+        method: "GET",
+        url: "/api/users",
+        data: { searchQuery }
+    });
+};

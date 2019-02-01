@@ -1,4 +1,5 @@
-import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER} from '../actions/session_actions';
+import { RECEIVE_SEARCH_USERS } from '../actions/user_actions'
 import { REMOVE_BOARD } from '../actions/board_actions'
 import { merge } from 'lodash';
 
@@ -11,6 +12,8 @@ const usersReducer = (state={},action) => {
             let newState = merge({}, state)
             newState[action.userId].board_ids = newState[action.userId].board_ids.filter(id => id != action.boardId);
             return newState
+        case RECEIVE_SEARCH_USERS:
+            return Object.values(action.users);
         default:
             return state;
     }

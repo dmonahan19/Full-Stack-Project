@@ -1,4 +1,9 @@
 class Api::UsersController < ApplicationController
+
+    def index
+     @users = User.where(email: params[:search_query])
+    end 
+
     def create
       @user = User.new(new_user_params)
   
