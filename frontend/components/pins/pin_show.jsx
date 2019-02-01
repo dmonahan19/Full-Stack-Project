@@ -10,6 +10,7 @@ class PinShow extends React.Component {
         super(props)
         this.state = this.props.pin;
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.navigateToShowBoards = this.navigateToShowBoards.bind(this)
     }
 
     componentDidMount() {
@@ -27,6 +28,10 @@ class PinShow extends React.Component {
         };
     }
     
+    navigateToShowBoards() {
+        const url = `/users/${this.props.currentUserId}`
+        this.props.history.push(url);
+    }
 
 
 
@@ -34,6 +39,7 @@ class PinShow extends React.Component {
         e.preventDefault();
         // const pin = Object.assign({}, this.state);
         // this.props.createPin(pin);
+        this.navigateToShowBoards()
     }
 
  

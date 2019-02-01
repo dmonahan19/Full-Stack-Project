@@ -8,6 +8,7 @@ class CreatePinForm extends React.Component {
         super(props);
         this.state = this.props.pin;
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.navigateToShowBoards = this.navigateToShowBoards.bind(this);
     }
 
 
@@ -26,11 +27,16 @@ class CreatePinForm extends React.Component {
         };
     }
 
+    navigateToShowBoards() {
+        const url = `/users/${this.props.currentUserId}`
+        this.props.history.push(url);
+    }
+
 
     handleSubmit(e) {
         e.preventDefault();
-      
         this.props.closeModal()
+        this.navigateToShowBoards()
     }
 
     render() {
