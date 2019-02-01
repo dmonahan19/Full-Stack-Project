@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class PinBuilder extends React.Component{
 
@@ -15,12 +16,20 @@ class PinBuilder extends React.Component{
         };
         this.handleSubmit = this.handelSubmit.bind(this)
         this.handleFile = this.handleFile.bind(this)
+        this.navigateToShowBoards = this.navigateToShowBoards.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchBoards();
 
     }
+
+
+    navigateToShowBoards() {
+        const url = `/users/${this.props.currentUserId}`
+        this.props.history.push(url);
+    }
+
 
 
     update(field) {
@@ -40,6 +49,8 @@ class PinBuilder extends React.Component{
         formData.append('item[website_url]', this.state.website_url);
         formData.append('item[photo]', this.state.photoFile);
         this.props.createItem(formData);
+
+        this.navigateToShowBoards()
     }
 
     handleFile(e) {
@@ -141,4 +152,4 @@ class PinBuilder extends React.Component{
 
 
 
-export default PinBuilder
+export default withRouter(PinBuilder)

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import ChangePicture from './change_picture'
+import { withRouter } from 'react-router-dom'
 
 class ProfileForm extends React.Component{
   
@@ -15,8 +15,14 @@ class ProfileForm extends React.Component{
         photoUrl: props.user.photoUrl || null
       }
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.navigateToShowBoards = this.navigateToShowBoards.bind(this);
       
     }
+
+  navigateToShowBoards() {
+    const url = `/users/${this.props.currentUserId}`
+    this.props.history.push(url);
+  }
   
     handleSubmit(e){
       e.preventDefault();
@@ -29,6 +35,8 @@ class ProfileForm extends React.Component{
         formData.append('user[photo]',this.props.photoFile)
       }
       this.props.updateUser(formData,this.props.currentUserId)
+      
+      this.navigateToShowBoards()
     }
     
   
@@ -114,4 +122,4 @@ class ProfileForm extends React.Component{
     }
 }
   
-  export default ProfileForm
+  export default withRouter(ProfileForm)
