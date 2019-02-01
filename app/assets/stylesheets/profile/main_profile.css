@@ -25,7 +25,6 @@
 }
 
 .editlinks > li {
-    padding: 0px;
     box-sizing: border-box;
     height: 30px;
     width: 30px;
@@ -41,6 +40,7 @@
 .edit-img{
     width: 30px;
     height: 30px;
+    border-radius: 50%;
     filter: brightness(120%);
     margin-top: 2px;
 }
@@ -52,6 +52,7 @@
     top: -15px;
     width: 30px;
     height: 30px;
+    border-radius: 50%;
 }
 
 .profile-user-info {
@@ -168,11 +169,15 @@
     padding: 10px; 
 }
 
+.pin-link a{
+    padding: 10px; 
+}
+
 .board-link {
     margin-right: 20px;
 }
 
-.pin-link:hover{
+.pin-link a:hover{
     background: #f0f0f0b1;
     border-radius: 25px;
     cursor: pointer;

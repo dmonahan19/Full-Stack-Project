@@ -37,9 +37,10 @@ class PinIndexItem extends React.Component {
                 <h1 className="pin-index-submit">Save</h1>
                 </div>
                 </button>) : (null)}
-
-            <Link to={`/pin/${this.props.pin.id}`}><img className='image4-hover' src={this.props.pin.photo} /></Link>
-            <div className='pin-show-page-title'>{this.props.pin.title}</div>
+            <div className='picture-title-hover'>
+              <Link to={`/pin/${this.props.pin.id}`}><img className='image4-hover' src={this.props.pin.photo} /></Link>
+              <div className='pin-show-page-title2'>{this.props.pin.title}</div>
+            </div>
           </div>
 
  

@@ -1,6 +1,6 @@
 .create-board-page2{
   position: relative;
-  top: 10px;
+  top: 12px;
     
 }
 
@@ -33,6 +33,7 @@
 
  .create-board-h12{
     padding-top: 5px;
+    padding-bottom: 10px;
     color: #939292;
     font-size: 18px;
     font-family:  "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", arial, sans-serif;;

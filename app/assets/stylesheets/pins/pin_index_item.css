@@ -44,10 +44,20 @@
 
 }
 
-.pin-show-image:hover{
-    background: rgba(226, 226, 226, 0.337);
+.pin-show-page-title2{
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 
+.picture-title-hover{
+     padding: 5px 10px 0 10px;
+     border-radius: 8px;
+}
+
+.picture-title-hover:hover{
+     background: rgba(226, 226, 226, 0.337);
 }
 
 .whole-image-save{
@@ -61,7 +71,8 @@
 }
 
 .image4-hover:hover{
-   filter: brightness(80%)
-   
+   filter: brightness(80%)  
 }
+
+
 

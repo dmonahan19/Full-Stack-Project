@@ -38,6 +38,8 @@
 .right-board-index {
     display:flex;
     padding-left: 50px;
+    width: 300px;
+    align-items: center;
 }
 
 .right-board-index> li {
@@ -49,7 +51,6 @@
 
 .right-board-index img{
     position: relative;
-    top: -7px;
     border-radius: 50%;
 }
 
