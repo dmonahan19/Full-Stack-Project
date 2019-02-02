@@ -56,8 +56,8 @@ const Profile = (props) => {
             <div className= "profile-user-info2">
                 <div>
                     <ul className="boardpin-links">
-                        <li className='board-link'><Link to={`/users/${props.currentUserId}/boards`}>Boards</Link></li>
-                        <li className='pin-link'><Link to={`/users/${props.currentUserId}/pins`}>Pins</Link></li>
+                        <li className='board-link'><Link to={`/users/${props.user.id}/boards`}>Boards</Link></li>
+                        <li className='pin-link'><Link to={`/users/${props.user.id}/pins`}>Pins</Link></li>
                     </ul>
                 </div>
                 <ul>
