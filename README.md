@@ -6,8 +6,20 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+ 
+##Technology
+- Rails
+- React/Redux
+- Postgres
+- Ajax
+- jBuilder
+- Amazon Web Services
 
-* System dependencies
+## Languages
+
+- Ruby version 5.2
+- JavaScript
+
 
 * Configuration
 

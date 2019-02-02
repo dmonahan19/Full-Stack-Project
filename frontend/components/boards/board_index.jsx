@@ -4,10 +4,16 @@ import BoardIndexItem from './board_index_item'
 class BoardIndex extends React.Component{
 
     componentDidMount(){
-        this.props.fetchBoards()
+        this.props.fetchBoards(this.props.user.id)
     
     }
+
   
+    componentDidUpdate(prevProps) {
+        if (prevProps.user.id != this.props.user.id) {
+          this.props.fetchBoards(this.props.user.id);
+        }
+      }
 
     
     render(){
@@ -18,6 +24,8 @@ class BoardIndex extends React.Component{
               board={board}
               deleteBoard={this.props.deleteBoard}
               openModal={this.props.openModal}
+              user={this.props.user}
+              currentUserId={this.props.currentUserId}
             />
         );
       });

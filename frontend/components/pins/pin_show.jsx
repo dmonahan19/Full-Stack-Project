@@ -17,7 +17,7 @@ class PinShow extends React.Component {
         this.props.fetchPin(this.props.match.params.pinId).then(() => {
             this.setState(this.props.pin)
         })
-        this.props.fetchBoards();
+        this.props.fetchBoards(this.props.currentUserId);
     }
 
     update(field) {
@@ -46,11 +46,7 @@ class PinShow extends React.Component {
   
 
     render() {
-        const boards = this.props.boards.map((board, i) => {
-            return (
-                <option value={board.id} key={i}> {board.title} </option>
-            );
-        });
+
        
         return (
             <div className='pin-background'>
@@ -60,14 +56,7 @@ class PinShow extends React.Component {
                         <img className="edit-show-img" src={window.pencil} />
                     </button></li> 
                     <form onSubmit={this.handleSubmit}>
-                    {/* <label>
-                        <select className='pin-show-selector' value={this.state.board_id} onChange={this.update('board_id')}>
-                            <option value='0' disabled={true}>Choose a board (required)</option>
-                            {boards}
-                        </select>
-    
-                    </label>
-                    <input className='pin-show-submit'  type='submit' value='Save'></input> */}
+
                         <div className='pin-show-selector'>
                             <BoardIndexTwoContainer pin={this.props.pin} />
                         </div>

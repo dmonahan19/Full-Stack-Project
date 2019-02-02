@@ -5,7 +5,7 @@ import { closeModal } from '../modal/modal'
 class BoardIndexTwo extends React.Component {
 
     componentDidMount() {
-        this.props.fetchBoards()
+        this.props.fetchBoards(this.props.currentUserId)
 
     }
 

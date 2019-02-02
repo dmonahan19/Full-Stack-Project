@@ -13,52 +13,32 @@ const PinBoardShow = (props) => {
             if (i % 4 === 0) {
                 col1.push(<PinIndexItem key={i}
                     pin={pin}
-                    openModal={props.openModal}/>);
+                    openModal={props.openModal}
+                   />);
             }
             if (i % 4 === 1) {
                 col2.push(<PinIndexItem key={i}
                     pin={pin}
-                    openModal={props.openModal} />);
+                    openModal={props.openModal}
+                    />);
             }
             if (i % 4 === 2) {
                 col3.push(<PinIndexItem key={i}
                     pin={pin}
-                    openModal={props.openModal} />);
+                    openModal={props.openModal}
+                    />);
             }
             if (i % 4 === 3) {
                 col4.push(<PinIndexItem key={i}
                     pin={pin}
-                    openModal={props.openModal} />);
+                    openModal={props.openModal}
+                    />);
             }
             i++;
         }
     });
 
-    // return (
-    //     <>
-        
-
-    //     <div className='splash2'>
-    //         <div className='show2'>
-    //             <ul className="column1">
-    //                 {col1}
-    //             </ul>
-
-    //             <ul className="column1">
-    //                 {col2}
-    //             </ul>
-
-    //             <ul className="column1">
-    //                 {col3}
-    //             </ul>
-
-    //             <ul className="column1">
-    //                 {col4}
-    //             </ul>
-    //         </div>
-    //     </div>
-    //     </>
-    // )
+    
     return (
         <>
         

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import DropDown from './drop_down'
 
 const Profile = (props) => {
-    if (props.currentUserId){
+   
         let user
         let photo
         let dot
@@ -67,10 +67,8 @@ const Profile = (props) => {
             
             </div>
         </>
-    )}
-    else{
-        return null;
-    }
+    )
+   
 }
 
 export default Profile;
