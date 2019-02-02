@@ -7,6 +7,7 @@ const Profile = (props) => {
         let user
         let photo
         let dot
+        let dropDown
         if(props.user.first_name && props.user.last_name){
             user = `${props.user.first_name} ${props.user.last_name}`
         }
@@ -27,13 +28,16 @@ const Profile = (props) => {
         if(props.user.location && props.user.about_you){
             dot = <li><span className="dot dot2"></span></li>
         }
+        if (props.currentUserId === props.user.id){
+            dropDown = <ul className="editlinks">
+                <DropDown openModal={props.openModal} />
+            </ul>
+        }
     return(
         <>
            <div className='main-profile'>
            <ul className='left-edit'>
-                <ul className="editlinks">
-                  <DropDown openModal={props.openModal}/>
-            </ul>
+                {dropDown}
             </ul>
             <div className="profile-user-info">
                 <div>
