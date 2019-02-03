@@ -1,6 +1,6 @@
 class Api::BoardsController < ApplicationController
     def index
-        @boards = current_user.boards
+        @boards = User.find(params[:user_id]).boards 
       end
     
       def show

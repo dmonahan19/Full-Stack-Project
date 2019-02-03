@@ -2,6 +2,7 @@ import React from 'react';
 import DropDownTwo from './drop_down_two'
 import PinIndexItem from '../pins/pin_index_item'
 import PinBoardShow from '../pins/pin-board-show'
+import withRouter from 'react-router-dom'
 
 
 class BoardShow extends React.Component{
@@ -59,11 +60,11 @@ class BoardShow extends React.Component{
                 </div>
           
 
-                <PinBoardShow pins={this.props.pins} openModal={this.props.openPinModal}/>
+                <PinBoardShow pins={this.props.pins} openModal={this.props.openPinModal} user={this.props.user}/>
             </>
         )
     }
 }
 
 
-export default BoardShow
+export default (BoardShow)

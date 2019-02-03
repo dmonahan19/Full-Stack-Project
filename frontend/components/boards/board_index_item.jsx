@@ -27,6 +27,7 @@ class BoardIndexItem extends React.Component {
 
 render(){
     let photo
+    let editButton
     if (this.props.board.photo) {
         photo = <li><Link to={`/boards/${this.props.board.id}`}>
             <img src={this.props.board.photo} />
@@ -39,6 +40,18 @@ render(){
             <div className='no-photo'></div>
 
         </Link></li>
+    }
+    if (this.props.currentUserId === this.props.user.id){
+       editButton = < div >
+            {
+                this.state.showSave ? (
+                    <li className='dontshow'><button onClick={() => this.props.openModal('editboardform', this.props.board.id)} >
+                        <img className="edit-img" src={window.pencil} />
+                    </button></li>) : (null)
+            }    
+    </div > } 
+    else {
+        editButton = null
     }
 
     return (
@@ -63,10 +76,7 @@ render(){
                         <p>7 days ago</p>
                     </Link></li> 
                     <div>
-                        {this.state.showSave ? (
-                            <li className='dontshow'><button onClick={() => this.props.openModal('editboardform', this.props.board.id)} >
-                                <img className="edit-img" src={window.pencil} />
-                            </button></li> ) : (null)}    
+                       {editButton} 
                     </div>        
                 </ul>
             </ul>

@@ -9,8 +9,14 @@ class PinUserIndex extends React.Component{
     }
 
     componentDidMount(){
-        this.props.fetchUserPins(this.props.currentUserId)
+        this.props.fetchUserPins(this.props.user.id)
 
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.user.id != this.props.user.id) {
+            this.props.fetchUserPins(this.props.user.id);
+        }
     }
 
     render(){
@@ -18,7 +24,8 @@ class PinUserIndex extends React.Component{
         let col2 = [];
         let col3 = [];
         let col4 = [];
-        col1.push(<CreatePin key={0} />);
+        this.props.currentUserId === this.props.user.id ?
+        col1.push(<CreatePin key={0} />) : null;
         let i = 1;
 
         this.props.pins.forEach((pin) => {

@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import DropDown from './drop_down'
 
 const Profile = (props) => {
-    if (props.currentUserId){
+   
         let user
         let photo
         let dot
+        let dropDown
         if(props.user.first_name && props.user.last_name){
             user = `${props.user.first_name} ${props.user.last_name}`
         }
@@ -27,13 +28,16 @@ const Profile = (props) => {
         if(props.user.location && props.user.about_you){
             dot = <li><span className="dot dot2"></span></li>
         }
+        if (props.currentUserId === props.user.id){
+            dropDown = <ul className="editlinks">
+                <DropDown openModal={props.openModal} />
+            </ul>
+        }
     return(
         <>
            <div className='main-profile'>
            <ul className='left-edit'>
-                <ul className="editlinks">
-                  <DropDown openModal={props.openModal}/>
-            </ul>
+                {dropDown}
             </ul>
             <div className="profile-user-info">
                 <div>
@@ -56,8 +60,8 @@ const Profile = (props) => {
             <div className= "profile-user-info2">
                 <div>
                     <ul className="boardpin-links">
-                        <li className='board-link'><Link to={`/users/${props.currentUserId}/boards`}>Boards</Link></li>
-                        <li className='pin-link'><Link to={`/users/${props.currentUserId}/pins`}>Pins</Link></li>
+                        <li className='board-link'><Link to={`/users/${props.user.id}/boards`}>Boards</Link></li>
+                        <li className='pin-link'><Link to={`/users/${props.user.id}/pins`}>Pins</Link></li>
                     </ul>
                 </div>
                 <ul>
@@ -67,10 +71,8 @@ const Profile = (props) => {
             
             </div>
         </>
-    )}
-    else{
-        return null;
-    }
+    )
+   
 }
 
 export default Profile;
