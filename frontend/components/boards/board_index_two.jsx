@@ -1,6 +1,6 @@
 import React from 'react'
 import BoardIndexItemTwo from './board_index_item_two'
-import { closeModal } from '../modal/modal'
+
 
 class BoardIndexTwo extends React.Component {
 
