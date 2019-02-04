@@ -21,14 +21,21 @@ class BoardShow extends React.Component{
     
 
     render(){
+        let buttons
+        if (this.props.user.board_ids.includes(this.props.board.id)) {
+           buttons = <ul className='left-board-show-edit'>
+                <ul className="show-editlinks">
+                    <DropDownTwo openModal={this.props.openBoardModal} />
+                </ul>
+            </ul>
+        }
+        else {
+            buttons = null
+        }
           return (
             <>
                 <div className='board-show-top'>
-                    <ul className='left-board-show-edit'>
-                        <ul className="show-editlinks">
-                              <DropDownTwo openModal={this.props.openBoardModal} />
-                        </ul>
-                    </ul>
+                 {buttons}
                     <div className="show-info">
                         <div>
                             <h1 className="board-show-title">{this.props.board.title}</h1>
