@@ -1,11 +1,14 @@
 import { connect } from "react-redux";
 import {openModal } from "../../actions/modal_actions"
 import CreateBoard from '../boards/create_board'
+import { withRouter } from 'react-router-dom'
 
-  const mapStateToProps = (state) => {
-    
+  const mapStateToProps = (state, ownProps) => {
+    let currentUserId = state.session.id;
     return({
-     boards: Object.values(state.entities.boards)
+      currentUserId: currentUserId,
+      user: state.entities.users[ownProps.match.params.userId], 
+      boards: Object.values(state.entities.boards)
     });
   };
 
@@ -16,4 +19,4 @@ import CreateBoard from '../boards/create_board'
     });
   };
   
-  export default connect(mapStateToProps, mapDispatchToProps)(CreateBoard);
+  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CreateBoard));
