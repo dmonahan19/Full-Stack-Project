@@ -69,7 +69,7 @@ render(){
                 <ul className= "right-board-index">
                    
                    <li> <Link to={`/boards/${this.props.board.id}`}>
-                        <p> {this.props.board.numPins} Pins </p>
+                        <p> {this.props.board.numPins ? this.props.board.numPins : 0} Pins </p>
                     </Link></li>          
                     
                     <li><Link to={`/boards/${this.props.board.id}`}>
