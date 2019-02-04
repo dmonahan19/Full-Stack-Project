@@ -6,8 +6,9 @@ import CreatePinForm from './create_pin_form'
 
 const mapStateToProps = (state,ownProps) => {
     const pin = state.entities.pins[state.ui.pinEdit] || {}
-
+    let currentUserId = state.session.id;
     return ({
+        currentUserId: currentUserId,
         pin: pin,
         boards: Object.values(state.entities.boards)
 
@@ -17,7 +18,7 @@ const mapStateToProps = (state,ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return ({
         fetchPin: id => dispatch(fetchPin(id)),
-        fetchBoards: () => dispatch(fetchBoards()),
+        fetchBoards: (userId) => dispatch(fetchBoards(userId)),
         createPin: (pin) => dispatch(createPin(pin)),
         closeModal: () => dispatch(closeModal()),
 

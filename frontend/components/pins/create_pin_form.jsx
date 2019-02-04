@@ -16,7 +16,7 @@ class CreatePinForm extends React.Component {
         this.props.fetchPin(this.props.pin.id).then(() => {
             this.setState(this.props.pin)
         })
-        this.props.fetchBoards();
+        this.props.fetchBoards(this.props.currentUserId);
     }
 
     update(field) {

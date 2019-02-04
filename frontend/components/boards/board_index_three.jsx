@@ -1,11 +1,11 @@
 import React from 'react'
 import BoardIndexItemTwo from './board_index_item_two'
-import { closeModal } from '../modal/modal'
+
 
 class BoardIndexThree extends React.Component {
 
     componentDidMount() {
-        this.props.fetchBoards()
+        this.props.fetchBoards(this.props.currentUserId)
 
     }
 
