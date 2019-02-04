@@ -46,15 +46,22 @@ class PinShow extends React.Component {
   
 
     render() {
-
+        let editButton
+        if (this.props.user.board_ids.includes(this.props.pin.board_id)){
+            editButton = <li className='dontshow'><button onClick={() => this.props.openModal('pineditform', this.props.match.params.pinId)} >
+                <img className="edit-show-img" src={window.pencil} />
+            </button></li> 
+        }
+        else{
+            editButton = null
+        }
        
         return (
             <div className='pin-background'>
                 <Link to={`/boards/${this.props.pin.board_id}`}><button className='home-pin-show'> <i  className="fas fa-chevron-left back-button"></i> Board </button></Link>
+            
                 <div className='pin-show' >
-                    <li className='dontshow'><button onClick={() => this.props.openModal('pineditform', this.props.match.params.pinId )} >
-                        <img className="edit-show-img" src={window.pencil} />
-                    </button></li> 
+                 {editButton}
                     <form onSubmit={this.handleSubmit}>
 
                         <div className='pin-show-selector'>

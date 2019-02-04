@@ -3,7 +3,7 @@ import PinShow from './pin_show';
 import { fetchPin, deletePin, createPin } from '../../actions/pin_actions';
 import { withRouter } from 'react-router-dom';
 import { fetchBoards } from '../../actions/board_actions'
-import { openModal, closeModal } from "../../actions/modal_actions"
+import { openModal } from "../../actions/modal_actions"
 
 
 
@@ -13,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
 
     return ({
         currentUserId: currentUserId,
-        user: state.entities.users[ownProps.match.params.userId],
+        user: state.entities.users[currentUserId],
         pin: pin,
         boards: Object.values(state.entities.boards)
 
