@@ -13,6 +13,8 @@
 class Board < ApplicationRecord
     validates :title, :user_id, presence: true;
 
+    include Following
+
     has_many :pins,
         foreign_key: :board_id,
         primary_key: :id,
@@ -22,4 +24,5 @@ class Board < ApplicationRecord
         foreign_key: :user_id,
         primary_key: :id,
         class_name: :User
+
 end

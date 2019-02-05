@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import DropDown from './drop_down'
 
 const Profile = (props) => {
-   
         let user
         let photo
         let dot
         let dropDown
+        let follow
         if(props.user.first_name && props.user.last_name){
+    
             user = `${props.user.first_name} ${props.user.last_name}`
         }
         else if(props.user.first_name){
@@ -25,7 +26,7 @@ const Profile = (props) => {
             photo= window.empty
         }
 
-        if(props.user.location && props.user.about_you){
+        if (props.user.location && props.user.about_you){
             dot = <li><span className="dot dot2"></span></li>
         }
         if (props.currentUserId === props.user.id){
@@ -33,11 +34,22 @@ const Profile = (props) => {
                 <DropDown openModal={props.openModal} />
             </ul>
         }
+
+        if (props.currentUserId === props.user.id){
+            follow = null 
+        }
+        else{
+            follow = <li><button onClick={ () => props.createFollow({
+                following_type: 'User',
+                following_id: props.user.id
+            })} className='follow-button'>Follow</button></li> 
+        }
     return(
         <>
            <div className='main-profile'>
            <ul className='left-edit'>
-                {dropDown}
+                <li>{dropDown}</li> 
+                {follow}
             </ul>
             <div className="profile-user-info">
                 <div>

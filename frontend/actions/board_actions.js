@@ -20,6 +20,7 @@ const receiveAllBoards = payload => ({
     userId: payload.user_id
   });
   
+
   export const fetchBoards = (userId) => dispatch => (
     BoardApiUtil.fetchBoards(userId).then( boards => dispatch(receiveAllBoards(boards)))
   );

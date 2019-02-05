@@ -11,7 +11,7 @@ class HomePage extends React.Component {
     
     componentDidMount() {
         this.props.fetchUsersPins()
-        this.props.fetchBoards()
+        this.props.fetchBoards(this.props.currentUserId)
 
     }
 

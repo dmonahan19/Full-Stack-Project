@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     end 
     resources :items do 
       resources :pins, only: [:create]
-    end 
+    end
+    resources :follows, only: [:create, :destroy] 
   end 
 end

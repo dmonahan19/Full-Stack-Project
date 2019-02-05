@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CreateBoard = (props) => {
-    if (props.boards.length < 1 && props.currentUserId === props.user.id) {
+    if (props.boards.length < 1 && props.currentUserId === props.match.params.userId) {
     return(
     <>
     <div className="create-board-page">

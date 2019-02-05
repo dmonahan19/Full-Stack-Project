@@ -1,3 +1,4 @@
+
 export const fetchBoards = (userId) => {
     return $.ajax({
         method: "GET",

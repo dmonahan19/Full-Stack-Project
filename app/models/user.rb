@@ -24,6 +24,9 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
+
+    include Following
+
     has_one_attached :photo
 
     has_many :boards,
@@ -34,6 +37,15 @@ class User < ApplicationRecord
     has_many :pins,
         through: :boards,
         source: :pins
+    
+    # has_many  :follows,
+    #     foreign_key: :user_id,
+    #     primary_key: :id,
+    #     class_name: :User
+        
+        
+
+    # has_many :follows, as: :following
     
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
