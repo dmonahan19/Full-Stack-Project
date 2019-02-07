@@ -5,6 +5,9 @@ import FollowButton from '../follow/follow_button'
 
 
 const Profile = (props) => {
+    if (!props.user){
+        return null
+    }
         let user
         let photo
         let dot
@@ -43,6 +46,7 @@ const Profile = (props) => {
                 <li>{dropDown}</li> 
                 <FollowButton currentUserId={props.currentUserId}
                     user={props.user}
+                    follows={props.follows}
                     createFollow={props.createFollow}
                     deleteFollow={props.deleteFollow}
                    />
@@ -51,7 +55,7 @@ const Profile = (props) => {
                 <div>
                     <h1 className="profile-user">{user}</h1>
                     <ul className="follow-links">
-                        <li className="follow1"><Link to='user/userId/:followers'>followers</Link></li>
+                            <li className="follow1"><Link to={`/users/${props.user.id}/followers`}>followers</Link></li>
                         <li><span className="dot follow2"></span></li>
                         <li className="follow3"><Link to="user/userId/:following">following</Link></li>
                     </ul>

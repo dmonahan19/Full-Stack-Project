@@ -3,6 +3,7 @@ import BoardIndexItem from './board_index_item'
 
 class BoardIndex extends React.Component{
 
+
     componentDidMount(){
         this.props.fetchBoards(this.props.user.id)
     
@@ -17,6 +18,9 @@ class BoardIndex extends React.Component{
 
     
     render(){
+      if(!this.props.user){
+        return null
+      }
       const boards = this.props.boards.map((board,i) => {
         return (
             <BoardIndexItem

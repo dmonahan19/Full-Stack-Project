@@ -9,7 +9,7 @@ const receiveFollow = follow => ({
 
 const removeFollow = (followId) => ({
     type: REMOVE_FOLLOW,
-    followId
+    followId,
 });
 
 export const createFollow = (followtype) => dispatch => (

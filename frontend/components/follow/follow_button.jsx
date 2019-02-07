@@ -4,30 +4,34 @@ class FollowButton extends React.Component {
 
     constructor(props) {
         super(props)
-        this.state = {following: false}
+        this.state = {follow: false}
+        this.follow = this.follow.bind(this)
+        this.unfollow = this.unfollow.bind(this)
     }
+    
 
-    doubleFollowClick(){
-        () => this.props.createFollow({
+    follow(){
+        this.props.createFollow({
             following_type: 'User',
             following_id: this.props.user.id
-        })
-        this.setState({ following: !following });
+        }).then(
+        this.setState({follow: true}))
+    }
+
+    unfollow(){
+        this.props.deleteFollow(this.props.user.follower_ids[this.props.currentUserId]).then(
+        this.setState({ follow: false }))
     }
 
     render() {
-        let followId = this.props.user.follower_ids[this.props.currentUserId]
         let follow
         if (this.props.currentUserId === this.props.user.id) {
             return null
         }
-        this.props.user.following_ids.includes(this.props.currentUserId) ?
-           follow = <li><button onClick={() => this.props.deleteFollow(followId)} className='unfollow-button'>Unfollow</button></li>
+        this.state.follow ?
+           follow = <li><button onClick={this.unfollow} className='unfollow-button'>Unfollow</button></li>
                 :
-           follow = <li><button onClick={() => this.props.createFollow({
-                following_type: 'User',
-                following_id: this.props.user.id
-            })} className='follow-button'>Follow</button></li>
+           follow = <li><button onClick={this.follow} className='follow-button'>Follow</button></li>
             
         return follow
 
