@@ -4,11 +4,10 @@ class Api::FollowsController < ApplicationController
     end
          
     def create
-        debugger
          @follow = Follow.new(follow_params)
          @follow.user_id = current_user.id
         if @follow.save
-          render json: {id: @follow.id, user_id: @follow.user_id}
+          render json: {id: @follow.id, following_id: @follow.following_id}
         else
           render json: @follow.errors.full_messages, status: 422
         end
@@ -19,7 +18,7 @@ class Api::FollowsController < ApplicationController
         @follow = Follow.find(params[:id])
         @follow.destroy
     
-        render json: {id: @follow.id, user_id: @follow.user_id}
+        render json: {id: @follow.id, following_id: @follow.following_id}
     end
     
     private

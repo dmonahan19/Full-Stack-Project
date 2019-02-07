@@ -9,6 +9,7 @@ export const createFollow = followtype => {
 
 
 export const deleteFollow = (id) => {
+
     return $.ajax({
         url: `api/follows/${id}`,
         method: 'DELETE'

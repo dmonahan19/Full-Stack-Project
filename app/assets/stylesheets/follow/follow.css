@@ -1,0 +1,24 @@
+.follow-button{
+    width: 90px;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-color: #e60000;
+    margin-left: 675px;
+    font-size: 18px;
+}
+
+.unfollow-button{
+    width: 110px;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    background-color: #efefef;
+    margin-left: 675px;
+    font-size: 18px;
+    font-weight: bold;
+}

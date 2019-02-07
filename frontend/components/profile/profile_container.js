@@ -9,13 +9,15 @@ const mapStateToProps = (state, ownProps) => {
     return({
       currentUserId: currentUserId,
       user: state.entities.users[ownProps.match.params.userId],
+      follows: state.entities.follows
     });
   };
   
   const mapDispatchToProps = (dispatch) => {
     return ({
       openModal: (modal)=> dispatch(openModal(modal)),
-      createFollow:  (follow) => dispatch(createFollow(follow))
+      createFollow:  (follow) => dispatch(createFollow(follow)),
+       deleteFollow: (followId) => dispatch(deleteFollow(followId))
     });
   };
   

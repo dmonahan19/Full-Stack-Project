@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DropDown from './drop_down'
+import FollowButton from '../follow/follow_button'
+
 
 const Profile = (props) => {
         let user
         let photo
         let dot
         let dropDown
-        let follow
         if(props.user.first_name && props.user.last_name){
     
             user = `${props.user.first_name} ${props.user.last_name}`
@@ -35,21 +36,16 @@ const Profile = (props) => {
             </ul>
         }
 
-        if (props.currentUserId === props.user.id){
-            follow = null 
-        }
-        else{
-            follow = <li><button onClick={ () => props.createFollow({
-                following_type: 'User',
-                following_id: props.user.id
-            })} className='follow-button'>Follow</button></li> 
-        }
     return(
         <>
            <div className='main-profile'>
            <ul className='left-edit'>
                 <li>{dropDown}</li> 
-                {follow}
+                <FollowButton currentUserId={props.currentUserId}
+                    user={props.user}
+                    createFollow={props.createFollow}
+                    deleteFollow={props.deleteFollow}
+                   />
             </ul>
             <div className="profile-user-info">
                 <div>
