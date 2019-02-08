@@ -3,6 +3,9 @@ import FollowIndexItem from './follow_index_item'
 
 class Followers extends React.Component {
 
+    // componentDidMount(){
+    //     this.props.fetchUsersFollows(currentUserId)
+    // }
 
     render() {
         const follows = this.props.user.follower_ids.map((follow, i) => {
@@ -10,7 +13,8 @@ class Followers extends React.Component {
                 <FollowIndexItem
                     key={i}
                     follow={follow}
-                    user={this.props.users[follow]}
+                    user={this.props.user}
+                    users={this.props.users}
                     currentUserId={this.props.currentUserId}
                 />
             );

@@ -7,14 +7,14 @@ const mapStateToProps = (state, ownProps) => {
     return ({
         users: state.entities.users,
         currentUserId: currentUserId,
-        user: state.entities.users[ownProps.match.params.userId],
+        user: state.entities.users[currentUserId],
     });
 };
 
-// const mapDispatchToProps = (dispatch) => {
-//     return ({
+const mapDispatchToProps = (dispatch) => {
+    return ({
+        fetchUsersFollows: (userId) => dispatch(fetchUsersFollows(userId))
+    });
+};
 
-//     });
-// };
-
-export default withRouter(connect(mapStateToProps, null)(Followers));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Followers));

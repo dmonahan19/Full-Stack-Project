@@ -19,7 +19,15 @@ class FollowButton extends React.Component {
     }
 
     unfollow(){
-        this.props.deleteFollow(this.props.user.follower_ids[this.props.currentUserId]).then(
+        let deleteUser
+        if( this.props.follows[parseInt(Object.keys(this.props.follows)[Object.keys(this.props.follows).length - 1])].user_id === this.props.currentUserId){
+            deleteUser = parseInt(Object.keys(this.props.follows)[Object.keys(this.props.follows).length - 1])
+        }
+        else{
+            deleteUser = this.props.user.follower_ids[this.props.currentUserId]
+        }
+
+        this.props.deleteFollow(deleteUser).then(
         this.setState({ follow: false }))
     }
 

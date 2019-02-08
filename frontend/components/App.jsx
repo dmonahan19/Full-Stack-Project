@@ -13,7 +13,7 @@ import ProfileAllPins from './pins/profile_all_pins'
 import CreatePinFromContainer from './pins/create_pin_form_container'
 import HomePageContainer from './homepage/home_page_container'
 import Modal from './modal/modal'
-import Followers from './follow/followers_container'
+import Followers from './follow/followers'
 
 import {
     Route,
@@ -40,7 +40,7 @@ import {
             <ProtectedRoute path='/pin-builder' component={PinBuilderContainer} />
             <ProtectedRoute path='/pin/:pinId' component={PinShowContainer} />
             <ProtectedRoute path='/users/:userId/pins' component={ProfileAllPins} />
-            <ProtectedRoute path='/users/:userId/pins' component={Followers} />
+            <ProtectedRoute path='/users/:userId/followers' component={Followers} />
       
     </div>
   );

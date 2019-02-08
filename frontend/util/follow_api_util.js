@@ -15,3 +15,10 @@ export const deleteFollow = (id) => {
         method: 'DELETE'
     })
 };
+
+export const fetchUserFollows = (userId) => (
+    $.ajax({
+        method: 'GET',
+        url: `/api/users/${userId}/follows`
+    })
+);
