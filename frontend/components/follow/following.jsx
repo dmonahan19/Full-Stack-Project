@@ -8,24 +8,57 @@ class Following extends React.Component {
     }
 
     render() {
-        const follows = this.props.follows.map((follow, i) => {
-            return (
-                <FollowingIndexItem
+        let col1 = [];
+        let col2 = [];
+        let col3 = [];
+        let col4 = [];
+        let i = 0;
+       this.props.follows.map((follow) => {
+            if (i % 4 === 0) {
+                col1.push(<FollowingIndexItem
                     key={i}
                     follow={follow}
-                    // user={this.props.user}
-                    // currentUserId={this.props.currentUserId}
-                />
-            );
-        });
-
+                />);
+            }
+            if (i % 4 === 1) {
+                col2.push(<FollowingIndexItem
+                    key={i}
+                    follow={follow}
+                />);
+            }
+            if (i % 4 === 2) {
+                col3.push(<FollowingIndexItem
+                    key={i}
+                    follow={follow}
+                />);
+            }
+            if (i % 4 === 3) {
+                col4.push(<FollowingIndexItem
+                    key={i}
+                    follow={follow}
+                />);
+            }
+            i++
+        })
         return (
-            <div >
-                <h2 className='name'>Name</h2>
-                <ul className=''>
-                    {follows}
-                </ul>
+            <>
+            <div className='splash2'>
+                <div className="row2">
+                    <div className="column2">
+                        {col1}
+                    </div>
+                    <div className="column2">
+                        {col2}
+                    </div>
+                    <div className="column2">
+                        {col3}
+                    </div>
+                    <div className="column2">
+                        {col4}
+                    </div>
+                </div>
             </div>
+        </>
         );
     }
 

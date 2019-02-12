@@ -29,8 +29,16 @@ class FollowingIndexItem extends React.Component {
 
         return (
             <>
-                <li><img className="following-profile-picture" src={photo} /></li>
-                <li>{user}</li>
+                <div className='name-and-following'>
+                    <li><img className="following-profile-picture" src={photo} /></li>
+                    <li className="following-name">{user}</li>
+                    <ul className="board-and-followers">
+                        <li className="follow1">13 boards</li>
+                        <li><span className="dot follow2"></span></li>
+                        <li className="follow3">48 followers</li>
+                    </ul>
+
+                </div>
             </>
         )
 
