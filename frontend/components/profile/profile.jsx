@@ -57,7 +57,7 @@ const Profile = (props) => {
                     <ul className="follow-links">
                             <li className="follow1"><Link to={`/users/${props.user.id}/followers`}>followers</Link></li>
                         <li><span className="dot follow2"></span></li>
-                        <li className="follow3"><Link to="user/userId/:following">following</Link></li>
+                            <li className="follow3"><Link to={`/users/${props.user.id}/following`}>following</Link></li>
                     </ul>
                     <ul className='about-links'>
                         <li className="about-location">{props.user.location}</li>

@@ -12,6 +12,7 @@ export const updateUser = (user,userId) => dispatch => {
             );
 };
 
+
 export const fetchSearchUsers = (searchQuery, history) => {
     return dispatch => {
         return UserApiUtil.fetchSearchUsers(searchQuery).then(users => {

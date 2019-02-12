@@ -10,7 +10,7 @@ class FollowIndexItem extends React.Component {
 
 
         return (
-            <li>{this.props.user.email}</li>
+            <li>{this.props.user_id}</li>
         )
            
     }

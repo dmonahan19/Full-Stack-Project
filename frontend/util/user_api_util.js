@@ -16,3 +16,4 @@ export const fetchSearchUsers = (searchQuery) => {
         data: { search_query: searchQuery }
     });
 };
+

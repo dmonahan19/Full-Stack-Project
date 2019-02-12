@@ -1,20 +1,20 @@
 import React from 'react'
-import FollowIndexItem from './follow_index_item'
+import FollowingIndexItem from './following_index_item'
 
-class Followers extends React.Component {
+class Following extends React.Component {
 
-    componentDidMount(){
-        this.props.fetchFollows(this.props.user.follow_ids)
+    componentDidMount() {
+        this.props.fetchFollows()
     }
 
     render() {
         const follows = this.props.follows.map((follow, i) => {
             return (
-                <FollowIndexItem
+                <FollowingIndexItem
                     key={i}
                     follow={follow}
-                    user={this.props.user}
-                    currentUserId={this.props.currentUserId}
+                    // user={this.props.user}
+                    // currentUserId={this.props.currentUserId}
                 />
             );
         });
@@ -30,4 +30,4 @@ class Followers extends React.Component {
     }
 
 }
-export default Followers
+export default Following

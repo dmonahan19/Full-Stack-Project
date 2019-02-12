@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Followers from './followers'
+import Following from './following'
 import { withRouter } from 'react-router-dom'
 import { fetchFollows } from '../../actions/follow_actions'
 
@@ -14,8 +14,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        fetchFollows: (userId) => dispatch(fetchFollows(userId)),
+        fetchFollows: () => dispatch(fetchFollows()),
     });
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Followers));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Following));
