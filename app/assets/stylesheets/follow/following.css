@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 
 .board-and-followers{
@@ -26,4 +27,22 @@
     font-size: 16px;
     justify-content: center;
     margin-top: 5px;
+}
+
+.splash3{
+   position: absolute;
+    top: 20%;
+    left: 12%;
+    z-index: -1;
+}
+
+.following-button{
+    width: 200px;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-color: #e60000;
+    font-size: 18px;
 }

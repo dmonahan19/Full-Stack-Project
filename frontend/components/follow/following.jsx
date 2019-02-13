@@ -18,31 +18,43 @@ class Following extends React.Component {
                 col1.push(<FollowingIndexItem
                     key={i}
                     follow={follow}
+                    user={this.props.user}
+                    createFollow={this.props.createFollow}
+                    deleteFollow={this.props.deleteFollow}
                 />);
             }
             if (i % 4 === 1) {
                 col2.push(<FollowingIndexItem
                     key={i}
                     follow={follow}
+                    user={this.props.user}
+                    createFollow={this.props.createFollow}
+                    deleteFollow={this.props.deleteFollow}
                 />);
             }
             if (i % 4 === 2) {
                 col3.push(<FollowingIndexItem
                     key={i}
                     follow={follow}
+                    user={this.props.user}
+                    createFollow={this.props.createFollow}
+                    deleteFollow={this.props.deleteFollow}
                 />);
             }
             if (i % 4 === 3) {
                 col4.push(<FollowingIndexItem
                     key={i}
                     follow={follow}
+                    user={this.props.user}
+                    createFollow={this.props.createFollow}
+                    deleteFollow={this.props.deleteFollow}
                 />);
             }
             i++
         })
         return (
             <>
-            <div className='splash2'>
+            <div className='splash3'>
                 <div className="row2">
                     <div className="column2">
                         {col1}

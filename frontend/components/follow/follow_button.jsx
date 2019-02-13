@@ -19,13 +19,14 @@ class FollowButton extends React.Component {
     }
 
     unfollow(){
+        
         let deleteUser
-        if( this.props.follows[parseInt(Object.keys(this.props.follows)[Object.keys(this.props.follows).length - 1])].user_id === this.props.currentUserId){
-            deleteUser = parseInt(Object.keys(this.props.follows)[Object.keys(this.props.follows).length - 1])
-        }
-        else{
+        // if( this.props.follows[parseInt(Object.keys(this.props.follows)[Object.keys(this.props.follows).length - 1])].user_id === this.props.currentUserId){
+        //     deleteUser = parseInt(Object.keys(this.props.follows)[Object.keys(this.props.follows).length - 1])
+        // }
+        // else{
             deleteUser = this.props.user.follower_ids[this.props.currentUserId]
-        }
+        // }
 
         this.props.deleteFollow(deleteUser).then(
         this.setState({ follow: false }))
@@ -36,7 +37,7 @@ class FollowButton extends React.Component {
         if (this.props.currentUserId === this.props.user.id) {
             return null
         }
-        this.state.follow ?
+        this.props.user.follower_ids[this.props.currentUserId] ?
            follow = <li><button onClick={this.unfollow} className='unfollow-button'>Unfollow</button></li>
                 :
            follow = <li><button onClick={this.follow} className='follow-button'>Follow</button></li>

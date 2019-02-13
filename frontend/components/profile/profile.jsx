@@ -44,12 +44,14 @@ const Profile = (props) => {
            <div className='main-profile'>
            <ul className='left-edit'>
                 <li>{dropDown}</li> 
-                <FollowButton currentUserId={props.currentUserId}
-                    user={props.user}
-                    follows={props.follows}
-                    createFollow={props.createFollow}
-                    deleteFollow={props.deleteFollow}
-                   />
+                    <div>
+                        <FollowButton currentUserId={props.currentUserId}
+                            user={props.user}
+                            follows={props.follows}
+                            createFollow={props.createFollow}
+                            deleteFollow={props.deleteFollow}
+                        />
+                </div>
             </ul>
             <div className="profile-user-info">
                 <div>

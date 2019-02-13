@@ -1,4 +1,5 @@
 import React from 'react';
+import FollowButton2 from './follow_button_2'
 
 
 class FollowingIndexItem extends React.Component {
@@ -37,6 +38,14 @@ class FollowingIndexItem extends React.Component {
                         <li><span className="dot follow2"></span></li>
                         <li className="follow3">48 followers</li>
                     </ul>
+                    <div>
+                        <FollowButton2 currentUserId={this.props.currentUserId}
+                            user={this.props.user}
+                            follow={this.props.follow}
+                            createFollow={this.props.createFollow}
+                            deleteFollow={this.props.deleteFollow}
+                        />
+                    </div>
 
                 </div>
             </>
