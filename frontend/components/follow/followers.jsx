@@ -16,11 +16,13 @@ class Follower extends React.Component {
         let col4 = [];
         let i = 0;
         this.props.users.map((user) => {
-            if(user.id != this.props.currentUserId ){
+            if (user.id != this.props.currentUserId ){
                 if (i % 4 === 0) {
                     col1.push(<FollowerIndexItem
                         key={i}
                         user={user}
+                        currentUser={this.props.user}
+                        currentUserId={this.props.currentUserId}
                         createFollow={this.props.createFollow}
                         deleteFollow={this.props.deleteFollow}
                     />);
@@ -29,6 +31,8 @@ class Follower extends React.Component {
                     col2.push(<FollowerIndexItem
                         key={i}
                         user={user}
+                        currentUser={this.props.user}
+                        currentUserId={this.props.currentUserId}
                         createFollow={this.props.createFollow}
                         deleteFollow={this.props.deleteFollow}
                     />);
@@ -37,6 +41,8 @@ class Follower extends React.Component {
                     col3.push(<FollowerIndexItem
                         key={i}
                         user={user}
+                        currentUser = {this.props.user}
+                        currentUserId={this.props.currentUserId}
                         createFollow={this.props.createFollow}
                         deleteFollow={this.props.deleteFollow}
                     />);
@@ -45,6 +51,8 @@ class Follower extends React.Component {
                     col4.push(<FollowerIndexItem
                         key={i}
                         user={user}
+                        currentUser={this.props.user}
+                        currentUserId={this.props.currentUserId}
                         createFollow={this.props.createFollow}
                         deleteFollow={this.props.deleteFollow}
                     />);
