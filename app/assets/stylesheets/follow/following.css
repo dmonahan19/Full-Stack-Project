@@ -1,3 +1,4 @@
+
 .following-profile-picture{
     border-radius: 50%;
     width: 225px;
@@ -46,3 +47,16 @@
     background-color: #e60000;
     font-size: 18px;
 }
+
+.unfollow-button-2{
+    width: 200px;
+    padding: 6px 9px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    background-color: #efefef;
+    font-size: 18px;
+    font-weight: bold;
+}
+

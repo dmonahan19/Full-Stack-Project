@@ -46,7 +46,6 @@ class FollowingIndexItem extends React.Component {
                             deleteFollow={this.props.deleteFollow}
                         />
                     </div>
-
                 </div>
             </>
         )

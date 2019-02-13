@@ -14,6 +14,7 @@ class Following extends React.Component {
         let col4 = [];
         let i = 0;
        this.props.follows.map((follow) => {
+           if(follow.user_id === this.props.currentUserId){
             if (i % 4 === 0) {
                 col1.push(<FollowingIndexItem
                     key={i}
@@ -51,7 +52,7 @@ class Following extends React.Component {
                 />);
             }
             i++
-        })
+        }})
         return (
             <>
             <div className='splash3'>

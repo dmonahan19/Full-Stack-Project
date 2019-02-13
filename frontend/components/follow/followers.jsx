@@ -1,33 +1,80 @@
 import React from 'react'
-import FollowIndexItem from './follow_index_item'
+import FollowingIndexItem from './following_index_item'
 
-class Followers extends React.Component {
+class Follower extends React.Component {
 
-    componentDidMount(){
-        this.props.fetchFollows(this.props.user.follow_ids)
+    componentDidMount() {
+        this.props.fetchFollows()
     }
 
     render() {
-        const follows = this.props.follows.map((follow, i) => {
-            return (
-                <FollowIndexItem
-                    key={i}
-                    follow={follow}
-                    user={this.props.user}
-                    currentUserId={this.props.currentUserId}
-                />
-            );
-        });
-
+        let col1 = [];
+        let col2 = [];
+        let col3 = [];
+        let col4 = [];
+        let i = 0;
+        this.props.follows.map((follow) => {
+            if (follow.following_id === this.props.currentUserId) {
+                if (i % 4 === 0) {
+                    col1.push(<FollowingIndexItem
+                        key={i}
+                        follow={follow}
+                        user={this.props.user}
+                        createFollow={this.props.createFollow}
+                        deleteFollow={this.props.deleteFollow}
+                    />);
+                }
+                if (i % 4 === 1) {
+                    col2.push(<FollowingIndexItem
+                        key={i}
+                        follow={follow}
+                        user={this.props.user}
+                        createFollow={this.props.createFollow}
+                        deleteFollow={this.props.deleteFollow}
+                    />);
+                }
+                if (i % 4 === 2) {
+                    col3.push(<FollowingIndexItem
+                        key={i}
+                        follow={follow}
+                        user={this.props.user}
+                        createFollow={this.props.createFollow}
+                        deleteFollow={this.props.deleteFollow}
+                    />);
+                }
+                if (i % 4 === 3) {
+                    col4.push(<FollowingIndexItem
+                        key={i}
+                        follow={follow}
+                        user={this.props.user}
+                        createFollow={this.props.createFollow}
+                        deleteFollow={this.props.deleteFollow}
+                    />);
+                }
+                i++
+            }
+        })
         return (
-            <div >
-                <h2 className='name'>Name</h2>
-                <ul className=''>
-                    {follows}
-                </ul>
-            </div>
+            <>
+                <div className='splash3'>
+                    <div className="row2">
+                        <div className="column2">
+                            {col1}
+                        </div>
+                        <div className="column2">
+                            {col2}
+                        </div>
+                        <div className="column2">
+                            {col3}
+                        </div>
+                        <div className="column2">
+                            {col4}
+                        </div>
+                    </div>
+                </div>
+            </>
         );
     }
 
 }
-export default Followers
+export default Follower

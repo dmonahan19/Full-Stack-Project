@@ -29,7 +29,7 @@ class FollowButton2 extends React.Component {
             return null
         }
         this.props.follow.follow_ids.includes(this.props.follow.id) ?
-            follow = <li><button onClick={this.unfollow}>Unfollow</button></li>
+            follow = <li className='unfollow-button-2'><button onClick={this.unfollow}>Unfollow</button></li>
             :
             follow = <li><button onClick={this.follow}>Follow</button></li>
 

@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import Followers from './followers'
+import Follow from './followers'
 import { withRouter } from 'react-router-dom'
-import { fetchFollows } from '../../actions/follow_actions'
+import { fetchFollows, createFollow, deleteFollow } from '../../actions/follow_actions'
 
 const mapStateToProps = (state, ownProps) => {
     let currentUserId = state.session.id;
@@ -14,8 +14,10 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        fetchFollows: (userId) => dispatch(fetchFollows(userId)),
+        fetchFollows: () => dispatch(fetchFollows()),
+        createFollow: (follow) => dispatch(createFollow(follow)),
+        deleteFollow: (followId) => dispatch(deleteFollow(followId))
     });
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Followers));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Follow));
