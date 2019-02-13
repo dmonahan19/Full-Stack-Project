@@ -1,10 +1,12 @@
-import React from 'react'
-import FollowingIndexItem from './following_index_item'
+import React from 'react';
+import FollowerIndexItem from './follower_index_item';
+
 
 class Follower extends React.Component {
 
     componentDidMount() {
-        this.props.fetchFollows()
+        // this.props.fetchFollows();
+        this.props.fetchUsers(this.props.user.follower_ids);
     }
 
     render() {
@@ -13,47 +15,42 @@ class Follower extends React.Component {
         let col3 = [];
         let col4 = [];
         let i = 0;
-        this.props.follows.map((follow) => {
-            if (follow.following_id === this.props.currentUserId) {
+        this.props.users.map((user) => {
+            if(user.id != this.props.currentUserId ){
                 if (i % 4 === 0) {
-                    col1.push(<FollowingIndexItem
+                    col1.push(<FollowerIndexItem
                         key={i}
-                        follow={follow}
-                        user={this.props.user}
+                        user={user}
                         createFollow={this.props.createFollow}
                         deleteFollow={this.props.deleteFollow}
                     />);
                 }
                 if (i % 4 === 1) {
-                    col2.push(<FollowingIndexItem
+                    col2.push(<FollowerIndexItem
                         key={i}
-                        follow={follow}
-                        user={this.props.user}
+                        user={user}
                         createFollow={this.props.createFollow}
                         deleteFollow={this.props.deleteFollow}
                     />);
                 }
                 if (i % 4 === 2) {
-                    col3.push(<FollowingIndexItem
+                    col3.push(<FollowerIndexItem
                         key={i}
-                        follow={follow}
-                        user={this.props.user}
+                        user={user}
                         createFollow={this.props.createFollow}
                         deleteFollow={this.props.deleteFollow}
                     />);
                 }
                 if (i % 4 === 3) {
-                    col4.push(<FollowingIndexItem
+                    col4.push(<FollowerIndexItem
                         key={i}
-                        follow={follow}
-                        user={this.props.user}
+                        user={user}
                         createFollow={this.props.createFollow}
                         deleteFollow={this.props.deleteFollow}
                     />);
                 }
                 i++
-            }
-        })
+        }})
         return (
             <>
                 <div className='splash3'>

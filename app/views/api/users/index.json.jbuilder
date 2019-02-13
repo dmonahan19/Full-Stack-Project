@@ -1,3 +1,4 @@
+
 @users.each do |user| 
     following_ids = []
     user.follows.each do |follow| 

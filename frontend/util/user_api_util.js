@@ -17,3 +17,11 @@ export const fetchSearchUsers = (searchQuery) => {
     });
 };
 
+export const fetchUsers = (userIds) => {
+    return $.ajax({
+        method: "GET",
+        url: "/api/users",
+        data: { userIds }
+    });
+};
+

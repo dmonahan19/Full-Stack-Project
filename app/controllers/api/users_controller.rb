@@ -1,8 +1,13 @@
 class Api::UsersController < ApplicationController
 
     def index
-      @users = User.where(email: params[:search_query])
-      render "api/users/index"
+      if params[:search_query]
+        @users = User.where(email: params[:search_query])
+        render "api/users/index"
+      elsif params[:userIds]  
+        @users = User.where(id: params[:userIds]) 
+        render "api/users/index"
+      end
     end 
 
     def create
