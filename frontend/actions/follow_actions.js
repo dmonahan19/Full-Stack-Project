@@ -14,12 +14,15 @@ const receiveFollow = (follow) => ({
     // followIds
 });
 
-const removeFollow = (follow) => ({
+const removeFollow = (follow, users) => {
+    debugger
+    return({
     type: REMOVE_FOLLOW,
     follow: follow,
     followId: follow.id,
-    userId: follow.following_id
-});
+    userId: follow.following_id,
+    users: users });
+};
 
 
 export const fetchFollows = () => dispatch => (

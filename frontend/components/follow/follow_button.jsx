@@ -11,20 +11,12 @@ class FollowButton extends React.Component {
         this.unfollow = this.unfollow.bind(this);
     }
 
-    componentDidUpdate(prevProps) {
-        if (this.props.follows !== prevProps.follows) {
-            this.setState({
-                user: this.props.user
-            });
-        }
-    }
 
     follow() {
         this.props.createFollow({
             following_type: 'User',
             following_id: this.props.user.id
-        }).then(
-            this.setState({ follow: true }));
+        })
     }
 
     unfollow() {
@@ -38,8 +30,7 @@ class FollowButton extends React.Component {
         deleteUser = this.props.user.follow_ids[index];
         // }
 
-        this.props.deleteFollow(deleteUser).then(
-            this.setState({ follow: false }));
+        this.props.deleteFollow(deleteUser)
     }
 
     render() {

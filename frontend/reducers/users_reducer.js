@@ -29,7 +29,7 @@ const usersReducer = (state={}, action) => {
                 newState = merge({}, state);
                 newState[action.userId].follow_ids = newState[action.userId].follow_ids.filter(id => id != action.followId);
                 newState[action.userId].follower_userIds = newState[action.userId].follower_userIds.filter(id => id != action.follow.user_id);
-            return newState
+                return newState;
         case RECEIVE_SEARCH_USERS:
             return merge({}, state, action.users);
         default:

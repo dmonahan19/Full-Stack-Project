@@ -5,8 +5,9 @@ import FollowerIndexItem from './follower_index_item';
 class Follower extends React.Component {
 
     componentDidMount() {
+        debugger
         // this.props.fetchFollows();
-        this.props.fetchUsers(Object.keys(this.props.user.user_follow_ids));
+        this.props.fetchUsers(this.props.user.follower_userIds);
     }
 
     render() {
@@ -16,7 +17,7 @@ class Follower extends React.Component {
         let col4 = [];
         let i = 0;
         this.props.users.map((user) => {
-            if (user.id != this.props.currentUserId ){
+            if (user.id != this.props.currentUserId && this.props.user.follower_userIds.includes(user.id) ){
                 if (i % 4 === 0) {
                     col1.push(<FollowerIndexItem
                         key={i}
