@@ -6,16 +6,19 @@ export const RECEIVE_ALL_FOLLOWS = "RECEIVE_ALL_FOLLOWS";
 const receiveAllFollows= payload => ({
     type: RECEIVE_ALL_FOLLOWS,
     payload
-})
-
-const receiveFollow = follow => ({
-    type: RECEIVE_FOLLOW,
-    follow
 });
 
-const removeFollow = (followId) => ({
+const receiveFollow = (follow) => ({
+    type: RECEIVE_FOLLOW,
+    follow,
+    // followIds
+});
+
+const removeFollow = (follow) => ({
     type: REMOVE_FOLLOW,
-    followId,
+    follow: follow,
+    followId: follow.id,
+    userId: follow.following_id
 });
 
 
@@ -25,7 +28,7 @@ export const fetchFollows = () => dispatch => (
 )
 
 export const createFollow = (followtype) => dispatch => (
-    FollowApiUtil.createFollow(followtype).then(follow => dispatch(receiveFollow(follow)))
+    FollowApiUtil.createFollow(followtype).then((follow,user) => dispatch(receiveFollow(follow,user)))
 )
 
 export const deleteFollow = (followId) => dispatch => {

@@ -2,19 +2,19 @@ import { RECEIVE_ALL_BOARDS, RECEIVE_BOARD, REMOVE_BOARD } from '../actions/boar
 import { merge } from 'lodash';
 
 const BoardsReducer = (state={},action) => {
-    Object.freeze(state)
+    Object.freeze(state);
     switch(action.type){
         case RECEIVE_ALL_BOARDS:
-            return merge({}, action.payload.boards)
+            return merge({}, action.payload.boards);
         case RECEIVE_BOARD:
-            return merge({},state,{[action.board.id]: action.board})
+            return merge({},state,{[action.board.id]: action.board});
         case REMOVE_BOARD:
-            let newState = merge({},state)
-            delete newState[action.boardId]
-            return newState
+            let newState = merge({},state);
+            delete newState[action.boardId];
+            return newState;
         default:
-            return state
+            return state;
     }
 }
 
-export default BoardsReducer
+export default BoardsReducer;

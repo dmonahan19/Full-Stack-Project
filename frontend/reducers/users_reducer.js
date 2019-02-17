@@ -1,11 +1,14 @@
 import { RECEIVE_CURRENT_USER} from '../actions/session_actions';
 import { RECEIVE_SEARCH_USERS, RECEIVE_ALL_USERS } from '../actions/user_actions'
+import { RECEIVE_FOLLOW, REMOVE_FOLLOW } from '../actions/follow_actions';
 import { REMOVE_BOARD } from '../actions/board_actions'
 import { merge } from 'lodash';
 
 
-const usersReducer = (state={},action) => {
+const usersReducer = (state={}, action) => {
     let newState;
+    let user;
+    let follow;
     Object.freeze(state);
     switch(action.type) {
         case RECEIVE_ALL_USERS:
@@ -16,6 +19,17 @@ const usersReducer = (state={},action) => {
             newState = merge({}, state);
             newState[action.userId].board_ids = newState[action.userId].board_ids.filter(id => id != action.boardId);
             return newState;
+        case RECEIVE_FOLLOW:
+             newState = merge({}, state);
+             user = newState[action.follow.following_id];
+             user.follower_userIds.push(action.follow.user_id);
+             user.follow_ids.push(action.follow.id);
+             return newState;  
+        case REMOVE_FOLLOW: 
+                newState = merge({}, state);
+                newState[action.userId].follow_ids = newState[action.userId].follow_ids.filter(id => id != action.followId);
+                newState[action.userId].follower_userIds = newState[action.userId].follower_userIds.filter(id => id != action.follow.user_id);
+            return newState
         case RECEIVE_SEARCH_USERS:
             return merge({}, state, action.users);
         default:

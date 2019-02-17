@@ -2,7 +2,7 @@ import React from 'react';
 import FollowerIndexItem from './follower_index_item';
 
 
-class Follower extends React.Component {
+class FollowingLink extends React.Component {
 
     componentDidMount() {
         // this.props.fetchFollows();
@@ -16,9 +16,9 @@ class Follower extends React.Component {
         let col4 = [];
         let i = 0;
         this.props.users.map((user) => {
-            if (user.id != this.props.currentUserId ){
+            if (user.id != this.props.currentUserId) {
                 if (i % 4 === 0) {
-                    col1.push(<FollowerIndexItem
+                    col1.push(<FollowingPinItem
                         key={i}
                         user={user}
                         currentUser={this.props.user}
@@ -28,7 +28,7 @@ class Follower extends React.Component {
                     />);
                 }
                 if (i % 4 === 1) {
-                    col2.push(<FollowerIndexItem
+                    col2.push(<FollowerPinItem
                         key={i}
                         user={user}
                         currentUser={this.props.user}
@@ -41,7 +41,7 @@ class Follower extends React.Component {
                     col3.push(<FollowerIndexItem
                         key={i}
                         user={user}
-                        currentUser = {this.props.user}
+                        currentUser={this.props.user}
                         currentUserId={this.props.currentUserId}
                         createFollow={this.props.createFollow}
                         deleteFollow={this.props.deleteFollow}
@@ -58,7 +58,8 @@ class Follower extends React.Component {
                     />);
                 }
                 i++
-        }})
+            }
+        })
         return (
             <>
                 <div className='splash3'>
@@ -82,4 +83,4 @@ class Follower extends React.Component {
     }
 
 }
-export default Follower
+export default FollowingLink

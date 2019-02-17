@@ -50,6 +50,7 @@ const Profile = (props) => {
                             follows={props.follows}
                             createFollow={props.createFollow}
                             deleteFollow={props.deleteFollow}
+                            fetchFollow={props.fetchFollow}
                         />
                 </div>
             </ul>

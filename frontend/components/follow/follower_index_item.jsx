@@ -18,7 +18,7 @@ class FollowingIndexItem extends React.Component {
             user1 = this.props.user.first_name;
         }
         else {
-            user1 = this.props.user.email.split("@")[0]
+            user1 = this.props.user.email.split("@")[0];
         }
 
         if (this.props.user.photo) {

@@ -17,7 +17,8 @@ const mapStateToProps = (state, ownProps) => {
     return ({
       openModal: (modal)=> dispatch(openModal(modal)),
       createFollow:  (follow) => dispatch(createFollow(follow)),
-       deleteFollow: (followId) => dispatch(deleteFollow(followId))
+       deleteFollow: (followId) => dispatch(deleteFollow(followId)),
+       fetchFollows: () => dispatch(fetchFollows())
     });
   };
   

@@ -13,7 +13,8 @@
 class Board < ApplicationRecord
     validates :title, :user_id, presence: true;
 
-    include Following
+    # include Following
+    has_many :follows, as: :following
 
     has_many :pins,
         foreign_key: :board_id,
