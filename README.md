@@ -20,6 +20,13 @@ One particular challenge was the Re-Pinning feature, which allows a user to re-p
 
 <img src='http://i67.tinypic.com/zkip84.png'>
 <img src='http://i63.tinypic.com/10omyy9.png/'>
+create pin form
+<img src='http://i66.tinypic.com/34in14y.png'>
+board index component
+<img src='http://i63.tinypic.com/9r3z9e.png'>
+board index item component
+<img src='http://i66.tinypic.com/34in14y.png'>
+
 
 One of the first challenges with re-pinning, was the feature where the save button only appears when you hover over a certain pin. In order for this to happen I had to create a component state that would change to true or false depending on if the pin is being hovered over. I bind an event listener function to be invoked and change the component state to true when the mouse enters an element and other event listener function to be invoked when the mouse leaves the element which will change the component state to false. Then I used a conditional ternary operator to only show the save button when the state of the component is true. 
 
