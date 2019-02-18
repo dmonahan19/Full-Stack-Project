@@ -1,14 +1,14 @@
 import React from 'react';
-import DropDownTwo from './drop_down_two'
-import PinIndexItem from '../pins/pin_index_item'
-import PinBoardShow from '../pins/pin-board-show'
-import withRouter from 'react-router-dom'
+import DropDownTwo from './drop_down_two';
+import PinIndexItem from '../pins/pin_index_item';
+import PinBoardShow from '../pins/pin-board-show';
+import withRouter from 'react-router-dom';
 
 
 class BoardShow extends React.Component{
 
     constructor(props){
-        super(props)
+        super(props);
     
     }
 
@@ -21,7 +21,7 @@ class BoardShow extends React.Component{
     
 
     render(){
-        let buttons
+        let buttons;
         if (this.props.user.board_ids.includes(this.props.board.id)) {
            buttons = <ul className='left-board-show-edit'>
                 <ul className="show-editlinks">

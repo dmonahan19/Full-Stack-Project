@@ -17,7 +17,7 @@ const PinsReducer = (oldState = {}, action) => {
     case RECEIVE_PIN:
       return merge({}, oldState, { [action.pin.id]: action.pin });
     case RECEIVE_ITEM:
-      return merge({}, oldState, action.payload.pins)
+      return merge({}, oldState, action.payload.pins);
     case REMOVE_PIN:
       let newState = merge({}, oldState);
       delete newState[action.pinId];

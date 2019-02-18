@@ -1,12 +1,15 @@
 import * as PinApiUtil from '../util/pin_api_util';
-export const RECEIVE_ALL_PINS = "RECEIVE_ALL_PINS"
+export const RECEIVE_ALL_PINS = "RECEIVE_ALL_PINS";
 export const RECEIVE_PIN = "RECEIVE_PIN";
 export const REMOVE_PIN = "REMOVE_PIN";
 
-    const receiveAllPins = payload => ({
+    const receiveAllPins = (payload, userIds) => {
+      return({
         type: RECEIVE_ALL_PINS,
-        payload
-    })
+        payload,
+        userIds
+      });
+    };
 
 
     const receivePin = pin => ({
@@ -19,8 +22,8 @@ export const REMOVE_PIN = "REMOVE_PIN";
         pinId
     });
 
-export const fetchUsersPins = () => dispatch => (
-  PinApiUtil.fetchUsersPins().then(pins => dispatch(receiveAllPins(pins)))
+export const fetchUsersPins = (userIds) => dispatch => (
+  PinApiUtil.fetchUsersPins(userIds).then(pins => dispatch(receiveAllPins(pins)))
 )
 
 

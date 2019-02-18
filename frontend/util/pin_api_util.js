@@ -8,7 +8,7 @@ export const fetchPins = (boardId) => (
   export const fetchUserPins = (userId) => (
     $.ajax({
       method: 'GET',
-      url: `/api/users/${userId}/pins`
+      url: `/api/users/${userId}/pins`,
     })
   );
   
@@ -43,9 +43,10 @@ export const fetchPins = (boardId) => (
     })
   );
   
-export const fetchUsersPins = () => (
+export const fetchUsersPins = (userIds) => (
   $.ajax({
     url: `/api/pins`,
-    method: 'GET'
+    method: 'GET',
+    data: { userIds }
   })
 );

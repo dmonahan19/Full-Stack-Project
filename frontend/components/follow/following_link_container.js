@@ -2,7 +2,6 @@
 import { connect } from "react-redux";
 import FollowingLink from './following_link';
 import { withRouter } from 'react-router-dom';
-import { fetchUserPins } from '../../actions/pin_actions';
 import { fetchUsersPins } from '../../actions/pin_actions';
 import { openModal } from "../../actions/modal_actions";
 

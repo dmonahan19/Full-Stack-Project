@@ -10,11 +10,10 @@ const receiveAllFollows= payload => ({
 
 const receiveFollow = (follow) => ({
     type: RECEIVE_FOLLOW,
-    follow,
-    // followIds
+    follow
 });
 
-const removeFollow = (follow, users) => {
+const removeFollow = (follow) => {
     return({
     type: REMOVE_FOLLOW,
     follow: follow,

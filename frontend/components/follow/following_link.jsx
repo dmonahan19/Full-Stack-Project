@@ -6,11 +6,9 @@ class FollowingLink extends React.Component {
 
     
     componentDidMount(){
-       
+        this.props.fetchUsersPins(this.props.user.following_userIds);
     }
         
-
-
     render() {
         let col1 = [];
         let col2 = [];
@@ -27,18 +25,21 @@ class FollowingLink extends React.Component {
                 }
                 if (i % 4 === 1) {
                     col2.push(<FollowingPinItem
+                        key={i}
                         pin={pin}
                         openModal={this.props.openModal}
                     />);
                 }
                 if (i % 4 === 2) {
                     col3.push(<FollowingPinItem
+                        key={i}
                         pin={pin}
                         openModal={this.props.openModal}
                     />);
                 }
                 if (i % 4 === 3) {
                     col4.push(<FollowingPinItem
+                        key={i}
                         pin={pin}
                         openModal={this.props.openModal}
                     />);
