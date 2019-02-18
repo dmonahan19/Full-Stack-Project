@@ -1,0 +1,30 @@
+import { connect } from "react-redux";
+import BoardViewTwo from './board_view_two';
+import { fetchBoards } from '../../actions/board_actions';
+import { fetchPins } from '../../actions/pin_actions';
+import { openModal } from '../../actions/modal_actions';
+import { withRouter } from 'react-router-dom';
+
+
+
+
+const mapStateToProps = (state, ownProps) => {
+    let currentUserId = state.session.id;
+    return ({
+        currentUserId: currentUserId,
+        boards: Object.values(state.entities.boards),
+        user: state.entities.users[ownProps.match.params.userId],
+        pins: Object.values(state.entities.pins)
+    });
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return ({
+        fetchBoards: (userId) => dispatch(fetchBoards(userId)),
+        fetchPins: (boardId) => dispatch(fetchPins(boardId)),
+        deleteBoard: (id) => dispatch(deleteBoard(id)),
+        openModal: (modal, boardId) => dispatch(openModal(modal, { boardId }))
+    });
+};
+
+export default withRouter((connect(mapStateToProps, mapDispatchToProps)(BoardViewTwo)));

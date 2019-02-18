@@ -191,15 +191,23 @@
     text-decoration: underline;
 }
 
-
+.menu-links{
+    display: flex;
+}
 
 .menu{
     color: #333333;
     font-size: 20px;
-    background-color: rgba(255, 255, 255, 0.824);
+    background-color: #efefef;
     border-radius: 3px;
     padding: 4px 14px;
     text-align: center;
     border: 3px solid  rgba(232, 228, 228, 0.625);
 }
+
+.menu1{
+     padding: 6px 10px 0 15px; 
+     border-left: none;
+}
+
 

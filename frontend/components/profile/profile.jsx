@@ -79,7 +79,8 @@ const Profile = (props) => {
                         <li className='pin-link'><Link to={`/users/${props.user.id}/pins`}>Pins</Link></li>
                     </ul>
                 </div>
-                <ul>
+                <ul className='menu-links'>
+                    <li className='menu menu1'><svg className="gUZ pBj U9O kVc" height="24" width="24" viewBox="0 0 24 24" aria-label="Wide view" role="img"><title>Wide view</title><path d="M13.00,20.00 L13.00,13.00 L20.00,13.00 L20.00,20.00 L13.00,20.00 Z M4.00,11.00 L4.00,4.00 L11.00,4.00 L11.00,11.00 L4.00,11.00 Z M13.00,11.00 L13.00,4.00 L20.00,4.00 L20.00,11.00 L13.00,11.00 Z M4.00,20.00 L4.00,13.00 L11.00,13.00 L11.00,20.00 L4.00,20.00 Z"></path></svg></li>
                     <li className='menu'> &#9776; </li>
                 </ul>
             </div>
