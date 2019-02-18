@@ -9,17 +9,24 @@ class FollowButton3 extends React.Component {
 
     unfollow() {
         let index;
-        index= this.props.currentUser.follower_userIds.indexOf(this.props.user.id);
+        index = this.props.currentUser.follower_userIds.indexOf(this.props.user.id);
         this.props.deleteFollow(this.props.currentUser.follow_ids[index]);
     }
 
     render() {
-    return(
-        <li className='unfollow-button-2'><button onClick={this.unfollow}>Unfollow</button></li>
-    )
     
+            let follow;
+    
+            this.props.user.follower_userIds.includes(this.props.currentUserId) ?
+                follow = <li><button onClick={this.unfollow} className='unfollow-button-2'>Unfollow</button></li>
+                :
+                follow = <li><button onClick={this.follow} className='follow-button-2'>Follow</button></li>
 
-    }
+            return follow
+
+     }
+ 
+
 
 }
 export default FollowButton3

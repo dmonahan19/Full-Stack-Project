@@ -74,20 +74,6 @@ class BoardViewTwo extends React.Component {
                 />);
             }
         });
-        // const boards = this.props.boards.map((board, i) => {
-        //     return (
-        //         <BoardViewItem
-        //             key={i}
-        //             board={board}
-        //             deleteBoard={this.props.deleteBoard}
-        //             openModal={this.props.openModal}
-        //             user={this.props.user}
-        //             currentUserId={this.props.currentUserId}
-        //             fetchPins={this.props.fetchPins}
-        //             pins={this.props.pins}   
-        //         />
-        //     );
-        // });
 
         return (
                 <>

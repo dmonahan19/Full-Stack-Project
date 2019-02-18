@@ -58,9 +58,9 @@ const Profile = (props) => {
                 <div>
                     <h1 className="profile-user">{user}</h1>
                     <ul className="follow-links">
-                            <li className="follow1"><Link to={`/users/${props.user.id}/followers`}>followers</Link></li>
+                            <li className="follow1"><Link to={`/users/${props.user.id}/followers`}>{props.user.follower_userIds.length} followers</Link></li>
                         <li><span className="dot follow2"></span></li>
-                            <li className="follow3"><Link to={`/users/${props.user.id}/following`}>following</Link></li>
+                            <li className="follow3"><Link to={`/users/${props.user.id}/following`}>{props.user.following_userIds.length} following</Link></li>
                     </ul>
                     <ul className='about-links'>
                         <li className="about-location">{props.user.location}</li>

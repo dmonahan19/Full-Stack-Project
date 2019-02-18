@@ -48,6 +48,18 @@
     font-size: 18px;
 }
 
+.follow-button-2{
+    width: 200px;
+    padding: 6px 9px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-color: #e60000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .unfollow-button-2{
     width: 200px;
     padding: 6px 9px;
