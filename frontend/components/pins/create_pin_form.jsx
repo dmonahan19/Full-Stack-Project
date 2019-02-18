@@ -35,8 +35,8 @@ class CreatePinForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.closeModal()
-        this.navigateToShowBoards()
+        this.props.closeModal();
+        this.navigateToShowBoards();
     }
 
 
