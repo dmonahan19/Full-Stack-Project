@@ -1,5 +1,5 @@
 class Api::PinsController < ApplicationController
-    def index
+   def index
       if params[:board_id]
         @pins = Board.find(params[:board_id]).pins 
       elsif params[:user_id]

@@ -6,7 +6,7 @@ class FollowingLink extends React.Component {
 
     
     componentDidMount(){
-        this.props.fetchUserPins(this.props.user.follower_userIds);
+       
     }
         
 

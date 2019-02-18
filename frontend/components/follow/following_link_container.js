@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import FollowingLink from './following_link';
 import { withRouter } from 'react-router-dom';
 import { fetchUserPins } from '../../actions/pin_actions';
+import { fetchUsersPins } from '../../actions/pin_actions';
 import { openModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state, ownProps) => {
@@ -15,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        fetchUserPins: (userIds) => dispatch(fetchUserPins(userIds)),
+        fetchUsersPins: (userIds) => dispatch(fetchUsersPins(userIds)),
         openModal: (modal, pinId) => dispatch(openModal(modal, { pinId }))
     });
 };

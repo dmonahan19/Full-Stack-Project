@@ -1,6 +1,6 @@
-import React from 'react'
-import {withRouter} from 'react-router-dom'
-import BoardIndexTwoContainer from '../boards/board_index_two_container'
+import React from 'react';
+import {withRouter} from 'react-router-dom';
+import BoardIndexTwoContainer from '../boards/board_index_two_container';
 
 
 class CreatePinForm extends React.Component {
