@@ -1,12 +1,11 @@
 import React from 'react';
-import ProfileContainer from '../profile/profile_container'
-// import CreateBoardContainer from './create_board_container'
-import BoardIndexContainer from './board_index_container'
-import CreateBoardContainer from './create_board_container'
+import ProfileContainer from '../profile/profile_container';
+import BoardIndexContainer from './board_index_container';
+import CreateBoardContainer from './create_board_container';
 
 class Boards extends React.Component{
     constructor(props){
-        super(props)
+        super(props);
      
     }
        
@@ -18,7 +17,7 @@ class Boards extends React.Component{
             <div className="board-profile">
                 <>
                 <div className="board-profile-divs">
-                    <div>{<ProfileContainer  />}</div>
+                    <div>{<ProfileContainer />}</div>
                     <div>{<BoardIndexContainer />} </div>
                     <div>{<CreateBoardContainer />}</div>
                 </div>

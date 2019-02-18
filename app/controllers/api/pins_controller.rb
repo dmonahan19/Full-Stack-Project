@@ -7,8 +7,7 @@ class Api::PinsController < ApplicationController
       else 
         @pins = Pin.all 
       end
-        # render :index
-      end
+    end
     
       def show
         @pin = Pin.find(params[:id])

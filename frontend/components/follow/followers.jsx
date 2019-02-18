@@ -5,7 +5,6 @@ import FollowerIndexItem from './follower_index_item';
 class Follower extends React.Component {
 
     componentDidMount() {
-        debugger
         // this.props.fetchFollows();
         this.props.fetchUsers(this.props.user.follower_userIds);
     }

@@ -1,35 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { closeModal } from '../modal/modal'
-
-
-
 
  class BoardIndexItemTwo extends React.Component {
 
     constructor(props){
-        super(props)
-        this.state = { showSave: false }
-        this.state = this.props.pin
+        super(props);
+        this.state = { showSave: false };
+        this.state = this.props.pin;
 
-        this.onHover = this.onHover.bind(this)
-        this.offHover = this.offHover.bind(this)
+        this.onHover = this.onHover.bind(this);
+        this.offHover = this.offHover.bind(this);
     }
 
      onHover(e) {
-         this.setState({ showSave: true })
+         this.setState({ showSave: true });
      }
 
      offHover(e) {
-         this.setState({ showSave: false })
+         this.setState({ showSave: false });
      }
 
-
-
-
     render(){
-
-        
+    
     let photo
     if (this.props.board.photo) {
         photo = <li>
@@ -57,7 +48,7 @@ import { closeModal } from '../modal/modal'
                         pin.board_id = this.props.board.id;
                         this.props.createPin(this.state)}} >
 
-                        <div className='whole-pin-button'>
+                        <div className='whole-pin-button-2'>
                             <icon className='fas fa-thumbtack pin-index-icon'></icon>
                             <h1 className="pin-index-submit">Save</h1>
                         </div>

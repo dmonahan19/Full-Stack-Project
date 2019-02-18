@@ -31,6 +31,7 @@ export const fetchUsers = (userIds) => {
     };
 };
 
+
 export const receiveSearchUsers = (users) => ({
     type: RECEIVE_SEARCH_USERS,
     users

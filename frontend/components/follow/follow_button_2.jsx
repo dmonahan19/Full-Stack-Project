@@ -10,9 +10,7 @@ class FollowButton2 extends React.Component {
 
 
     unfollow() {
-        debugger
-        this.props.deleteFollow(this.props.follow.id).then(
-            this.setState({ follow: false }));
+        this.props.deleteFollow(this.props.follow.id);
     }
 
     render() {

@@ -1,20 +1,21 @@
-import React from 'react'
-import NavBarContainer from '../components/nav_bar/nav_bar_container'
-import Splash from './splash/splash_container'
-import ProfileContainer from './profile/profile_container'
-import FullProfileForm from './profile/full_profile_form'
+import React from 'react';
+import NavBarContainer from '../components/nav_bar/nav_bar_container';
+import Splash from './splash/splash_container';
+import ProfileContainer from './profile/profile_container';
+import FullProfileForm from './profile/full_profile_form';
 import { ProtectedRoute } from '../util/route_util';
 import BoardsContainer from './boards/boards_container'
-import EditBoardFormContainer from './boards/board_edit_form_container'
-import BoardShowContainer from './boards/board_show_container'
-import PinShowContainer from './pins/pin_show_container'
-import PinBuilderContainer from './pins/pin_builder_container'
-import ProfileAllPins from './pins/profile_all_pins'
-import CreatePinFromContainer from './pins/create_pin_form_container'
-import HomePageContainer from './homepage/home_page_container'
-import Modal from './modal/modal'
-import FollowersContainer from './follow/followers_container'
-import FollowingContainer from './follow/following_container'
+import EditBoardFormContainer from './boards/board_edit_form_container';
+import BoardShowContainer from './boards/board_show_container';
+import PinShowContainer from './pins/pin_show_container';
+import PinBuilderContainer from './pins/pin_builder_container';
+import ProfileAllPins from './pins/profile_all_pins';
+import CreatePinFromContainer from './pins/create_pin_form_container';
+import HomePageContainer from './homepage/home_page_container';
+import Modal from './modal/modal';
+import FollowersContainer from './follow/followers_container';
+import FollowingContainer from './follow/following_container';
+import FollowingLinkContainer from './follow/following_link_container';
 
 import {
     Route,
@@ -43,6 +44,7 @@ import {
             <ProtectedRoute path='/users/:userId/pins' component={ProfileAllPins} />
             <ProtectedRoute path='/users/:userId/followers' component={FollowersContainer} />
             <ProtectedRoute path='/users/:userId/following' component={FollowingContainer} />
+            <ProtectedRoute path='/following' component={FollowingLinkContainer} />
       
     </div>
   );

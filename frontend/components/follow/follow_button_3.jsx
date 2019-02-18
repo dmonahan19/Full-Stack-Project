@@ -8,8 +8,7 @@ class FollowButton3 extends React.Component {
     }
 
     unfollow() {
-        debugger
-        let index
+        let index;
         index= this.props.currentUser.follower_userIds.indexOf(this.props.user.id);
         this.props.deleteFollow(this.props.currentUser.follow_ids[index]);
     }

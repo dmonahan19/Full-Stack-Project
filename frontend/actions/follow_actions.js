@@ -15,13 +15,11 @@ const receiveFollow = (follow) => ({
 });
 
 const removeFollow = (follow, users) => {
-    debugger
     return({
     type: REMOVE_FOLLOW,
     follow: follow,
     followId: follow.id,
-    userId: follow.following_id,
-    users: users });
+    userId: follow.following_id });
 };
 
 

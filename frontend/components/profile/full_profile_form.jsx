@@ -4,11 +4,11 @@ import ChangePicture from './change_picture'
 
 class FullProfileForm extends React.Component{
     constructor(props){
-        super(props)
+        super(props);
         this.state = {
             showPicture: false,
             photoFile: null
-        }
+        };
         this.showPicture = this.showPicture.bind(this)
         this.handleFile = this.handleFile.bind(this);
     }

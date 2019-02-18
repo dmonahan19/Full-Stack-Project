@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-class PinUserIndexItem extends React.Component{
+class FollowingPinItem extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = { showSave: false };
+
         this.onHover = this.onHover.bind(this);
         this.offHover = this.offHover.bind(this);
 
@@ -22,9 +23,8 @@ class PinUserIndexItem extends React.Component{
 
 
 
-    render(){
+    render() {
         return (
-
             <div className='whole-image-save'
                 onMouseEnter={this.onHover}
                 onMouseLeave={this.offHover}
@@ -36,7 +36,7 @@ class PinUserIndexItem extends React.Component{
                             <h1 className="pin-index-submit">Save</h1>
                         </div>
                     </button>) : (null)}
-                <div className='picture-title-hover'>       
+                <div className='picture-title-hover'>
                     <Link to={`/pin/${this.props.pin.id}`}><img className='image4-hover' src={this.props.pin.photo} /></Link>
                     <div className='pin-show-page-title2'>{this.props.pin.title}</div>
                 </div>
@@ -47,4 +47,4 @@ class PinUserIndexItem extends React.Component{
     }
 }
 
-export default PinUserIndexItem;
+export default FollowingPinItem;

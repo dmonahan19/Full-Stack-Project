@@ -8,7 +8,6 @@ import { merge } from 'lodash';
 const usersReducer = (state={}, action) => {
     let newState;
     let user;
-    let follow;
     Object.freeze(state);
     switch(action.type) {
         case RECEIVE_ALL_USERS:
@@ -27,8 +26,8 @@ const usersReducer = (state={}, action) => {
              return newState;  
         case REMOVE_FOLLOW: 
                 newState = merge({}, state);
-                newState[action.userId].follow_ids = newState[action.userId].follow_ids.filter(id => id != action.followId);
-                newState[action.userId].follower_userIds = newState[action.userId].follower_userIds.filter(id => id != action.follow.user_id);
+                    newState[action.userId].follow_ids = newState[action.userId].follow_ids.filter(id => id != action.followId);
+                    newState[action.userId].follower_userIds = newState[action.userId].follower_userIds.filter(id => id != action.follow.user_id);    
                 return newState;
         case RECEIVE_SEARCH_USERS:
             return merge({}, state, action.users);

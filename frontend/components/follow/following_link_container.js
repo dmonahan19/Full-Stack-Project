@@ -2,25 +2,21 @@
 import { connect } from "react-redux";
 import FollowingLink from './following_link';
 import { withRouter } from 'react-router-dom';
-import { fetchFollows, createFollow, deleteFollow } from '../../actions/follow_actions';
-import { fetchUsers } from '../../actions/user_actions';
+import { fetchUserPins } from '../../actions/pin_actions';
+import { openModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state, ownProps) => {
     let currentUserId = state.session.id;
     return ({
-        users: Object.values(state.entities.users),
-        follows: Object.values(state.entities.follows),
-        currentUserId: currentUserId,
-        user: state.entities.users[ownProps.match.params.userId]
+        pins: Object.values(state.entities.pins),
+        user: state.entities.users[currentUserId]
     });
 };
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        fetchFollows: () => dispatch(fetchFollows()),
-        createFollow: (follow) => dispatch(createFollow(follow)),
-        deleteFollow: (followId) => dispatch(deleteFollow(followId)),
-        fetchUsers: (userIds) => dispatch(fetchUsers(userIds))
+        fetchUserPins: (userIds) => dispatch(fetchUserPins(userIds)),
+        openModal: (modal, pinId) => dispatch(openModal(modal, { pinId }))
     });
 };
 

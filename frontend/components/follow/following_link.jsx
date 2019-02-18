@@ -1,13 +1,15 @@
 import React from 'react';
-import FollowerIndexItem from './follower_index_item';
+import FollowingPinItem from './following_pin_item';
 
 
 class FollowingLink extends React.Component {
 
-    componentDidMount() {
-        // this.props.fetchFollows();
-        this.props.fetchUsers(Object.keys(this.props.user.user_follow_ids));
+    
+    componentDidMount(){
+        this.props.fetchUserPins(this.props.user.follower_userIds);
     }
+        
+
 
     render() {
         let col1 = [];
@@ -15,51 +17,34 @@ class FollowingLink extends React.Component {
         let col3 = [];
         let col4 = [];
         let i = 0;
-        this.props.users.map((user) => {
-            if (user.id != this.props.currentUserId) {
+        this.props.pins.map((pin) => {
                 if (i % 4 === 0) {
                     col1.push(<FollowingPinItem
                         key={i}
-                        user={user}
-                        currentUser={this.props.user}
-                        currentUserId={this.props.currentUserId}
-                        createFollow={this.props.createFollow}
-                        deleteFollow={this.props.deleteFollow}
+                        pin={pin}
+                        openModal={this.props.openModal}
                     />);
                 }
                 if (i % 4 === 1) {
-                    col2.push(<FollowerPinItem
-                        key={i}
-                        user={user}
-                        currentUser={this.props.user}
-                        currentUserId={this.props.currentUserId}
-                        createFollow={this.props.createFollow}
-                        deleteFollow={this.props.deleteFollow}
+                    col2.push(<FollowingPinItem
+                        pin={pin}
+                        openModal={this.props.openModal}
                     />);
                 }
                 if (i % 4 === 2) {
-                    col3.push(<FollowerIndexItem
-                        key={i}
-                        user={user}
-                        currentUser={this.props.user}
-                        currentUserId={this.props.currentUserId}
-                        createFollow={this.props.createFollow}
-                        deleteFollow={this.props.deleteFollow}
+                    col3.push(<FollowingPinItem
+                        pin={pin}
+                        openModal={this.props.openModal}
                     />);
                 }
                 if (i % 4 === 3) {
-                    col4.push(<FollowerIndexItem
-                        key={i}
-                        user={user}
-                        currentUser={this.props.user}
-                        currentUserId={this.props.currentUserId}
-                        createFollow={this.props.createFollow}
-                        deleteFollow={this.props.deleteFollow}
+                    col4.push(<FollowingPinItem
+                        pin={pin}
+                        openModal={this.props.openModal}
                     />);
                 }
                 i++
-            }
-        })
+        });
         return (
             <>
                 <div className='splash3'>

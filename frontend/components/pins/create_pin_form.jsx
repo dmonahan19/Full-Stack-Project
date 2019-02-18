@@ -14,7 +14,7 @@ class CreatePinForm extends React.Component {
 
     componentDidMount() {
         this.props.fetchPin(this.props.pin.id).then(() => {
-            this.setState(this.props.pin)
+            this.setState(this.props.pin);
         })
         this.props.fetchBoards(this.props.currentUserId);
     }
@@ -62,7 +62,7 @@ class CreatePinForm extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                     <div className='pin-create-board-x' onClick={this.props.closeModal}>X</div>
                     <h1 className='pin-create-form-h1'> Choose a board </h1>
-                    <div className='pin-show-selector'>
+                    <div className='pin-show-selector3'>
                         <BoardIndexTwoContainer pin={this.props.pin} />
                     </div>
                     </form>

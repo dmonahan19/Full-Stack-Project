@@ -25,7 +25,7 @@ class Pin < ApplicationRecord
         class_name: :Item
 
     has_many :users,
-        through: :boards,
+        through: :board,
         source: :user 
 
 end
