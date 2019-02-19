@@ -41,22 +41,22 @@ class PinBoardViewTwo extends React.Component {
         });
 
         if(col1.length === 0){
-            col1.push(<img src={window.square} />)
+            col1.push(<img src={window.square} key={1} />)
         }
         if (col2.length === 0) {
-            col2.push(<img src={window.square} />)
+            col2.push(<img src={window.square} key={2}  />)
         }
         if (col3.length === 0) {
-            col3.push(<img src={window.square} />)
+            col3.push(<img src={window.square} key={3} />)
         }
         if (col4.length === 0) {
-            col4.push(<img src={window.square} />)
+            col4.push(<img src={window.square} key={4}  />)
         }
         if (col5.length === 0) {
-            col5.push(<img src={window.square} />)
+            col5.push(<img src={window.square} key={5} />)
         }
         if (col6.length === 0) {
-            col6.push(<img src={window.square} />)
+            col6.push(<img src={window.square} key={6} />)
         }
         return(
             <>
