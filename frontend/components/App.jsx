@@ -15,6 +15,7 @@ import HomePageContainer from './homepage/home_page_container';
 import Modal from './modal/modal';
 import FollowersContainer from './follow/followers_container';
 import FollowingContainer from './follow/following_container';
+import FollowingBoardContainer from './follow/following_board_container';
 import FollowingLinkContainer from './follow/following_link_container';
 
 import {
@@ -43,7 +44,7 @@ import {
             <ProtectedRoute path='/pin/:pinId' component={PinShowContainer} />
             <ProtectedRoute path='/users/:userId/pins' component={ProfileAllPins} />
             <ProtectedRoute path='/users/:userId/followers' component={FollowersContainer} />
-            <ProtectedRoute path='/users/:userId/following' component={FollowingContainer} />
+            <ProtectedRoute path='/users/:userId/following' component={FollowingBoardContainer} />
             <ProtectedRoute path='/following' component={FollowingLinkContainer} />
       
     </div>

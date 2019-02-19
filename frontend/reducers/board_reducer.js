@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_BOARDS, RECEIVE_BOARD, REMOVE_BOARD } from '../actions/board_actions'
+import { RECEIVE_ALL_BOARDS, RECEIVE_BOARD, REMOVE_BOARD } from '../actions/board_actions';
 import { merge } from 'lodash';
 
 const BoardsReducer = (state={},action) => {

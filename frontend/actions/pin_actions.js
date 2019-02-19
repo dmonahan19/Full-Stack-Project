@@ -22,10 +22,15 @@ export const REMOVE_PIN = "REMOVE_PIN";
         pinId
     });
 
-export const fetchUsersPins = (userIds) => dispatch => (
-  PinApiUtil.fetchUsersPins(userIds).then(pins => dispatch(receiveAllPins(pins)))
-)
+export const fetchBoardPins = (boardIds) => dispatch => {
+    return(
+    PinApiUtil.fetchBoardPins(boardIds).then(pins => dispatch(receiveAllPins(pins)))
+  );
+};
 
+export const fetchUsersPins = () => dispatch => (
+  PinApiUtil.fetchUsersPins().then(pins => dispatch(receiveAllPins(pins)))
+);
 
   export const fetchPins = (boardId) => dispatch => { 
     return(

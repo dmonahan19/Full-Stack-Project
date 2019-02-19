@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PinBoardViewTwo from '../pins/pin_board_view_two';
+import FollowButton4 from '../follow/follow_button_4';
 
 
 
@@ -28,7 +29,7 @@ class BoardViewItem extends React.Component {
 
     render() { 
         let editButton;
-      
+        let follow;
         if (this.props.currentUserId === this.props.user.id) {
             editButton = <div>
                 {
@@ -40,7 +41,12 @@ class BoardViewItem extends React.Component {
             </div >
         }
         else {
-            editButton = null
+            editButton = <FollowButton4
+                createFollow={this.props.createFollow}
+                deleteFollow={this.props.deleteFollow}
+                board={this.props.board}
+                user={this.props.user}
+            />
         }
 
         const pins = this.props.pins.filter(pin => pin.board_id === this.props.board.id)

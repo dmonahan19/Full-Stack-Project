@@ -27,9 +27,12 @@ export const fetchFollows = () => dispatch => (
         dispatch(receiveAllFollows(follows))})
 )
 
-export const createFollow = (followtype) => dispatch => (
-    FollowApiUtil.createFollow(followtype).then((follow,user) => dispatch(receiveFollow(follow,user)))
-)
+export const createFollow = (followtype) => dispatch => {
+    debugger
+    return(
+        FollowApiUtil.createFollow(followtype).then((follow,user) => dispatch(receiveFollow(follow,user)))
+    );
+};
 
 export const deleteFollow = (followId) => dispatch => {
     return(

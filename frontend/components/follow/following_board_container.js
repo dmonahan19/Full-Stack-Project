@@ -1,9 +1,9 @@
 import { connect } from "react-redux";
-import Following from './following';
+import FollowingBoard from './following_board';
 import { withRouter } from 'react-router-dom';
-import { fetchFollows,createFollow, deleteFollow } from '../../actions/follow_actions';
+import { fetchFollows, createFollow, deleteFollow } from '../../actions/follow_actions';
 import { fetchUsers } from '../../actions/user_actions';
-import { fetchPins } from '../../actions/pin_actions';
+import { fetchBoardPins } from '../../actions/pin_actions';
 import { fetchBoard } from '../../actions/board_actions';
 
 const mapStateToProps = (state, ownProps) => {
@@ -12,7 +12,9 @@ const mapStateToProps = (state, ownProps) => {
         follows: Object.values(state.entities.follows),
         currentUserId: currentUserId,
         user: state.entities.users[currentUserId],
-        pins: Object.values(state.entities.pins)
+        pins: Object.values(state.entities.pins),
+        boards: Object.values(state.entities.boards) || {},
+        follow: Object.values(state.entities.follows)
     });
 };
 
@@ -22,9 +24,9 @@ const mapDispatchToProps = (dispatch) => {
         fetchFollows: () => dispatch(fetchFollows()),
         createFollow: (follow) => dispatch(createFollow(follow)),
         deleteFollow: (followId) => dispatch(deleteFollow(followId)),
-        fetchPins: (boardIds) => dispatch(fetchPins(boardIds)),
+        fetchBoardPins: (boardIds) => dispatch(fetchBoardPins(boardIds)),
         fetchBoard: (boardId) => dispatch(fetchBoard(boardId))
     });
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Following));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FollowingBoard));

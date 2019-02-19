@@ -10,6 +10,7 @@ class FollowingIndexItem extends React.Component {
     render() {
         let user;
         let photo;
+        if (this.props.follow.following_type === 'User'){
         if (this.props.follow.first_name && this.props.follow.last_name) {
 
             user = `${this.props.follow.first_name} ${this.props.follow.last_name}`
@@ -27,7 +28,7 @@ class FollowingIndexItem extends React.Component {
         else {
             photo = window.empty;
         }
-
+    }
         return (
             <>
                 <div className='name-and-following'>

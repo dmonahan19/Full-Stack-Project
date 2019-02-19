@@ -4,9 +4,6 @@ class FollowButton extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            user: this.props.user,
-        }
         this.follow = this.follow.bind(this);
         this.unfollow = this.unfollow.bind(this);
     }

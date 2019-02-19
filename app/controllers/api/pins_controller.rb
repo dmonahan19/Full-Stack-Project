@@ -2,6 +2,8 @@ class Api::PinsController < ApplicationController
    def index
       if params[:board_id]
         @pins = Board.find(params[:board_id]).pins 
+      elsif params[:boardIds]
+        @pins= Pin.where(board_id: params[:boardIds]) 
       elsif params[:user_id]
         @pins = Pin.joins(:board).where("boards.user_id = #{params[:user_id]}")
       elsif params[:userIds] 

@@ -13,6 +13,7 @@ class BoardViewTwo extends React.Component {
     componentDidUpdate(prevProps) {
         if (prevProps.user.id != this.props.user.id) {
             this.props.fetchBoards(this.props.user.id);
+            this.props.fetchUsersPins(this.props.user.id);
         }
     }
 
@@ -36,6 +37,8 @@ class BoardViewTwo extends React.Component {
                     currentUserId={this.props.currentUserId}
                     fetchPins={this.props.fetchPins}
                     pins={this.props.pins}
+                    createFollow={this.props.createFollow}
+                    deleteFollow={this.props.deleteFollow}
                 />);
             }
             if (i % 4 === 1) {
@@ -48,6 +51,8 @@ class BoardViewTwo extends React.Component {
                     currentUserId={this.props.currentUserId}
                     fetchPins={this.props.fetchPins}
                     pins={this.props.pins}
+                    createFollow={this.props.createFollow}
+                    deleteFollow={this.props.deleteFollow}
                 />);
             }
             if (i % 4 === 2) {
@@ -60,6 +65,8 @@ class BoardViewTwo extends React.Component {
                     currentUserId={this.props.currentUserId}
                     fetchPins={this.props.fetchPins}
                     pins={this.props.pins}
+                    createFollow={this.props.createFollow}
+                    deleteFollow={this.props.deleteFollow}
                 />);
             }
             if (i % 4 === 3) {
@@ -72,6 +79,8 @@ class BoardViewTwo extends React.Component {
                     currentUserId={this.props.currentUserId}
                     fetchPins={this.props.fetchPins}
                     pins={this.props.pins}
+                    createFollow={this.props.createFollow}
+                    deleteFollow={this.props.deleteFollow}
                 />);
             }
         });
@@ -82,16 +91,16 @@ class BoardViewTwo extends React.Component {
 
                     <div className='splash4'>
                         <div className="row3">
-                            <div className="column3">
+                            <div className="column3 hover3">
                                 {col1}
                             </div>
-                            <div className="column3">
+                        <div className="column3 hover3">
                                 {col2}
                             </div>
-                            <div className="column3">
+                        <div className="column3 hover3">
                                 {col3}
                             </div>
-                            <div className="column3">
+                        <div className="column3 hover3">
                                 {col4}
                             </div>
                         </div>

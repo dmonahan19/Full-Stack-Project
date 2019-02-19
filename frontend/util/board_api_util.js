@@ -6,6 +6,16 @@ export const fetchBoards = (userId) => {
     });
 };
 
+
+export const fetchFollowBoards = (boardIds) => {
+  return $.ajax({
+    method: "GET",
+    url: `/api/boards`,
+    data: { boardIds }
+  });
+};
+
+
 export const fetchBoard = id => {
     return $.ajax({
       method: 'GET',

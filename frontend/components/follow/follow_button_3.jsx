@@ -4,7 +4,15 @@ class FollowButton3 extends React.Component {
 
     constructor(props) {
         super(props);
+        this.follow = this.follow.bind(this);
         this.unfollow = this.unfollow.bind(this);
+    }
+
+    follow() {
+        this.props.createFollow({
+            following_type: 'User',
+            following_id: this.props.user.id
+        });
     }
 
     unfollow() {
