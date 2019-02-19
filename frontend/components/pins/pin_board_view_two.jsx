@@ -19,26 +19,47 @@ class PinBoardViewTwo extends React.Component {
         let col5 = [];
         let col6 = [];
         this.props.pins.forEach((pin, i) => {
+          
             if (i === 0) {
-                col1.push(<img className='' src={pin.photo}></img>);
+                col1.push(<img key={i} src={pin.photo}></img>);
             }
             if (i === 1) {
-                col2.push(<img className='' src={pin.photo}></img>);
+                col2.push(<img key={i} src={pin.photo}></img>);
             }
             if (i === 2) {
-                col3.push(<img className='' src={pin.photo}></img>);
+                col3.push(<img key={i} src={pin.photo}></img>);
             }
             if (i === 3) {
-                col4.push(<img className='' src={pin.photo}></img>);
+                col4.push(<img key={i} src={pin.photo}></img>);
             }
             if (i === 4) {
-                col5.push(<img className='' src={pin.photo}></img>);
+                col5.push(<img key={i} src={pin.photo}></img>);
             }
             if (i === 4) {
-                col6.push(<img className='' src={pin.photo}></img>);
+                col6.push(<img key={i} src={pin.photo}></img>);
             }
         });
+
+        if(col1.length === 0){
+            col1.push(<img src={window.square} />)
+        }
+        if (col2.length === 0) {
+            col2.push(<img src={window.square} />)
+        }
+        if (col3.length === 0) {
+            col3.push(<img src={window.square} />)
+        }
+        if (col4.length === 0) {
+            col4.push(<img src={window.square} />)
+        }
+        if (col5.length === 0) {
+            col5.push(<img src={window.square} />)
+        }
+        if (col6.length === 0) {
+            col6.push(<img src={window.square} />)
+        }
         return(
+            <>
              <div className="gallery">
                 <div className="gallery-item-1">
                     {col1}
@@ -59,6 +80,7 @@ class PinBoardViewTwo extends React.Component {
                     {col6}
                 </div>
             </div> 
+        </>
         )
     }
 }

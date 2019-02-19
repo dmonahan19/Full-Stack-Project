@@ -6,6 +6,7 @@ class BoardViewTwo extends React.Component {
 
     componentDidMount() {
         this.props.fetchBoards(this.props.user.id);
+        this.props.fetchUsersPins(this.props.user.id);
     }
 
 
@@ -75,6 +76,7 @@ class BoardViewTwo extends React.Component {
             }
         });
 
+        
         return (
                 <>
 

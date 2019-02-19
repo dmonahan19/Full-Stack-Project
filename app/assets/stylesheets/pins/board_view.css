@@ -1,7 +1,7 @@
 .gallery {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 5vw);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 5vw);
     grid-gap: 3px;
 }
 
@@ -54,8 +54,8 @@
 }
 
 .splash4{
-     position: absolute;
-    top: 45%;
+    position: absolute;
+    top: 50%;
     left: 8%;
     z-index: -1;
     width: fit-content;
@@ -64,5 +64,31 @@
 .board-view{
     display: flex;
     flex-direction: column;
-    width: 700px;
+}
+
+.board-view-info{
+    position: relative;
+    top: -50px;
+}
+
+.board-view-title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.board-view-edit{
+    width: 35px;
+    position: relative;
+    top: -20px;
+    left: -10px;
+}
+
+.flex-edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.square-view{
+      background: #efefef;
 }

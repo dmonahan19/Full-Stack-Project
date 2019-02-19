@@ -15,10 +15,6 @@ class BoardViewItem extends React.Component {
 
     }
 
-    componentDidMount() {
-        this.props.fetchPins(this.props.board.id);
-
-    }
 
     onHover(e) {
         this.setState({ showSave: true });
@@ -30,15 +26,15 @@ class BoardViewItem extends React.Component {
 
 
 
-    render() {
+    render() { 
         let editButton;
       
         if (this.props.currentUserId === this.props.user.id) {
             editButton = <div>
                 {
                     this.state.showSave ? (
-                        <li className='dontshow'><button onClick={() => this.props.openModal('editboardform', this.props.board.id)} >
-                            <img className="edit-img" src={window.pencil} />
+                        <li className='board-view-edit'><button onClick={() => this.props.openModal('editboardform', this.props.board.id)} >
+                            <img className="board-view-edit" src={window.pencil} />
                         </button></li>) : (null)
                 }
             </div >
@@ -47,24 +43,32 @@ class BoardViewItem extends React.Component {
             editButton = null
         }
 
+        const pins = this.props.pins.filter(pin => pin.board_id === this.props.board.id)
+
+        
+
         return (
-            <li>
-                <div className='' onMouseEnter={this.onHover}
+                <div className='board-view' onMouseEnter={this.onHover}
                     onMouseLeave={this.offHover}>
-                    <div className='board-view'>
-                        <li><PinBoardViewTwo pins={this.props.pins} /></li> 
-                        <li><Link to={`/boards/${this.props.board.id}`}>
-                                <h2 className=''>{this.props.board.title} </h2>
-                            </Link>
-                        </li>
-                        <li> <Link to={`/boards/${this.props.board.id}`}>
-                                <p> {this.props.board.numPins ? this.props.board.numPins : 0} Pins </p>
-                            </Link>
-                        </li>
-                        {editButton}  
+                    <div>
+                        <PinBoardViewTwo pins={pins} />
+                        <div className='board-view-info'>
+                            <li><Link to={`/boards/${this.props.board.id}`}>
+                                    <h2 className='board-view-title'>{this.props.board.title} </h2>
+                                </Link>
+                            </li>
+                            <div className='flex-edit'>
+                                <li> <Link to={`/boards/${this.props.board.id}`}>
+                                        <p> {this.props.board.numPins ? this.props.board.numPins : 0} Pins </p>
+                                    </Link>
+                                </li>
+                                {editButton}
+                            </div>
+
+                        </div>
                     </div>  
                 </div>             
-            </li>);
+            );
     }
 };
 

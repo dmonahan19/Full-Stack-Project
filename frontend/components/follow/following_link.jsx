@@ -15,7 +15,7 @@ class FollowingLink extends React.Component {
         let col3 = [];
         let col4 = [];
         let i = 0;
-        this.props.pins.map((pin) => {
+        this.props.pins.map((pin, i) => {
                 if (i % 4 === 0) {
                     col1.push(<FollowingPinItem
                         key={i}
