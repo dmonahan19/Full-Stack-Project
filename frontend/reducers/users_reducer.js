@@ -32,7 +32,6 @@ const usersReducer = (state={}, action) => {
              }
              return newState;  
         case REMOVE_FOLLOW: 
-        debugger
                 newState = merge({}, state);
             if (action.follow.following_type === 'User') {
                     newState[action.userId].follow_ids = newState[action.userId].follow_ids.filter(id => id != action.followId);
