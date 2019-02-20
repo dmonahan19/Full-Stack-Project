@@ -58,16 +58,41 @@
 .board-view{
     display: flex;
     flex-direction: column;
+    height: fit-content;
 }
 
-.board-view-info{
+.board-view{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.board-view-info2{
     position: relative;
     top: -50px;
+    height: fit-content;
+}
+
+
+.board-view-info2{
+    position: relative;
+    top: -50px;
+    height: fit-content;
 }
 
 .board-view-title{
     font-size: 24px;
     font-weight: bold;
+}
+
+.board-view2:hover{
+    background-color: #eeeeee;
+    height: 85%;
+}
+
+.board-view:hover{
+    background-color: #eeeeee;
+    height: 80%;
 }
 
 .board-view-edit{

@@ -57,11 +57,11 @@ class BoardViewItemThree extends React.Component {
 
 
         return (
-            <div className='board-view' onMouseEnter={this.onHover}
+            <div className='board-view2' onMouseEnter={this.onHover}
                 onMouseLeave={this.offHover}>
                 <div>
                     <PinBoardViewThree pins={pins} />
-                    <div className='board-view-info'>
+                    <div className='board-view-info2'>
                         <li><Link to={`/boards/${this.props.board.id}`}>
                             <h2 className='board-view-title'>{this.props.board.title} </h2>
                         </Link>

@@ -28,7 +28,7 @@ const usersReducer = (state={}, action) => {
              if(action.follow.following_type === 'Board'){
                  user = newState[action.follow.user_id];
                  user.following_boardIds.push(action.follow.following_id);
-                 user.follow_ids_board.push(action.follow.id)
+                 user.follow_ids_board.push(action.follow.id);
              }
              return newState;  
         case REMOVE_FOLLOW: 
