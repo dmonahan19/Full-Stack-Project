@@ -28,14 +28,20 @@ const usersReducer = (state={}, action) => {
              if(action.follow.following_type === 'Board'){
                  user = newState[action.follow.user_id];
                  user.following_boardIds.push(action.follow.following_id);
+                 user.follow_ids_board.push(action.follow.id)
              }
              return newState;  
         case REMOVE_FOLLOW: 
+        debugger
                 newState = merge({}, state);
+            if (action.follow.following_type === 'User') {
                     newState[action.userId].follow_ids = newState[action.userId].follow_ids.filter(id => id != action.followId);
                     newState[action.userId].follower_userIds = newState[action.userId].follower_userIds.filter(id => id != action.follow.user_id);
-                    newState[action.userId].following_boardIds = newState[action.userId].following_boardIds.filter(id => id != action.follow.following_id);     
-                return newState;
+            }
+            if (action.follow.following_type === 'Board') {
+                    newState[action.follow.user_id].following_boardIds = newState[action.follow.user_id].following_boardIds.filter(id => id != action.follow.following_id);   
+            }  
+            return newState;
         case RECEIVE_SEARCH_USERS:
             return merge({}, state, action.users);
         default:

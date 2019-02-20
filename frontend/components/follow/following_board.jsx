@@ -36,6 +36,7 @@ class FollowingBoard extends React.Component {
                         fetchPins={this.props.fetchPins}
                         boards={this.props.boards}
                         follows={this.props.follows}
+                        currentUser={this.props.currentUser}
                     />);
                 }
                 if (i % 4 === 1) {
@@ -51,6 +52,7 @@ class FollowingBoard extends React.Component {
                         boards={this.props.boards}
                         fetchPins={this.props.fetchPins}
                         follows={this.props.follows}
+                        currentUser={this.props.currentUser}
                     />);
                 }
                 if (i % 4 === 2) {
@@ -66,6 +68,7 @@ class FollowingBoard extends React.Component {
                         boards={this.props.boards}
                         fetchPins={this.props.fetchPins}
                         follows={this.props.follows}
+                        currentUser={this.props.currentUser}
                     />);
                 }
                 if (i % 4 === 3) {
@@ -82,6 +85,7 @@ class FollowingBoard extends React.Component {
                         boards={this.props.boards}
                         fetchPins={this.props.fetchPins}
                         follows={this.props.follows}
+                        currentUser={this.props.currentUser}
                     />);
                 }
                 i++

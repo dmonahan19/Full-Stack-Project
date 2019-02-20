@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FollowButton4 from '../follow/follow_button_4';
+import FollowButton5 from '../follow/follow_button_5';
 import PinBoardViewThree from './pin_board_view_three';
 
 
@@ -42,7 +42,7 @@ class BoardViewItemThree extends React.Component {
             </div >
         }
         else {
-            editButton = <FollowButton4
+            editButton = <FollowButton5
                 createFollow={this.props.createFollow}
                 deleteFollow={this.props.deleteFollow}
                 board={this.props.board}

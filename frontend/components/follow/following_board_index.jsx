@@ -62,6 +62,7 @@ class FollowingBoardIndex extends React.Component {
                 user={this.props.user}
                 boards={this.props.boards}
                 follows={this.props.follows}
+                currentUser={this.props.currentUser}
             />
         }
 

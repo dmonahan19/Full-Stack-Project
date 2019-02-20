@@ -11,6 +11,12 @@ class FollowButton4 extends React.Component {
         this.unfollow = this.unfollow.bind(this);
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.currentUser.following_boardIds != this.props.currentUser.following_boardIds) {
+        
+        }
+    }
+
 
     follow() {
         this.props.createFollow({
@@ -25,9 +31,8 @@ class FollowButton4 extends React.Component {
     }
 
     render() {
-        debugger
         let follow;
-            this.props.user.following_boardIds.includes(this.props.boardId)  ?
+            this.props.currentUser.following_boardIds.includes(this.props.boardId)  ?
             follow = <li><button onClick={this.unfollow} className='unfollow-button4'>Unfollow</button></li>
             :
             follow = <li><button onClick={this.follow} className='follow-button4'>Follow</button></li>

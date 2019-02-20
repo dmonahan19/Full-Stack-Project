@@ -36,8 +36,34 @@
     top:-35px;
 }
 
+.follow-button5{
+    width: 90px;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-color: #e60000;
+    font-size: 18px;
+    position: relative;
+    top:-35px;
+}
 
 .unfollow-button4{
+    width: 110px;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    background-color: #efefef;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top:-35px;
+}
+
+.unfollow-button5{
     width: 110px;
     padding: 12px 15px;
     box-sizing: border-box;
