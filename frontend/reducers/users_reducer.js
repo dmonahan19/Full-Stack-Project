@@ -33,7 +33,8 @@ const usersReducer = (state={}, action) => {
         case REMOVE_FOLLOW: 
                 newState = merge({}, state);
                     newState[action.userId].follow_ids = newState[action.userId].follow_ids.filter(id => id != action.followId);
-                    newState[action.userId].follower_userIds = newState[action.userId].follower_userIds.filter(id => id != action.follow.user_id);    
+                    newState[action.userId].follower_userIds = newState[action.userId].follower_userIds.filter(id => id != action.follow.user_id);
+                    newState[action.userId].following_boardIds = newState[action.userId].following_boardIds.filter(id => id != action.follow.following_id);     
                 return newState;
         case RECEIVE_SEARCH_USERS:
             return merge({}, state, action.users);

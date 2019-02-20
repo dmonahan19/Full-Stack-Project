@@ -25,6 +25,7 @@ class FollowButton4 extends React.Component {
     }
 
     render() {
+        debugger
         let follow;
             this.props.user.following_boardIds.includes(this.props.boardId)  ?
             follow = <li><button onClick={this.unfollow} className='unfollow-button4'>Unfollow</button></li>

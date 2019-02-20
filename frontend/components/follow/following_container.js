@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
     return ({
         follows: Object.values(state.entities.follows),
         currentUserId: currentUserId,
-        user: state.entities.users[currentUserId],
+        user: state.entities.users[ownProps.match.params.userId],
         pins: Object.values(state.entities.pins)
     });
 };

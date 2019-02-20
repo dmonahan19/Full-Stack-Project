@@ -30,7 +30,6 @@ class BoardViewItem extends React.Component {
     render() { 
 
         let editButton;
-        let follow;
         if (this.props.currentUserId === this.props.user.id) {
             editButton = <div>
                 {

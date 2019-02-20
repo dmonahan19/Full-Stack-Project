@@ -4,38 +4,47 @@ import DropDown from './drop_down';
 import FollowButton from '../follow/follow_button';
 
 
-const Profile = (props) => {
-    if (!props.user){
+class Profile extends React.Component {
+    
+    componentDidUpdate(prevProps){
+        prevProps.user.id != this.props.user.id
+        
+    }
+
+   render(){
+       let boardFollowers = this.props.user.following_boardIds.length;
+       let userFollowers = this.props.user.following_userIds.length;
+    if (!this.props.user){
         return null;
     }
         let user;
         let photo;
         let dot;
         let dropDown;
-        if(props.user.first_name && props.user.last_name){
+        if(this.props.user.first_name && this.props.user.last_name){
     
-            user = `${props.user.first_name} ${props.user.last_name}`
+            user = `${this.props.user.first_name} ${this.props.user.last_name}`
         }
-        else if(props.user.first_name){
-            user = props.user.first_name;
+        else if(this.props.user.first_name){
+            user = this.props.user.first_name;
         }
         else{
-            user = props.user.email.split("@")[0]
+            user = this.props.user.email.split("@")[0]
         }
 
-        if(props.user.photo){
-            photo = props.user.photo;
+        if(this.props.user.photo){
+            photo = this.props.user.photo;
         }
         else{
             photo= window.empty;
         }
 
-        if (props.user.location && props.user.about_you){
+        if (this.props.user.location && this.props.user.about_you){
             dot = <li><span className="dot dot2"></span></li>
         }
-        if (props.currentUserId === props.user.id){
+        if (this.props.currentUserId === this.props.user.id){
             dropDown = <ul className="editlinks">
-                <DropDown openModal={props.openModal} />
+                <DropDown openModal={this.props.openModal} />
             </ul>
         }
 
@@ -45,12 +54,12 @@ const Profile = (props) => {
            <ul className='left-edit'>
                 <li>{dropDown}</li> 
                     <div>
-                        <FollowButton currentUserId={props.currentUserId}
-                            user={props.user}
-                            follows={props.follows}
-                            createFollow={props.createFollow}
-                            deleteFollow={props.deleteFollow}
-                            fetchFollow={props.fetchFollow}
+                        <FollowButton currentUserId={this.props.currentUserId}
+                            user={this.props.user}
+                            follows={this.props.follows}
+                            createFollow={this.props.createFollow}
+                            deleteFollow={this.props.deleteFollow}
+                            fetchFollow={this.props.fetchFollow}
                         />
                 </div>
             </ul>
@@ -58,37 +67,25 @@ const Profile = (props) => {
                 <div>
                     <h1 className="profile-user">{user}</h1>
                     <ul className="follow-links">
-                            <li className="follow1"><Link to={`/users/${props.user.id}/followers`}>{props.user.follower_userIds.length} followers</Link></li>
+                            <li className="follow1"><Link to={`/users/${this.props.user.id}/followers`}>{this.props.user.follower_userIds.length} followers</Link></li>
                         <li><span className="dot follow2"></span></li>
-                            <li className="follow3"><Link to={`/users/${props.user.id}/following`}>{props.user.following_userIds.length} following</Link></li>
+                            <li className="follow3"><Link to={`/users/${this.props.user.id}/following`}>{ boardFollowers + userFollowers} following</Link></li>
                     </ul>
                     <ul className='about-links'>
-                        <li className="about-location">{props.user.location}</li>
+                        <li className="about-location">{this.props.user.location}</li>
                         {dot}
-                        <li>{props.user.about_you || ""}</li>
+                        <li>{this.props.user.about_you || ""}</li>
                     </ul>
                 </div>
                 <ul>
                     <li><img className="profile-picture" src={photo}/></li>
                 </ul>
             </div>
-            {/* <div className= "profile-user-info2">
-                <div>
-                    <ul className="boardpin-links">
-                        <li className='board-link'><Link to={`/users/${props.user.id}/boards`}>Boards</Link></li>
-                        <li className='pin-link'><Link to={`/users/${props.user.id}/pins`}>Pins</Link></li>
-                    </ul>
-                </div>
-                <ul className='menu-links'>
-                    <button className='menu menu1'><svg className="gUZ pBj U9O kVc" height="24" width="24" viewBox="0 0 24 24" aria-label="Wide view" role="img"><title>Wide view</title><path d="M13.00,20.00 L13.00,13.00 L20.00,13.00 L20.00,20.00 L13.00,20.00 Z M4.00,11.00 L4.00,4.00 L11.00,4.00 L11.00,11.00 L4.00,11.00 Z M13.00,11.00 L13.00,4.00 L20.00,4.00 L20.00,11.00 L13.00,11.00 Z M4.00,20.00 L4.00,13.00 L11.00,13.00 L11.00,20.00 L4.00,20.00 Z"></path></svg></button>
-                    <button className='menu'> &#9776; </button>
-                </ul>
-            </div> */}
             
             </div>
         </>
     )
-   
+    }  
 }
 
 export default Profile;

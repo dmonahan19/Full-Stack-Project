@@ -34,9 +34,9 @@ class FollowingIndexItem extends React.Component {
                     <li><img className="following-profile-picture" src={photo} /></li>
                     <li className="following-name">{user1}</li>
                     <ul className="board-and-followers">
-                        <li className="follow1">13 boards</li>
+                        <li className="follow1">{this.props.user.board_ids.length} boards</li>
                         <li><span className="dot follow2"></span></li>
-                        <li className="follow3">48 followers</li>
+                        <li className="follow3">{this.props.user.follower_userIds.length} followers</li>
                     </ul>
                     <div>
                         <FollowButton3 

@@ -50,3 +50,17 @@
     position: relative;
     top:-35px;
 }
+
+
+.number-followers-2{
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.follow-word{
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    top: -20px;
+}
+

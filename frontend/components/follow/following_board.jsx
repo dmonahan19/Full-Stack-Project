@@ -8,6 +8,13 @@ class FollowingBoard extends React.Component {
         this.props.fetchBoardPins(this.props.user.following_boardIds);
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.user.id != this.props.user.id) {
+            this.props.fetchFollows();
+            this.props.fetchBoardPins(this.props.user.following_boardIds);
+        }
+    }
+
     render() {
         let col1 = [];
         let col2 = [];

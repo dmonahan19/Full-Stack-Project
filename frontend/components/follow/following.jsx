@@ -4,8 +4,13 @@ import FollowingIndexItem from './following_index_item'
 class Following extends React.Component {
 
     componentDidMount() {
-        // this.props.fetchUsers() 
         this.props.fetchFollows();
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.user.id != this.props.user.id) {
+            this.props.fetchFollows();
+        }
     }
 
     render() {
