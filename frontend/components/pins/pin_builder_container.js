@@ -17,7 +17,7 @@ import PinBuilder from './pin_builder'
   const mapDispatchToProps = (dispatch) => {
     return ({
         createItem: (item) => dispatch(createItem(item)),
-        fetchBoards: () => dispatch(fetchBoards()),
+        fetchBoards: (userId) => dispatch(fetchBoards(userId)),
 
     });
   };

@@ -20,6 +20,7 @@ class PinBuilder extends React.Component{
     }
 
     componentDidMount() {
+        debugger
         this.props.fetchBoards(this.props.currentUserId);
 
     }
