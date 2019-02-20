@@ -7,7 +7,7 @@ json.boards do
         json.photo url_for(board.pins.first.item.photo)
       end
       if !board.pins.empty?
-        json.lastEdited board.pins.first.updated_at
+        json.lastEdited board.pins.last.updated_at
       end
     end
   end

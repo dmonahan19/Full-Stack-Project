@@ -28,7 +28,6 @@ class BoardViewItem extends React.Component {
 
 
     render() { 
-
         let editButton;
         if (this.props.currentUserId === this.props.user.id) {
             editButton = <div>
@@ -52,6 +51,7 @@ class BoardViewItem extends React.Component {
         }
 
         const pins = this.props.pins.filter(pin => pin.board_id === this.props.board.id)
+    
 
         
 

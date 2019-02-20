@@ -1,33 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import moment from 'moment-timezone';
 
 
 
 class BoardIndexItem extends React.Component { 
 
     constructor(props) {
-        super(props)
-        this.state = { showSave: false }
+        super(props);
+        this.state = { showSave: false };
 
         this.onHover = this.onHover.bind(this)
-        this.offHover = this.offHover.bind(this)
+        this.offHover = this.offHover.bind(this);
 
     }
 
     onHover(e) {
-        this.setState({ showSave: true })
+        this.setState({ showSave: true });
     }
 
     offHover(e) {
-        this.setState({ showSave: false })
+        this.setState({ showSave: false });
     }
    
-
+    parseDate() {
+        const time = moment(this.props.board.lastEdited).tz('America/New_York');
+        return time.fromNow();
+    }
 
 render(){
-    let photo
-    let editButton
+
+   
+
+    let photo;
+    let editButton;
     if (this.props.board.photo) {
         photo = <li><Link to={`/boards/${this.props.board.id}`}>
             <img src={this.props.board.photo} />
@@ -73,7 +79,7 @@ render(){
                     </Link></li>          
                     
                     <li><Link to={`/boards/${this.props.board.id}`}>
-                        <p>7 days ago</p>
+                            <p>{this.parseDate()}</p>
                     </Link></li> 
                     <div>
                        {editButton} 
