@@ -13,7 +13,7 @@ class FollowingIndexItem extends React.Component {
         if (this.props.follow.following_type === 'User'){
         if (this.props.follow.first_name && this.props.follow.last_name) {
 
-            user = `${this.props.follow.first_name} ${this.props.follow.last_name}`
+            user = `${this.props.follow.first_name} ${this.props.follow.last_name}`;
         }
         else if (this.props.follow.first_name) {
             user = this.props.follow.first_name;
