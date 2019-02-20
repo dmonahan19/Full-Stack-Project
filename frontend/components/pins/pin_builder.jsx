@@ -20,13 +20,13 @@ class PinBuilder extends React.Component{
     }
 
     componentDidMount() {
-        this.props.fetchBoards();
+        this.props.fetchBoards(this.props.currentUserId);
 
     }
 
 
     navigateToShowBoards() {
-        const url = `/users/${this.props.currentUserId}`
+        const url = `/users/${this.props.currentUserId}`;
         this.props.history.push(url);
     }
 
