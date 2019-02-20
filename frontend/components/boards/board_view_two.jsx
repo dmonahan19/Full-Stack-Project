@@ -15,10 +15,10 @@ class BoardViewTwo extends React.Component {
             this.props.fetchBoards(this.props.user.id);
             this.props.fetchUserPins(this.props.user.id);
         }
-        if (prevProps.pins != this.props.pins) {
-            this.props.fetchBoards(this.props.user.id);
-            this.props.fetchUserPins(this.props.user.id);
-        }
+        // if (prevProps.pins != this.props.pins) {
+        //     this.props.fetchBoards(this.props.user.id);
+        //     this.props.fetchUserPins(this.props.user.id);
+        // }
        
     }
 
