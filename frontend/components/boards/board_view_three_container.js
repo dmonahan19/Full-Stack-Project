@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import BoardViewThree from './board_view_three';
 import { fetchBoards } from '../../actions/board_actions';
-import { fetchUsersPins } from '../../actions/pin_actions';
+import { fetchUserPins } from '../../actions/pin_actions';
 import { createFollow, deleteFollow } from '../../actions/follow_actions';
 import { openModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
@@ -23,7 +23,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return ({
         fetchBoards: (userId) => dispatch(fetchBoards(userId)),
-        fetchUsersPins: (userId) => dispatch(fetchUsersPins(userId)),
+        fetchUserPins: (userId) => dispatch(fetchUserPins(userId)),
         deleteBoard: (id) => dispatch(deleteBoard(id)),
         openModal: (modal, boardId) => dispatch(openModal(modal, { boardId })),
         createFollow: (follow) => dispatch(createFollow(follow)),
