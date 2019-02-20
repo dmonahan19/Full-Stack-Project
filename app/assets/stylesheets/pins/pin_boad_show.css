@@ -8,7 +8,7 @@
   
   
 .column2 {
- -ms-flex: 20%; /* IE10 */
+ -ms-flex: 20%; 
   flex: 20%;
   max-width: 20%;
   min-width: 200px;;

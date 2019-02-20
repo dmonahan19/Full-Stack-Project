@@ -84,7 +84,7 @@
     font-size: 24px;
     font-weight: bold;
 }
-
+/* 
 .board-view2:hover{
     background-color: #eeeeee;
     height: 85%;
@@ -93,7 +93,7 @@
 .board-view:hover{
     background-color: #eeeeee;
     height: 80%;
-}
+} */
 
 .board-view-edit{
     width: 35px;
