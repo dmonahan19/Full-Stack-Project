@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 
 class PinBoardViewTwo extends React.Component {
 
@@ -35,7 +33,7 @@ class PinBoardViewTwo extends React.Component {
             if (i === 4) {
                 col5.push(<img key={i} src={pin.photo}></img>);
             }
-            if (i === 4) {
+            if (i === 5) {
                 col6.push(<img key={i} src={pin.photo}></img>);
             }
         });
