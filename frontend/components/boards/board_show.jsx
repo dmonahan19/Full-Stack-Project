@@ -59,9 +59,7 @@ class BoardShow extends React.Component{
                                 
                             </ul>
                         </div>
-                        {/* <ul>
-                            <li className='show-menu'> &#9776; </li>
-                        </ul> */}
+                       
                     </div>
 
                 </div>

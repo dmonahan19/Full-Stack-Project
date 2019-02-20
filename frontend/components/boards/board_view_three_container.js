@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
-import BoardViewTwo from './board_view_two';
+import BoardViewThree from './board_view_three';
 import { fetchBoards } from '../../actions/board_actions';
 import { fetchUsersPins } from '../../actions/pin_actions';
-import { fetchFollows, createFollow, deleteFollow } from '../../actions/follow_actions';
+import { createFollow, deleteFollow } from '../../actions/follow_actions';
 import { openModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
 
@@ -31,4 +31,4 @@ const mapDispatchToProps = (dispatch) => {
     });
 };
 
-export default withRouter((connect(mapStateToProps, mapDispatchToProps)(BoardViewTwo)));
+export default withRouter((connect(mapStateToProps, mapDispatchToProps)(BoardViewThree)));

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PinBoardViewTwo from '../pins/pin_board_view_two';
 import FollowButton4 from '../follow/follow_button_4';
+import PinBoardViewThree from './pin_board_view_three';
 
 
 
-class BoardViewItem extends React.Component {
+class BoardViewItemThree extends React.Component {
 
     constructor(props) {
         super(props);
@@ -27,7 +27,7 @@ class BoardViewItem extends React.Component {
 
 
 
-    render() { 
+    render() {
 
         let editButton;
         let follow;
@@ -54,31 +54,31 @@ class BoardViewItem extends React.Component {
 
         const pins = this.props.pins.filter(pin => pin.board_id === this.props.board.id)
 
-        
+
 
         return (
-                <div className='board-view' onMouseEnter={this.onHover}
-                    onMouseLeave={this.offHover}>
-                    <div>
-                        <PinBoardViewTwo pins={pins} />
-                        <div className='board-view-info'>
-                            <li><Link to={`/boards/${this.props.board.id}`}>
-                                    <h2 className='board-view-title'>{this.props.board.title} </h2>
-                                </Link>
+            <div className='board-view' onMouseEnter={this.onHover}
+                onMouseLeave={this.offHover}>
+                <div>
+                    <PinBoardViewThree pins={pins} />
+                    <div className='board-view-info'>
+                        <li><Link to={`/boards/${this.props.board.id}`}>
+                            <h2 className='board-view-title'>{this.props.board.title} </h2>
+                        </Link>
+                        </li>
+                        <div className='flex-edit'>
+                            <li> <Link to={`/boards/${this.props.board.id}`}>
+                                <p> {this.props.board.numPins ? this.props.board.numPins : 0} Pins </p>
+                            </Link>
                             </li>
-                            <div className='flex-edit'>
-                                <li> <Link to={`/boards/${this.props.board.id}`}>
-                                        <p> {this.props.board.numPins ? this.props.board.numPins : 0} Pins </p>
-                                    </Link>
-                                </li>
-                                {editButton}
-                            </div>
-
+                            {editButton}
                         </div>
-                    </div>  
-                </div>             
-            );
+
+                    </div>
+                </div>
+            </div>
+        );
     }
 };
 
-export default BoardViewItem;
+export default BoardViewItemThree;

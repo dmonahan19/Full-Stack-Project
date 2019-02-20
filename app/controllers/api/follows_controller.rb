@@ -6,7 +6,6 @@ class Api::FollowsController < ApplicationController
     end
          
     def create
-        debugger
          @follow = Follow.new(follow_params)
          @follow.user_id = current_user.id
         if @follow.save

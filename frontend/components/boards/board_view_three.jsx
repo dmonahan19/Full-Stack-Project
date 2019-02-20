@@ -1,7 +1,7 @@
 import React from 'react';
-import BoardViewItem from './board_view_items';
+import BoardViewItemThree from './board_view_items_three';
 
-class BoardViewTwo extends React.Component {
+class BoardViewThree extends React.Component {
 
 
     componentDidMount() {
@@ -28,7 +28,7 @@ class BoardViewTwo extends React.Component {
         let col4 = [];
         this.props.boards.forEach((board, i) => {
             if (i % 4 === 0) {
-                col1.push(<BoardViewItem
+                col1.push(<BoardViewItemThree
                     key={i}
                     board={board}
                     deleteBoard={this.props.deleteBoard}
@@ -43,7 +43,7 @@ class BoardViewTwo extends React.Component {
                 />);
             }
             if (i % 4 === 1) {
-                col2.push(<BoardViewItem
+                col2.push(<BoardViewItemThree
                     key={i}
                     board={board}
                     deleteBoard={this.props.deleteBoard}
@@ -58,7 +58,7 @@ class BoardViewTwo extends React.Component {
                 />);
             }
             if (i % 4 === 2) {
-                col3.push(<BoardViewItem
+                col3.push(<BoardViewItemThree
                     key={i}
                     board={board}
                     deleteBoard={this.props.deleteBoard}
@@ -73,7 +73,7 @@ class BoardViewTwo extends React.Component {
                 />);
             }
             if (i % 4 === 3) {
-                col4.push(<BoardViewItem
+                col4.push(<BoardViewItemThree
                     key={i}
                     board={board}
                     deleteBoard={this.props.deleteBoard}
@@ -89,32 +89,32 @@ class BoardViewTwo extends React.Component {
             }
         });
 
-        
-        return (
-                <>
 
-                    <div className='splash4'>
-                        <div className="row3">
-                            <div className="column3 hover3">
-                                {col1}
-                            </div>
+        return (
+            <>
+
+                <div className='splash4'>
+                    <div className="row3">
                         <div className="column3 hover3">
-                                {col2}
-                            </div>
+                            {col1}
+                        </div>
                         <div className="column3 hover3">
-                                {col3}
-                            </div>
+                            {col2}
+                        </div>
                         <div className="column3 hover3">
-                                {col4}
-                            </div>
+                            {col3}
+                        </div>
+                        <div className="column3 hover3">
+                            {col4}
                         </div>
                     </div>
+                </div>
 
 
 
-                </>
+            </>
         );
     }
 
 }
-export default BoardViewTwo
+export default BoardViewThree

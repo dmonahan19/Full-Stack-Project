@@ -28,7 +28,6 @@ export const fetchFollows = () => dispatch => (
 )
 
 export const createFollow = (followtype) => dispatch => {
-    debugger
     return(
         FollowApiUtil.createFollow(followtype).then((follow,user) => dispatch(receiveFollow(follow,user)))
     );
