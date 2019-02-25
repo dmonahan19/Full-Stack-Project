@@ -12,6 +12,7 @@ class UserIndex extends React.Component {
     render() {
         let userName;
         let photo;
+        let email
         if (this.props.user.first_name && this.props.user.last_name) {
 
             userName = `${this.props.user.first_name} ${this.props.user.last_name}`;
@@ -20,7 +21,8 @@ class UserIndex extends React.Component {
             userName = this.props.user.first_name;
         }
         else {
-            userName = null;
+            email = this.props.user.email.split("@")[0];
+            userName = email.replace(/[0-9]/g, '');
         }
 
         if (this.props.user.photo) {
@@ -37,8 +39,8 @@ class UserIndex extends React.Component {
             <div className='search-results'>
                     <li><Link to={`/users/${this.props.user.id}`}><img className="search-profile-picture" src={photo} /></Link></li>
                     <div className='search-results-name'>
-                        <li><Link to={`/users/${this.props.user.id}`}>{this.props.user.email.split("@")[0]}</Link></li> 
-                        <li className='search-username'><Link to={`/users/${this.props.user.id}`}>{userName}</Link></li>     
+                        <li className='search-username'><Link to={`/users/${this.props.user.id}`}>{userName}</Link></li>   
+                        <li className='search-email'><Link to={`/users/${this.props.user.id}`}>{this.props.user.email.split("@")[0]}</Link></li>   
                     </div>
             </div>
             </>

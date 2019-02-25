@@ -145,6 +145,10 @@ li >a:focus {
     top: 10px;
 }
 
+.search-results:hover{
+      background: #efefef;
+}
+
 .search-results > li{
     display: flex;
     flex-direction: row;
@@ -161,7 +165,13 @@ li >a:focus {
     flex-direction: column;
 }
 
-.search-username{
+.search-email{
     position: relative;
-    top: -10px;;
+    top: -10px;
+    font-size: 14px;
+}
+
+.search-username{
+   font-size: 20px;
+   font-weight: bold;
 }
