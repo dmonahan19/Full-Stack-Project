@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import BoardViewTwo from './board_view_two';
 import { fetchBoards } from '../../actions/board_actions';
 import { fetchUserPins } from '../../actions/pin_actions';
-import { fetchFollows, createFollow, deleteFollow } from '../../actions/follow_actions';
+import { createFollow, deleteFollow } from '../../actions/follow_actions';
 import { openModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
 

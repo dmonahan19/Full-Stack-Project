@@ -14,8 +14,8 @@ class PinBuilder extends React.Component{
             photoFile: null,
             photoUrl: null
         };
-        this.handleSubmit = this.handelSubmit.bind(this)
-        this.handleFile = this.handleFile.bind(this)
+        this.handleSubmit = this.handelSubmit.bind(this);
+        this.handleFile = this.handleFile.bind(this);
         this.navigateToShowBoards = this.navigateToShowBoards.bind(this);
     }
 
@@ -37,7 +37,7 @@ class PinBuilder extends React.Component{
     
           this.setState({
           [field]: e.currentTarget.value
-        });}
+        });};
       }
       
     handelSubmit(e){

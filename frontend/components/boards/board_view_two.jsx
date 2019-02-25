@@ -15,15 +15,13 @@ class BoardViewTwo extends React.Component {
             this.props.fetchBoards(this.props.user.id);
             this.props.fetchUserPins(this.props.user.id);
         }
-        // if (prevProps.pins != this.props.pins) {
-        //     this.props.fetchBoards(this.props.user.id);
-        //     this.props.fetchUserPins(this.props.user.id);
-        // }
        
     }
-
-
+    
     render() {
+        let boards;
+        let board1;
+        let board2;
         if (!this.props.user) {
             return null;
         }
@@ -31,7 +29,26 @@ class BoardViewTwo extends React.Component {
         let col2 = [];
         let col3 = [];
         let col4 = [];
-        this.props.boards.forEach((board, i) => {
+        if(this.props.pins.length > 0){
+            if (this.props.showOrder === "4") {
+                board2 = this.props.boards.sort((a, b) => a.lastEdited.localeCompare(b.lastEdited));
+                boards = board2.reverse();
+            }
+            else if (this.props.showOrder === "1"){
+                boards = this.props.boards.sort((a, b) => a.title.localeCompare(b.title));
+            }
+            else if(this.props.showOrder === "2"){
+                board1 = this.props.boards.sort((a, b) => a.created_at.localeCompare(b.created_at));
+                boards = board1.reverse();
+            }
+            else if(this.props.showOrder === "3"){
+                boards = this.props.boards.sort((a, b) => a.created_at.localeCompare(b.created_at));
+            }
+        }
+        else{
+            boards = this.props.boards;
+        }
+        boards.forEach((board, i) => {
             if (i % 4 === 0) {
                 col1.push(<BoardViewItem
                     key={i}

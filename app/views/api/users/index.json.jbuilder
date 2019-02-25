@@ -48,5 +48,8 @@
         json.board_following_ids board_following_ids
         json.follow_ids_board  follow_ids_board 
         json.following_boardIds  following_boardIds
+        if user.photo.attached? 
+            json.photo user.photo.service_url
+        end
     end
 end

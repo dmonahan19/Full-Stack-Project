@@ -2,7 +2,7 @@ class Api::UsersController < ApplicationController
 
     def index
       if params[:search_query]
-        @users = User.where("lower(email) LIKE ?", "%#{params[:search_query].downcase}%")
+        @users = User.where("lower(email) LIKE ? or lower(first_name) LIKE ?", "%#{params[:search_query].downcase}%", "%#{params[:search_query].downcase}%")
         render "api/users/index"
       elsif params[:userIds]  
         @users = User.where(id: params[:userIds]) 

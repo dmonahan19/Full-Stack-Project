@@ -11,15 +11,15 @@ const mapStateToProps = (state) => {
   return({
     currentUserId: currentUserId,
     user: state.entities.users[currentUserId],
-    users: state.entities.users
+    users: Object.values(state.entities.users),
+    searchUsers: Object.values(state.entities.searchUsers)
   });
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  const history = ownProps.history
+const mapDispatchToProps = (dispatch) => {
   return ({
     logout: () => dispatch(logout()),
-    fetchSearchUsers: (searchQuery) => dispatch((fetchSearchUsers(searchQuery, history)))
+    fetchSearchUsers: (searchQuery) => dispatch((fetchSearchUsers(searchQuery)))
   });
 };
 

@@ -18,10 +18,27 @@ class BoardIndex extends React.Component{
 
     
     render(){
+      let boardOrder;
+      let board1;
+      let board2;
       if(!this.props.user){
-        return null
+        return null;
       }
-      const boards = this.props.boards.map((board,i) => {
+      if (this.props.showOrder === "4") {
+        board2 = this.props.boards.sort((a, b) => a.lastEdited.localeCompare(b.lastEdited));
+        boardOrder = board2.reverse();
+      }
+      else if (this.props.showOrder === "1") {
+        boardOrder = this.props.boards.sort((a, b) => a.title.localeCompare(b.title));
+      }
+      else if (this.props.showOrder === "2") {
+        board1 = this.props.boards.sort((a, b) => a.created_at.localeCompare(b.created_at));
+        boardOrder = board1.reverse();
+      }
+      else if (this.props.showOrder === "3") {
+        boardOrder = this.props.boards.sort((a, b) => a.created_at.localeCompare(b.created_at));
+      }
+      const boards = boardOrder.map((board,i) => {
         return (
             <BoardIndexItem
               key={i}

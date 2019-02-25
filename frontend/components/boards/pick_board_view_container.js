@@ -8,6 +8,7 @@ const mapStateToProps = (state, ownProps) => {
     return ({
         currentUserId: currentUserId,
         user: state.entities.users[ownProps.match.params.userId],
+        pins: Object.values(state.entities.pins)
     });
 };
 
