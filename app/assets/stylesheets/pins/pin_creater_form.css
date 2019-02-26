@@ -12,6 +12,7 @@
     left: 17%;
     width: 900px;
     height: fit-content;
+    min-height: 750px;
     background-color: white;
     border-radius: 5px;
 }
