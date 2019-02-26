@@ -1,18 +1,17 @@
-import React from 'react'
-import PinHomeIndexItem from '../pins/pin_home_index_item'
+import React from 'react';
+import PinHomeIndexItem from '../pins/pin_home_index_item';
 
 
 class HomePage extends React.Component {
 
     constructor(props){
-        super(props)
+        super(props);
     }
     
     
     componentDidMount() {
         this.props.fetchUsersPins();
         this.props.fetchBoards(this.props.currentUserId);
-
     }
 
 

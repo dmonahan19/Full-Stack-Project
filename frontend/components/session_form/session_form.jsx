@@ -27,7 +27,6 @@ class SessionForm extends React.Component{
     this.setState({email:'demouser', password:'password'}, () => {
     this.props.login(this.state);
     });
-    // this.props.login();
   }
 
 
@@ -37,11 +36,6 @@ class SessionForm extends React.Component{
         [field]: e.target.value});
     };
   }
-
-  // toggleSpan(){
-  //   this.props.formType === 'Log in' ? <SignupFormContainer/>: <LoginFormContainer/> }
-  // }
-
 
 
   renderErrors() {

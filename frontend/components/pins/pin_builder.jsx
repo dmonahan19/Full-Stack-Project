@@ -10,7 +10,7 @@ class PinBuilder extends React.Component{
             title: '',
             description: '',
             website_url: '',
-            boardId: "0",
+            boardId: "",
             photoFile: null,
             photoUrl: null
         };
@@ -28,6 +28,19 @@ class PinBuilder extends React.Component{
     navigateToShowBoards() {
         const url = `/users/${this.props.currentUserId}`;
         this.props.history.push(url);
+    }
+
+    renderErrors() {
+        debugger
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
     }
 
 
@@ -65,6 +78,7 @@ class PinBuilder extends React.Component{
     }
 
     render(){
+        debugger
         const boards = this.props.boards.map((board,i) => {
             return (
                 <option value={board.id} key={i}> {board.title} </option>
@@ -134,10 +148,11 @@ class PinBuilder extends React.Component{
                         
                         <label>
                         <select className='pin-selector' value={this.state.boardId} onChange={this.update('boardId')}>
-                                <option value='0' disabled={true}>Choose a board (required)</option>
+                                <option value='' disabled={true}>Choose a board (required)</option>
                                 { boards }
                             </select>
                         </label>
+                        {this.renderErrors()}
                     </div>
                 </div>
                 </div>

@@ -1,13 +1,14 @@
 import { connect } from "react-redux";
-import { fetchPin, createPin } from "../../actions/pin_actions"
-import { fetchBoards } from "../../actions/board_actions"
-import { closeModal } from "../../actions/modal_actions"
-import HomePageCreatePin from './home_page_create_pin'
+import { fetchPin, createPin } from "../../actions/pin_actions";
+import { fetchBoards } from "../../actions/board_actions";
+import { closeModal } from "../../actions/modal_actions";
+import HomePageCreatePin from './home_page_create_pin';
 
 const mapStateToProps = (state) => {
-    const pin = state.entities.pins[state.ui.pinEdit] || {}
+    const pin = state.entities.pins[state.ui.pinEdit] || {};
 
     return ({
+        currentUserId: state.session.id,
         pin: pin,
         boards: Object.values(state.entities.boards)
 
@@ -17,7 +18,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return ({
         fetchPin: id => dispatch(fetchPin(id)),
-        fetchBoards: () => dispatch(fetchBoards()),
+        fetchBoards: (userId) => dispatch(fetchBoards(userId)),
         createPin: (pin) => dispatch(createPin(pin)),
         closeModal: () => dispatch(closeModal()),
 

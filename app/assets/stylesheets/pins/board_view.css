@@ -1,7 +1,7 @@
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 5vw);
+    grid-template-rows: repeat(3, 5vw);
     grid-gap: 3px;
 }
 
@@ -67,9 +67,17 @@
     flex-direction: column;
 }
 
+.div-check{
+   
+}
+
+.float-view{
+    display:flex;
+    flex-direction: column;
+}
+
 .board-view-info{
-    position: relative;
-    top: -50px;
+   margin-top: 10px;
 }
 
 .board-view-title{

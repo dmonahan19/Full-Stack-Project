@@ -29,12 +29,14 @@ class BoardViewTwo extends React.Component {
         let col2 = [];
         let col3 = [];
         let col4 = [];
+
         if(this.props.pins.length > 0){
             if (this.props.showOrder === "4") {
                 board2 = this.props.boards.sort((a, b) => a.lastEdited.localeCompare(b.lastEdited));
                 boards = board2.reverse();
+                boards = this.props.boards;
             }
-            else if (this.props.showOrder === "1"){
+            if (this.props.showOrder === "1"){
                 boards = this.props.boards.sort((a, b) => a.title.localeCompare(b.title));
             }
             else if(this.props.showOrder === "2"){

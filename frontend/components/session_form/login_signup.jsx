@@ -1,18 +1,17 @@
-import React from 'react'
-import LoginFormContainer from './login_form_container'
-import SignupFormContainer from './signup_form_container'
+import React from 'react';
+import LoginFormContainer from './login_form_container';
+import SignupFormContainer from './signup_form_container';
 
 class LoginSignup extends React.Component{
     constructor(props){
-        super(props)
+        super(props);
         this.state = {
             signup: true,
-        }
-        this.toggleSignup = this.toggleSignup.bind(this)
+        };
+        this.toggleSignup = this.toggleSignup.bind(this);
     }
 
     toggleSignup(){
-        // this.props.clearSessionErrors()
         const signup= this.state.signup;
         this.setState({signup: !signup});
     }

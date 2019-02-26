@@ -8,6 +8,8 @@ json.boards do
       end
       if !board.pins.empty?
         json.lastEdited board.pins.last.updated_at
+      else
+        json.lastEdited board.created_at
       end
     end
   end

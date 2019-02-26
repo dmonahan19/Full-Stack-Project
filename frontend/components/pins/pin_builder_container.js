@@ -1,15 +1,15 @@
 import { connect } from "react-redux";
-import { createItem } from "../../actions/item_actions"
-import { fetchBoards } from "../../actions/board_actions"
-
-import PinBuilder from './pin_builder'
+import { createItem } from "../../actions/item_actions";
+import { fetchBoards } from "../../actions/board_actions";
+import PinBuilder from './pin_builder';
 
   const mapStateToProps = (state) => {
     let currentUserId = state.session.id;
     return({
       currentUserId: currentUserId,
       boards: Object.values(state.entities.boards),
-      user: state.entities.users[currentUserId]
+      user: state.entities.users[currentUserId],
+      errors: state.errors.session
     });
   };
 

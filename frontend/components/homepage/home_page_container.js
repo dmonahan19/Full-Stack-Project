@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
-import HomePage from './home_page'
+import HomePage from './home_page';
 import { fetchUsersPins } from '../../actions/pin_actions';
-import { fetchBoards } from '../../actions/board_actions'
-import { openModal } from "../../actions/modal_actions"
+import { fetchBoards } from '../../actions/board_actions';
+import { openModal } from "../../actions/modal_actions";
 
 
 const mapStateToProps = (state) => {
@@ -24,7 +24,6 @@ const mapDispatchToProps = (dispatch) => {
         fetchUsersPins: () => dispatch(fetchUsersPins()),
         fetchBoards: (userId) => dispatch(fetchBoards(userId)),
         openModal: (modal, pinId) => dispatch(openModal(modal, { pinId }))
-        // openModal: (modal) => dispatch(openModal(modal))
     });
 };
 
