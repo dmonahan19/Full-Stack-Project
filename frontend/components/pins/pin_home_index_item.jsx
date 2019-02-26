@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 class PinHomeIndexItem extends React.Component {
 
     constructor(props) {
-        super(props)
-        this.state = { showSave: false }
+        super(props);
+        this.state = { showSave: false };
 
-        this.onHover = this.onHover.bind(this)
-        this.offHover = this.offHover.bind(this)
+        this.onHover = this.onHover.bind(this);
+        this.offHover = this.offHover.bind(this);
 
     }
 

@@ -14,8 +14,8 @@ function Modal({modal, closeModal}) {
     return null;
   }
   let component;
-  let modalClass = 'modal-background'
-  let modalChildClass = 'modal-child'
+  let modalClass = 'modal-background';
+  let modalChildClass = 'modal-child';
   switch (modal) {
     case 'boardform':
       component = <BoardFormContainer />;
@@ -33,7 +33,7 @@ function Modal({modal, closeModal}) {
       component = <BoardListTwoContainer />
       break;
     case 'boardListHomePage':
-      modalClass = 'transparent-modal'
+      modalClass = 'transparent-modal';
       component = <HomePageCreatePinContainer />
       break; 
     default:

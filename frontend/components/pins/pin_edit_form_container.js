@@ -1,13 +1,13 @@
 import { connect } from "react-redux";
-import { updatePin, deletePin, fetchPin } from "../../actions/pin_actions"
-import { closeModal } from "../../actions/modal_actions"
-import PinEditForm from './pin_edit_form'
+import { updatePin, deletePin, fetchPin } from "../../actions/pin_actions";
+import { closeModal } from "../../actions/modal_actions";
+import PinEditForm from './pin_edit_form';
 
 
 const mapStateToProps = (state, ownProps) => {
    
     const defaultPin= { title: '', description: '' };
-    const pin = state.entities.pins[state.ui.pinEdit] || defaultPin
+    const pin = state.entities.pins[state.ui.pinEdit] || defaultPin;
     return ({
         pin: pin
     });

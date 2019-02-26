@@ -12,7 +12,7 @@ class HomePageCreatePin extends React.Component {
 
     componentDidMount() {
         this.props.fetchPin(this.props.pin.id).then(() => {
-            this.setState(this.props.pin)
+            this.setState(this.props.pin);
         })
         this.props.fetchBoards();
     }
@@ -29,7 +29,7 @@ class HomePageCreatePin extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.props.closeModal()
+        this.props.closeModal();
     }
 
     render() {
