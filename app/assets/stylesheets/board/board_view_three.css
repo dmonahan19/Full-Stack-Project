@@ -1,7 +1,7 @@
 .gallery2 {
   display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 5vw);
+    grid-template-rows: repeat(4, 5vw);
     grid-gap: 3px;
 }
 
@@ -68,17 +68,9 @@
 }
 
 .board-view-info2{
-    position: relative;
-    top: -50px;
-    height: fit-content;
+   margin-top: 10px;
 }
 
-
-.board-view-info2{
-    position: relative;
-    top: -50px;
-    height: fit-content;
-}
 
 .board-view-title{
     font-size: 24px;
