@@ -9,6 +9,7 @@ class UserIndex extends React.Component {
         
     }
 
+
     render() {
         let userName;
         let photo;
@@ -37,10 +38,10 @@ class UserIndex extends React.Component {
         return (
             <>
             <div className='search-results'>
-                    <li><Link to={`/users/${this.props.user.id}`}><img className="search-profile-picture" src={photo} /></Link></li>
+                    <li><button onClick={this.props.removeSearch}><Link to={`/users/${this.props.user.id}`}><img className="search-profile-picture" src={photo} /></Link></button></li>
                     <div className='search-results-name'>
-                        <li className='search-username'><Link to={`/users/${this.props.user.id}`}>{userName}</Link></li>   
-                        <li className='search-email'><Link to={`/users/${this.props.user.id}`}>{this.props.user.email.split("@")[0]}</Link></li>   
+                        <li className='search-username'><button onClick={this.props.removeSearch}><Link to={`/users/${this.props.user.id}`}>{userName}</Link></button></li>   
+                        <li className='search-email'><button onClick={this.props.removeSearch}><Link to={`/users/${this.props.user.id}`}>{this.props.user.email.split("@")[0]}</Link></button></li>   
                     </div>
             </div>
             </>

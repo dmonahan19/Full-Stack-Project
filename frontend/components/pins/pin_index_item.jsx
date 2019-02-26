@@ -14,11 +14,11 @@ class PinIndexItem extends React.Component {
   }
 
   onHover(e) {
-    this.setState({showSave: true})
+    this.setState({showSave: true});
   }
 
   offHover(e) {
-    this.setState({ showSave: false })
+    this.setState({ showSave: false });
   }
 
 

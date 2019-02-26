@@ -10,6 +10,7 @@ class NavBar extends React.Component{
             this.state = {
                 searchUser: ''
             };
+        this.removeSearch = this.removeSearch.bind(this)
     }
 
     update(field) {
@@ -22,6 +23,10 @@ class NavBar extends React.Component{
                 this.props.fetchSearchUsers(e.currentTarget.value);
             }
         };
+    }
+
+    removeSearch(){
+        this.setState({ searchUser: '' });
     }
 
 
@@ -53,6 +58,7 @@ class NavBar extends React.Component{
                     <UserIndex
                     user={user}
                     key={i}
+                    removeSearch={this.removeSearch}
                     />
                 );
             })};
