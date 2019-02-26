@@ -2,10 +2,7 @@ import { connect } from "react-redux";
 import BoardIndex from './board_index';
 import { fetchBoards } from '../../actions/board_actions';
 import { openModal } from '../../actions/modal_actions';
-import { withRouter } from 'react-router-dom'
-
-
-
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
     let currentUserId = state.session.id;

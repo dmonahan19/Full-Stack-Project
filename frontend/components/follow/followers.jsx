@@ -15,8 +15,6 @@ class Follower extends React.Component {
         }
     }
 
-    
-
     render() {
         let photo;
         let userFollowers = this.props.user.follower_userIds.length;

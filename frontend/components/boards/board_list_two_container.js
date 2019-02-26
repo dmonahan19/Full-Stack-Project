@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import BoardListTwo from './board_list_two'
-import { fetchBoards } from '../../actions/board_actions'
+import BoardListTwo from './board_list_two';
+import { fetchBoards } from '../../actions/board_actions';
 
 
 const mapStateToProps = (state) => {

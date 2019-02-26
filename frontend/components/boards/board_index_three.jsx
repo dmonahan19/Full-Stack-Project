@@ -5,11 +5,9 @@ import BoardIndexItemTwo from './board_index_item_two'
 class BoardIndexThree extends React.Component {
 
     componentDidMount() {
-        this.props.fetchBoards(this.props.currentUserId)
+        this.props.fetchBoards(this.props.currentUserId);
 
     }
-
-
 
     render() {
         const boards = this.props.boards.map((board, i) => {
@@ -25,7 +23,7 @@ class BoardIndexThree extends React.Component {
 
         return (
             <div >
-                <ul className=''>
+                <ul>
                     {boards}
                 </ul>
             </div>

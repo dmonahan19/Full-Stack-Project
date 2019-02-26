@@ -40,9 +40,9 @@ class BoardShow extends React.Component{
                         <div>
                             <h1 className="board-show-title">{this.props.board.title}</h1>
                             <ul className="follow-pin-links">
-                                <li className="pin-follows1">24 pins</li>
+                                  <li className="pin-follows1">{this.props.board.numPins} pins</li>
                                 <li><span className="dot pin-follow2"></span></li>
-                                <li className="follow3"> 130 followers </li>
+                                  <li className="follow3"> {this.props.user.follower_userIds.length} followers </li>
                             </ul>
                             <ul className='show-about-links'>
                                 <li className="about-description">{this.props.user.description}</li>

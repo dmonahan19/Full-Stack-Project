@@ -4,7 +4,7 @@ import FollowButton3 from './follow_button_3'
 
 class FollowingIndexItem extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
 
     render() {

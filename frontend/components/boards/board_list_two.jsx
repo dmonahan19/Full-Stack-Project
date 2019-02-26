@@ -4,11 +4,11 @@ import React from 'react';
 class BoardListTwo extends React.Component{
 
     constructor(props) {
-        super(props)
+        super(props);
     }
 
     componentDidMount() {
-        this.props.fetchBoards()
+        this.props.fetchBoards();
     }
 
     render() {

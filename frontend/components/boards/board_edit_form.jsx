@@ -7,7 +7,7 @@ class BoardEditForm extends React.Component {
     super(props);
     this.state = this.props.board;
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.doubleClick = this.doubleClick.bind(this)
+    this.doubleClick = this.doubleClick.bind(this);
   }
 
   componentDidMount() {

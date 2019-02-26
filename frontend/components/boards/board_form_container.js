@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import { createBoard } from "../../actions/board_actions"
-import {openModal, closeModal } from "../../actions/modal_actions"
-import BoardForm from '../boards/board_form'
+import { createBoard } from "../../actions/board_actions";
+import { closeModal } from "../../actions/modal_actions";
+import BoardForm from '../boards/board_form';
 
 const mapStateToProps = (state) => {
   let currentUserId = state.session.id;
@@ -15,12 +15,6 @@ const mapStateToProps = (state) => {
     return ({
         createBoard: (board)=> dispatch(createBoard(board)),
         closeModal: () => dispatch(closeModal()),
-  
-        // otherForm: (
-        //   <button onClick={() => dispatch(openModal('boardform'))}>
-        //     Create Board
-        //   </button>
-        // ),
     });
   };
   

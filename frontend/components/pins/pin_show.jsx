@@ -57,7 +57,7 @@ class PinShow extends React.Component {
         }
        
         return (
-            <div className='pin-background'>
+            <div className='pin-background-1'>
                 <Link to={`/boards/${this.props.pin.board_id}`}><button className='home-pin-show'> <i  className="fas fa-chevron-left back-button"></i> Board </button></Link>
             
                 <div className='pin-show' >

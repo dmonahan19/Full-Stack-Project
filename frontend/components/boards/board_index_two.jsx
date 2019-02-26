@@ -1,11 +1,11 @@
-import React from 'react'
-import BoardIndexItemTwo from './board_index_item_two'
+import React from 'react';
+import BoardIndexItemTwo from './board_index_item_two';
 
 
 class BoardIndexTwo extends React.Component {
 
     componentDidMount() {
-        this.props.fetchBoards(this.props.currentUserId)
+        this.props.fetchBoards(this.props.currentUserId);
 
     }
 
@@ -25,7 +25,7 @@ class BoardIndexTwo extends React.Component {
 
         return (
             <div >
-                <ul className=''>
+                <ul>
                     {boards}
                 </ul>
             </div>

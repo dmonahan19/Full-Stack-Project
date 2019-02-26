@@ -50,7 +50,7 @@ class PinBuilder extends React.Component{
         formData.append('item[photo]', this.state.photoFile);
         this.props.createItem(formData);
 
-        this.navigateToShowBoards()
+        this.navigateToShowBoards();
     }
 
     handleFile(e) {

@@ -53,8 +53,6 @@ class BoardViewItem extends React.Component {
         const pins = this.props.pins.filter(pin => pin.board_id === this.props.board.id)
     
 
-        
-
         return (
                 <div className='board-view' onMouseEnter={this.onHover}
                     onMouseLeave={this.offHover}>

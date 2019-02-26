@@ -21,7 +21,7 @@ import React from 'react';
 
     render(){
     
-    let photo
+    let photo;
     if (this.props.board.photo) {
         photo = <li>
             <img src={this.props.board.photo} />

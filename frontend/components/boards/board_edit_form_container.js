@@ -1,13 +1,13 @@
 import { connect } from "react-redux";
-import { updateBoard, deleteBoard, fetchBoard } from "../../actions/board_actions"
-import { closeModal } from "../../actions/modal_actions"
-import EditBoardForm from '../boards/board_edit_form'
+import { updateBoard, deleteBoard, fetchBoard } from "../../actions/board_actions";
+import { closeModal } from "../../actions/modal_actions";
+import EditBoardForm from '../boards/board_edit_form';
 
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   let currentUserId = state.session.id;
   const defaultBoard = { title: '', description: '' };
-  const board = state.entities.boards[state.ui.boardEdit] || defaultBoard
+  const board = state.entities.boards[state.ui.boardEdit] || defaultBoard;
   return({
     currentUserId: currentUserId,
     user: state.entities.users[currentUserId],

@@ -5,7 +5,7 @@ class BoardIndex extends React.Component{
 
 
     componentDidMount(){
-        this.props.fetchBoards(this.props.user.id)
+        this.props.fetchBoards(this.props.user.id);
     
     }
 
@@ -54,7 +54,7 @@ class BoardIndex extends React.Component{
       return (
         <div >        
             <h2 className='name'>Name</h2>
-          <ul className=''>
+          <ul>
             { boards }
           </ul>
         </div>

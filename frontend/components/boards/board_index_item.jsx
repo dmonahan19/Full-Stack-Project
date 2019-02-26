@@ -30,8 +30,6 @@ class BoardIndexItem extends React.Component {
 
 render(){
 
-   
-
     let photo;
     let editButton;
     if (this.props.board.photo) {

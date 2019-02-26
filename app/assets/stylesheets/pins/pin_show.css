@@ -7,6 +7,13 @@
     margin-bottom: 100px;
 }
 
+.pin-background-1{
+    background: #efefef;
+    width: 100%;
+    margin-top: 63px;
+    height: 1200px;
+}
+
 .home-pin-show{
     font-size: 22px;
     font-weight: bold;
@@ -22,9 +29,9 @@
 
 .pin-show{
     position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 20%;
+    left: 17%;
+    /* transform: translate(-50%, -50%); */
     width: 800px;
     height: fit-content;
     background-color: white;
