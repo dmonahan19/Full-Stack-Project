@@ -19,6 +19,7 @@
     top: 0;
     border-bottom: 1px solid #efefef;
     background: white;
+    z-index: 10;
 }
 
 .left-nav{
@@ -140,9 +141,7 @@ li >a:focus {
     justify-content: row;
     background: white;
     width: 500px;
-    z-index: 15;
-    position: relative;
-    top: 10px;
+    z-index: 5;
 }
 
 .search-results:hover{
@@ -159,6 +158,8 @@ li >a:focus {
 
 .search-results-2{
     margin-left: 100px;
+    position: fixed;
+    top: 75px;
 }
 .search-results-name{
     display: flex;
