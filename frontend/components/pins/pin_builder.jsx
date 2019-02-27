@@ -31,7 +31,6 @@ class PinBuilder extends React.Component{
     }
 
     renderErrors() {
-        debugger
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
@@ -78,7 +77,6 @@ class PinBuilder extends React.Component{
     }
 
     render(){
-        debugger
         const boards = this.props.boards.map((board,i) => {
             return (
                 <option value={board.id} key={i}> {board.title} </option>

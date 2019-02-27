@@ -27,7 +27,7 @@ class FollowButton extends React.Component {
         deleteUser = this.props.user.follow_ids[index];
         // }
 
-        this.props.deleteFollow(deleteUser)
+        this.props.deleteFollow(deleteUser);
     }
 
     render() {

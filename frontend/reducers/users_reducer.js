@@ -27,6 +27,7 @@ const usersReducer = (state = {}, action) => {
                 user.follow_ids.push(action.follow.id);
                 user1 = newState[action.follow.user_id];
                 user1.following_userIds.push(action.follow.following_id);
+                user1.follower_ids.push(action.follow.id);
             }
             if (action.follow.following_type === 'Board') {
                 user = newState[action.follow.user_id];
@@ -38,6 +39,7 @@ const usersReducer = (state = {}, action) => {
             newState = merge({}, state);
             if (action.follow.following_type === 'User') {
                 newState[action.userId].follow_ids = newState[action.userId].follow_ids.filter(id => id != action.followId);
+                newState[action.follow.user_id].follower_ids = newState[action.follow.user_id].follower_ids.filter(id => id != action.followId);
                 newState[action.userId].follower_userIds = newState[action.userId].follower_userIds.filter(id => id != action.follow.user_id);
                 newState[action.follow.user_id].following_userIds = newState[action.follow.user_id].following_userIds.filter(id => id != action.follow.following_id);
             }

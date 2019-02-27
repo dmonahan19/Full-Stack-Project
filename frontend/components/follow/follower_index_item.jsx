@@ -1,5 +1,5 @@
 import React from 'react';
-import FollowButton3 from './follow_button_3'
+import FollowButton3 from './follow_button_3';
 
 
 class FollowingIndexItem extends React.Component {
