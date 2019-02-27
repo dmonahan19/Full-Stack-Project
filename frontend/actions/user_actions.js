@@ -18,7 +18,6 @@ export const fetchSearchUsers = (searchQuery, history) => {
     return dispatch => {
         return UserApiUtil.fetchSearchUsers(searchQuery).then(users => {
             dispatch(receiveSearchUsers(users));
-            history.push(`/users/${Object.keys(users)[0]}`);
         });
     };
 };
