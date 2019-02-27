@@ -124,7 +124,7 @@ class PinBuilder extends React.Component{
                        
                         <div className='pin-name-followers'>
                             <h2 className='pin-form-username'>{this.props.user.first_name}</h2>
-                            <p className='pin-form-followers'>131 followers</p>
+                                    <p className='pin-form-followers'>{this.props.user.follower_userIds.length} followers</p>
                            
                         </div>
                     </div>

@@ -7,7 +7,7 @@ import FollowButton from '../follow/follow_button';
 class Profile extends React.Component {
     
     componentDidUpdate(prevProps){
-        prevProps.user.id != this.props.user.id
+        prevProps.user.id != this.props.user.id;
         
     }
 
@@ -23,13 +23,13 @@ class Profile extends React.Component {
         let dropDown;
         if(this.props.user.first_name && this.props.user.last_name){
     
-            user = `${this.props.user.first_name} ${this.props.user.last_name}`
+            user = `${this.props.user.first_name} ${this.props.user.last_name}`;
         }
         else if(this.props.user.first_name){
             user = this.props.user.first_name;
         }
         else{
-            user = this.props.user.email.split("@")[0]
+            user = this.props.user.email.split("@")[0];
         }
 
         if(this.props.user.photo){
