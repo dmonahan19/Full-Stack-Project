@@ -1,11 +1,13 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { timingSafeEqual } from 'crypto';
 
 class BoardForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       title: '',
+      count: true
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -34,7 +36,30 @@ class BoardForm extends React.Component {
     );
   }
 
+  count(){
+    this.setState({count: '1'})
+  }
+  
+
   render() {
+    let create
+    let error
+    this.state.title ?
+      create = <input className="board-submit" type="submit" value="Create" /> 
+      :
+      create = <input disabled={!this.state.title} className="board-submit-off" id='no-hover' type="submit" value="Create" />
+      if(this.state.title){
+       
+      }
+      if(!this.state.title && this.state.count === '1'){
+        error = <div className='board-errors'>
+          <p>Don't forget to name your board!</p>
+        </div>
+      }
+    else{
+      error = null
+    }
+    
     return (
       <div >
         <form className='board-form' onSubmit={this.handleSubmit} >
@@ -50,10 +75,11 @@ class BoardForm extends React.Component {
                 placeholder='Like "Places to Go" or "Recipies to Make"'
               />
             </label>
+            {error}
             <div className='board-form-buttons'>
               <div>
                 <button onClick={this.props.closeModal} className='cancel-submit'>Cancel</button>
-                <input className="board-submit" type="submit" value="Create" />
+              {create}
               </div>
           </div>
         </form>

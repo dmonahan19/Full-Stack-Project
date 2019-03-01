@@ -1,6 +1,6 @@
 .board-form{
-    width: 525px;
-    height: 200px;
+    width: 550px;
+    height: fit-content;
     background: white;
     border-radius: 4px;
     display: flex;
@@ -8,11 +8,12 @@
     position: relative;
     align-items: center;
     width: 100%
+
 }
 
 .board-x{
     position: absolute;
-    left: 480px;
+    left: 390px;
     top: 10px;
     font-size: 24px;
     color: #919191;
@@ -36,7 +37,7 @@
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-right: 20px;
 }
 
@@ -50,6 +51,22 @@
     background-color: #e60000;
     font-size: 16px;
     font-weight: bold;
+}
+
+.board-submit-off{
+    width: 75px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    color: #8e8e8e;
+    background-color: rgb(237, 235, 235);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#no-hover{
+      background-color: rgb(237, 235, 235);
 }
 
 
@@ -81,9 +98,21 @@
     border-radius: 4px;
     border: 1px solid #333;
     font-size: 16px;
+    margin-left: 10px;
 }
 
 .board-form-input::placeholder{
   font-size: 16px;
   color:  #a2a2a2;
+}
+
+.board-errors{
+    color: #ed7a1c;
+    font-size: 16px;
+    width: 345px;
+    font: "Segoe UI";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-top: 10px;
+    margin-left: 65px;
 }

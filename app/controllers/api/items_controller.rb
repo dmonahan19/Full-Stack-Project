@@ -2,15 +2,21 @@ class Api::ItemsController < ApplicationController
   
 
   def create
-    @item = Item.new(item_params)
     ActiveRecord::Base.transaction do
       begin
-        @item.save
+        debugger
+        @item = Item.new(item_params)
+        @item.save!
         @pin = @item.pins.new(pin_params)
-        @pin.save
+        @pin.save!
         render :show
       rescue
-        render json: @item.errors.full_messages, status: 422
+        if @pin.errors.full_messages.length > 0
+             render json: ["A board is required to create a Pin."], status: 422
+        end 
+       if @item.errors.full_messages.length > 0
+          render json:["An image is required to create a Pin."], status: 422
+       end
       end
     end
   end

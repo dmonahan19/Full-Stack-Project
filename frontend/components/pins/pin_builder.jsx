@@ -61,8 +61,9 @@ class PinBuilder extends React.Component{
         formData.append('item[website_url]', this.state.website_url);
         formData.append('item[photo]', this.state.photoFile);
         this.props.createItem(formData);
-
-        this.navigateToShowBoards();
+        if(!this.props.errors){
+            this.navigateToShowBoards();
+        }
     }
 
     handleFile(e) {
@@ -127,9 +128,6 @@ class PinBuilder extends React.Component{
                                     <p className='pin-form-followers'>{this.props.user.follower_userIds.length} followers</p>
                            
                         </div>
-                                <div className='session-errors'>
-                                    {this.renderErrors()}
-                                </div>
                     </div>
 
                     <li><label className='say-more-about-pin'>
@@ -148,10 +146,13 @@ class PinBuilder extends React.Component{
                         </label>
                         
                         <label>
-                        <select className='pin-selector' value={this.state.boardId} onChange={this.update('boardId')}>
+                            <select className='pin-selector' value={this.state.boardId} onChange={this.update('boardId')}>
                                 <option value='' disabled={true}>Choose a board (required)</option>
                                 { boards }
                             </select>
+                            <div className='pin-errors'>
+                                {this.renderErrors()}
+                            </div>
                         </label>
                     </div>
                 </div>

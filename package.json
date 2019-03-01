@@ -6,6 +6,7 @@
     "@babel/preset-env": "^7.3.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "enzyme-adapter-react-16": "^1.10.0",
     "jquery": "^3.3.1",
     "lodash": "^4.17.11",
     "moment-timezone": "^0.5.23",
@@ -13,6 +14,7 @@
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
+    "react-test-renderer": "^16.8.3",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
@@ -27,7 +29,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "postinstall": "./node_modules/.bin/webpack --mode=production",
     "start": "./node_modules/.bin/webpack --mode=production",
     "webpack": "webpack --watch --mode=development"
@@ -46,5 +48,12 @@
   "bugs": {
     "url": "https://github.com/dmonahan19/Full-Stack-Project/issues"
   },
-  "homepage": "https://github.com/dmonahan19/Full-Stack-Project#readme"
+  "homepage": "https://github.com/dmonahan19/Full-Stack-Project#readme",
+  "devDependencies": {
+    "babel-jest": "^24.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^24.1.0",
+    "react-addons-test-utils": "^15.6.2"
+  }
 }

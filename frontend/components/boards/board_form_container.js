@@ -8,6 +8,7 @@ const mapStateToProps = (state) => {
  
   return({
     user: state.entities.users[currentUserId],
+    errors: state.errors.board
   });
 };
 

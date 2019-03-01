@@ -3,6 +3,7 @@ import * as BoardApiUtil from '../util/board_api_util';
 export const RECEIVE_ALL_BOARDS = "RECEIVE_ALL_BOARDS";
 export const RECEIVE_BOARD = "RECEIVE_BOARD";
 export const REMOVE_BOARD = "REMOVE_BOARD";
+export const RECEIVE_BOARD_ERRORS = 'RECEIVE_BOARD_ERRORS';
 
 const receiveAllBoards = payload => ({
     type: RECEIVE_ALL_BOARDS,
@@ -19,6 +20,11 @@ const receiveAllBoards = payload => ({
     boardId: payload.id,
     userId: payload.user_id
   });
+
+const receiveBoardErrors = (errors) => ({
+  type: RECEIVE_BOARD_ERRORS,
+  errors,
+});
   
 
   export const fetchBoards = (boardId) => dispatch => (
@@ -34,7 +40,9 @@ export const fetchFollowBoards = (userId) => dispatch => (
   );
   
   export const createBoard = board => dispatch => (
-    BoardApiUtil.createBoard(board).then(board => dispatch(receiveBoard(board)))
+    BoardApiUtil.createBoard(board).then(board => dispatch(receiveBoard(board)), errors => (
+      dispatch(receiveItemErrors(errors.responseJSON))
+      ))
   );
   
   export const updateBoard = board => dispatch => (

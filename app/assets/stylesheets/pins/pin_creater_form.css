@@ -117,7 +117,7 @@
 .pin-selector{
     border: 1px solid black;
     width: 380px;;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     height: 45px;
     font-size: 16px;
 }
@@ -170,4 +170,14 @@
 .pin-show-page-title{
     font-weight: bold;
     padding-top: 5px;
+}
+
+
+.pin-errors{
+    color: #ed7a1c;
+    font-size: 16px;
+    width: 400px;
+    font: "Segoe UI";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

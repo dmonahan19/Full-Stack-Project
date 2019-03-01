@@ -10,7 +10,7 @@ const receiveItem = payload  => ({
     
 
 const receiveItemErrors = (errors) => ({
-  type: RECEIVE_PIN_ERRORS,
+  type: RECEIVE_ITEM_ERRORS,
   errors,
 });
   export const createItem = item => dispatch => (
