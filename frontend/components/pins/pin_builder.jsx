@@ -127,6 +127,9 @@ class PinBuilder extends React.Component{
                                     <p className='pin-form-followers'>{this.props.user.follower_userIds.length} followers</p>
                            
                         </div>
+                                <div className='session-errors'>
+                                    {this.renderErrors()}
+                                </div>
                     </div>
 
                     <li><label className='say-more-about-pin'>
@@ -150,7 +153,6 @@ class PinBuilder extends React.Component{
                                 { boards }
                             </select>
                         </label>
-                        {this.renderErrors()}
                     </div>
                 </div>
                 </div>

@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import BoardIndexThree from './board_index_two';
 import { fetchBoards } from '../../actions/board_actions';
 import { openModal } from '../../actions/modal_actions';
-import { createPin } from "../../actions/pin_actions"
+import { createPin } from "../../actions/pin_actions";
 
 
 const mapStateToProps = (state) => {

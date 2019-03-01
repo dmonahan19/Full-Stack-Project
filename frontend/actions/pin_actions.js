@@ -2,6 +2,7 @@ import * as PinApiUtil from '../util/pin_api_util';
 export const RECEIVE_ALL_PINS = "RECEIVE_ALL_PINS";
 export const RECEIVE_PIN = "RECEIVE_PIN";
 export const REMOVE_PIN = "REMOVE_PIN";
+export const RECEIVE_PIN_ERRORS = 'RECEIVE_ERRORS';
 
     const receiveAllPins = (payload, userIds) => {
       return({
@@ -22,6 +23,11 @@ export const REMOVE_PIN = "REMOVE_PIN";
         pinId
     });
 
+export const receiveErrors = (errors) => ({
+  type: RECEIVE_PIN_ERRORS,
+  errors,
+});
+
 export const fetchBoardPins = (boardIds) => dispatch => {
     return(
     PinApiUtil.fetchBoardPins(boardIds).then(pins => dispatch(receiveAllPins(pins)))
@@ -39,7 +45,7 @@ export const fetchUsersPins = () => dispatch => (
 
   export const fetchUserPins = (userId) => dispatch => (
   PinApiUtil.fetchUserPins(userId).then(pins => dispatch(receiveAllPins(pins)))
-)
+);
 
 
 
@@ -53,7 +59,9 @@ export const updatePin = pin => dispatch => (
 );
   
   export const createPin = pin => dispatch => (
-    PinApiUtil.createPin(pin).then(pin => dispatch(receivePin(pin)))
+    PinApiUtil.createPin(pin).then(pin => dispatch(receivePin(pin)),
+     errors => dispatch(receiveErrors(errors.responseJSON))
+      )
   );
   
   export const deletePin = pinId => dispatch => (

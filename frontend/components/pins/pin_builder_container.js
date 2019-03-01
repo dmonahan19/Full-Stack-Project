@@ -9,7 +9,7 @@ import PinBuilder from './pin_builder';
       currentUserId: currentUserId,
       boards: Object.values(state.entities.boards),
       user: state.entities.users[currentUserId],
-      errors: state.errors.session
+      errors: state.errors.item
     });
   };
 

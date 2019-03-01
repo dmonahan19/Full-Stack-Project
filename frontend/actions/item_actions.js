@@ -1,4 +1,5 @@
 import * as ItemApiUtil from '../util/item_api_util';
+export const RECEIVE_ITEM_ERRORS = 'RECEIVE_ITEM_ERRORS';
 
 export const RECEIVE_ITEM = "RECEIVE_ITEM";
 
@@ -7,6 +8,13 @@ const receiveItem = payload  => ({
         payload
     });
     
+
+const receiveItemErrors = (errors) => ({
+  type: RECEIVE_PIN_ERRORS,
+  errors,
+});
   export const createItem = item => dispatch => (
-    ItemApiUtil.createItem(item).then(item => dispatch(receiveItem(item)))
+    ItemApiUtil.createItem(item).then(item => dispatch(receiveItem(item)), errors =>(
+      dispatch(receiveItemErrors(errors.responseJSON))
+    ))
   );

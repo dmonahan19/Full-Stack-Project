@@ -4,10 +4,10 @@ import {withRouter} from 'react-router-dom'
 
 class DropDownTwo extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             dropdown: false
-        }
+        };
         this.showDropDowntwo = this.showDropDowntwo.bind(this)
     }
 

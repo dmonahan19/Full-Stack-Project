@@ -10,7 +10,7 @@ class BoardIndexItem extends React.Component {
         super(props);
         this.state = { showSave: false };
 
-        this.onHover = this.onHover.bind(this)
+        this.onHover = this.onHover.bind(this);
         this.offHover = this.offHover.bind(this);
 
     }

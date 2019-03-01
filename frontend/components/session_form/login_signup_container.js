@@ -4,16 +4,11 @@ import { clearSessionErrors } from '../../actions/session_actions';
 import React from 'react';
 
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return ({
     errors: state.errors.session,
   });
 };
 
-// const mapDispatchToProps = (dispatch) => {
-//   return ({ 
-    
-//   });
-// };
 
 export default connect(mapStateToProps, null)(LoginSignup);
