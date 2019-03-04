@@ -21,13 +21,16 @@ One particular challenge was the Re-Pinning feature, which allows a user to re-p
 <img src='http://i67.tinypic.com/zkip84.png'>
 <img src='http://i63.tinypic.com/10omyy9.png/'>
 
-# Create Pin Form Component
+### Create Pin Form Component
+
 <img src='http://i66.tinypic.com/34in14y.png'>
 
-# Board Index Component
+### Board Index Component
+
 <img src='http://i63.tinypic.com/9r3z9e.png'>
 
-# Board Index Item Component
+### Board Index Item Component
+
 <img src='http://i66.tinypic.com/34in14y.png'>
 
 
