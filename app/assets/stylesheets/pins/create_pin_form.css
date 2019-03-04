@@ -1,6 +1,7 @@
 .pin-create-form-background{
     width: 800px;
-    height: 720px;
+    height: fit-content;
+    max-height: 1000px;
     background: white;
 }
 
