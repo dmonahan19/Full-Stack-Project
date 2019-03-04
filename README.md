@@ -38,7 +38,13 @@ One of the first challenges with re-pinning, was the feature where the save butt
 
 The next challenge with re-pinning is when the save button is clicked on a pin then a create pin modal appears. This pin modal shows the pins picture and a list of all the user's boards that they can add the pin to. In order for this list to appear on this modal, I had to create three extra board components. The first was a board container which gave the board component access to the board slice of state and functions it needed to create a pin and the find all the users boards. The next component used the fetchBoards function in order to get access to all the users boards. I mapped through these boards and created the third component which had access to each individual board. The biggest challenge with all of this is I had to have the pin information be sent as props from the create pin component all the way through to the third board component which had access to each individual board. This board is ultimately where the new pin would be created. Each individual board had a save button and if the user clicked that save button it would set that board id as the pins board id and use the createPin function with the pins information sent over as props to create the new pin to that particular board.
 
-### Create New Pin vs. Re-pinning
+## Create New Pin vs. Re-pinning
+
+### Creating a new Pin
+
+<img src='http://i67.tinypic.com/25owiv6.png'>
+
+### Re-Pinning
 
 
 

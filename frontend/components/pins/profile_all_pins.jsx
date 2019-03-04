@@ -5,7 +5,7 @@ import PinUserIndexContainer from './pin_user_index_container'
 
 class ProfileAllPins extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
 
     }
 

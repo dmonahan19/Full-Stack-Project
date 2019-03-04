@@ -3,7 +3,7 @@
 
 .create-board-page{
   position: fixed;
-  top: 60%;
+  top: 45%;
   left: 15%;
 }
 
@@ -33,10 +33,6 @@
     border-radius: 4px;
  }
 
- .create-board-square:hover{
-        
- }
- 
 
 
  .create-small-square{
@@ -48,11 +44,6 @@
      border-radius: 4px;
  }
 
-  /* .create-small-square:hover{
-    background:  #e0e0e0;
-   
-}  */
-
  .create-board-h1{
     padding-top: 5px;
     color: #939292;
@@ -60,6 +51,3 @@
     font-family:  "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", arial, sans-serif;;
  }
 
- /* .create-board-h1:hover{
-    background:  #f0efef;
- } */
