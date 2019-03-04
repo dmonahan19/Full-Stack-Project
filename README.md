@@ -1,7 +1,7 @@
 Pixtrest, a Pinterest clone, is an online pinboard entirely made up of images. User can create their own profile, upload their own pins, save other users pins and create boards to group pins into categories.
 
 
-##Technology
+## Technology
 - Rails
 - React/Redux
 - Postgres
@@ -20,11 +20,11 @@ One particular challenge was the Re-Pinning feature, which allows a user to re-p
 
 <img src='http://i67.tinypic.com/zkip84.png'>
 <img src='http://i63.tinypic.com/10omyy9.png/'>
-create pin form
+## Create Pin Form Componenet
 <img src='http://i66.tinypic.com/34in14y.png'>
-board index component
+## Board Index component
 <img src='http://i63.tinypic.com/9r3z9e.png'>
-board index item component
+## Board Index Item Component
 <img src='http://i66.tinypic.com/34in14y.png'>
 
 
