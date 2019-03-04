@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { timingSafeEqual } from 'crypto';
+
 
 class BoardForm extends React.Component {
   constructor(props) {
@@ -44,21 +44,20 @@ class BoardForm extends React.Component {
   render() {
     let create
     let error
-    this.state.title ?
+    if (this.state.title){
       create = <input className="board-submit" type="submit" value="Create" /> 
-      :
-      create = <input disabled={!this.state.title} className="board-submit-off" id='no-hover' type="submit" value="Create" />
-      if(this.state.title){
-       
-      }
-      if(!this.state.title && this.state.count === '1'){
-        error = <div className='board-errors'>
-          <p>Don't forget to name your board!</p>
-        </div>
-      }
-    else{
-      error = null
     }
+    else{
+      create = <input disabled={!this.state.title} className="board-submit-off" id='no-hover' type="submit" value="Create" />
+    } 
+    // if(!this.state.title && count === 1){
+    //     error = <div className='board-errors'>
+    //       <p>Don't forget to name your board!</p>
+    //     </div>
+    //   }
+    // else{
+    //   error = null
+    // }
     
     return (
       <div >
@@ -75,7 +74,6 @@ class BoardForm extends React.Component {
                 placeholder='Like "Places to Go" or "Recipies to Make"'
               />
             </label>
-            {error}
             <div className='board-form-buttons'>
               <div>
                 <button onClick={this.props.closeModal} className='cancel-submit'>Cancel</button>

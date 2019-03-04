@@ -12,11 +12,11 @@ class Profile extends React.Component {
     }
 
    render(){
-       let boardFollowers = this.props.user.following_boardIds.length;
-       let userFollowers = this.props.user.following_userIds.length;
     if (!this.props.user){
         return null;
     }
+         let boardFollowers = this.props.user.following_boardIds.length;
+       let userFollowers = this.props.user.following_userIds.length;
         let user;
         let photo;
         let dot;

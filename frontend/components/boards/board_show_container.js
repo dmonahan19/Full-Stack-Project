@@ -8,7 +8,7 @@ import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
     const board = state.entities.boards[ownProps.match.params.boardId] || {};
-    const pin = state.entities.pins[state.ui.pinEdit] || {}
+    const pin = state.entities.pins[state.ui.pinEdit] || {};
     let currentUserId = state.session.id;
     return({
         boards: state.entities.boards,

@@ -4,7 +4,6 @@ class Api::ItemsController < ApplicationController
   def create
     ActiveRecord::Base.transaction do
       begin
-        debugger
         @item = Item.new(item_params)
         @item.save!
         @pin = @item.pins.new(pin_params)

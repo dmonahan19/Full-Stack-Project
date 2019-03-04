@@ -7,6 +7,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "enzyme-adapter-react-16": "^1.10.0",
+    "jest-fetch-mock": "^2.1.1",
     "jquery": "^3.3.1",
     "lodash": "^4.17.11",
     "moment-timezone": "^0.5.23",
@@ -54,6 +55,7 @@
     "enzyme": "^3.9.0",
     "enzyme-to-json": "^3.3.5",
     "jest": "^24.1.0",
-    "react-addons-test-utils": "^15.6.2"
+    "react-addons-test-utils": "^15.6.2",
+    "react-testing-library": "^6.0.0"
   }
 }

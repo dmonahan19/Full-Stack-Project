@@ -10,7 +10,7 @@ class NavBar extends React.Component{
             this.state = {
                 searchUser: ''
             };
-        this.removeSearch = this.removeSearch.bind(this)
+        this.removeSearch = this.removeSearch.bind(this);
     }
 
     update(field) {

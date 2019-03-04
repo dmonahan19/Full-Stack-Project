@@ -35,7 +35,7 @@ import {
         </header>
   
             <Route exact path="/" component={Splash} />
-            {/* <ProtectedRoute exact path="/" component={HomePageContainer} /> */}
+            <ProtectedRoute exact path="/" component={HomePageContainer} />
             <ProtectedRoute exact path="/users/:userId" component={BoardsContainer}/>
             <ProtectedRoute exact path="/settings" component={FullProfileForm}/>
             <ProtectedRoute exact path="/users/:userId/boards" component={BoardsContainer}/>

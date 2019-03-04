@@ -20,7 +20,7 @@ class Boards extends React.Component{
                 <>
                 <div className="board-profile-divs">
                     <div>{<ProfileContainer />}</div>
-                    {/* <div>{<PickBoardViewContainer />}</div> */}
+                    <div>{<PickBoardViewContainer />}</div>
                     <div>{<CreateBoardContainer />}</div>
                 </div>
                 </>    

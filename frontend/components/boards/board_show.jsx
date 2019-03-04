@@ -2,7 +2,6 @@ import React from 'react';
 import DropDownTwo from './drop_down_two';
 import PinIndexItem from '../pins/pin_index_item';
 import PinBoardShow from '../pins/pin-board-show';
-import withRouter from 'react-router-dom';
 
 
 class BoardShow extends React.Component{
