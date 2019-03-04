@@ -61,7 +61,7 @@ class PinBuilder extends React.Component{
         formData.append('item[website_url]', this.state.website_url);
         formData.append('item[photo]', this.state.photoFile);
         this.props.createItem(formData);
-        if(!this.props.errors){
+        if (this.props.errors){
             this.navigateToShowBoards();
         }
     }

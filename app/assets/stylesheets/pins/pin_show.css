@@ -34,6 +34,7 @@
     /* transform: translate(-50%, -50%); */
     width: 800px;
     height: fit-content;
+    min-height: 650px;
     background-color: white;
     border-radius: 10px;
     padding-bottom: 20px;

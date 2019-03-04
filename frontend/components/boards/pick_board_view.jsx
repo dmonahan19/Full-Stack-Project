@@ -75,7 +75,9 @@ class PickBoardView extends React.Component {
                         {select}
                     </ul>
                 </div>
-                {view}
+                <div className='view5'>
+                    {view}
+                </div>
             </>
 
         )
