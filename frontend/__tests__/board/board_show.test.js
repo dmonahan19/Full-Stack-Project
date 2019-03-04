@@ -35,7 +35,8 @@ test('<BoardShow />', () => {
         <MemoryRouter>
             <BoardShow user={user}/>
         </MemoryRouter>
-        await waitForElement( () => getByText('fashion'))
+        // await waitForElement( () => getByText('fashion'))
     );
     debug();
 });
+

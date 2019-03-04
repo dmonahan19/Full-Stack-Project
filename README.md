@@ -46,6 +46,8 @@ The next challenge with re-pinning is when the save button is clicked on a pin t
 
 ### Re-Pinning
 
+<img src='http://i68.tinypic.com/30ker9k.png'>
 
+When a user creates a new pin they are creating an item and a pin. The item hold the photo information and the pin holds the pin information(ex.title) and has an item_id. The item_id is a foreign key and connects the pin and item. The item hold the photo information that belongs to a pin. When you are repinning a pin it will create a new pin but not a new item. The pin will have the same item_id. The reason for this is because millions of users can re-pin the same pin over and over again. With having a seperate items table that hold the photo information then it stop the same image from being duplicated in the database over and over again. 
 
 
