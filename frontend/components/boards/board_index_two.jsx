@@ -9,8 +9,6 @@ class BoardIndexTwo extends React.Component {
 
     }
 
-
-
     render() {
         const boards = this.props.boards.map((board, i) => {
             return (

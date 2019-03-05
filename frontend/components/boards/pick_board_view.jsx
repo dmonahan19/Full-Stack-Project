@@ -37,7 +37,6 @@ class PickBoardView extends React.Component {
     }
 
 
-
     render() {
         let select
         if (!this.props.user) {

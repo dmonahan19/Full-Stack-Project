@@ -4,9 +4,6 @@ import { fetchBoards } from '../../actions/board_actions';
 import { openModal } from '../../actions/modal_actions';
 import {  createPin } from "../../actions/pin_actions";
 
-
-
-
 const mapStateToProps = (state) => {
     let currentUserId = state.session.id;
     return ({
