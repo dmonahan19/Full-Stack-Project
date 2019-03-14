@@ -10,7 +10,7 @@ const receiveAllBoards = payload => ({
     payload
   });
   
-  const receiveBoard = board => ({
+  export const receiveBoard = board => ({
     type: RECEIVE_BOARD,
     board
   });
