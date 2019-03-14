@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 class PinIndexItem extends React.Component {
 
   constructor(props){
-    super(props)
-      this.state={showSave: false}
+    super(props);
+      this.state={showSave: false};
 
-      this.onHover = this.onHover.bind(this)
-      this.offHover = this.offHover.bind(this)
+      this.onHover = this.onHover.bind(this);
+      this.offHover = this.offHover.bind(this);
     
   }
 
@@ -34,7 +34,7 @@ class PinIndexItem extends React.Component {
               <button className='button4' onClick={() => this.props.openModal('pincreateform', this.props.pin.id)} >
                 <div className='whole-pin-button'>
                   <icon className='fas fa-thumbtack pin-index-icon'></icon>
-                <h1 className="pin-index-submit">Save</h1>
+                  <h1 className="pin-index-submit">Save</h1>
                 </div>
                 </button>) : (null)}
             <div className='picture-title-hover'>

@@ -52,7 +52,6 @@
    position: absolute;
     top: 45%;
     left: 12%;
-    z-index: -1;
 }
 
 .pin-show-selector{
