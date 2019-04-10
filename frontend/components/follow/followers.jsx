@@ -13,6 +13,7 @@ class Follower extends React.Component {
         if (prevProps.user.id != this.props.user.id) {
             this.props.fetchUsers(this.props.user.follower_userIds);
         }
+        prevProps.user.id !== this.props.user.follower_userIds;
     }
 
     render() {
