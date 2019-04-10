@@ -14,7 +14,7 @@ import CreatePinFromContainer from './pins/create_pin_form_container';
 import HomePageContainer from './homepage/home_page_container';
 import Modal from './modal/modal';
 import FollowersContainer from './follow/followers_container';
-// import FollowingContainer from './follow/following_container';
+import FollowingContainer from './follow/following_container';
 // import FollowingBoardContainer from './follow/following_board_container';
 import FollowingBoardUserContainer from './follow/following_board_user_container';
 import FollowingLinkContainer from './follow/following_link_container';

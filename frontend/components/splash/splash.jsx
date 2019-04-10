@@ -1,6 +1,6 @@
 import React from 'react';
-import SplashBackground from './splash_background'
-import LoginSignup from '../session_form/login_signup'
+import SplashBackground from './splash_background';
+import LoginSignup from '../session_form/login_signup';
 
 const Splash = (props) => {
     if (props.currentUserId){   

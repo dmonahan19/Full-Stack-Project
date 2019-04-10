@@ -5,11 +5,10 @@ import { withRouter } from 'react-router-dom';
 import { fetchUsersPins } from '../../actions/pin_actions';
 import { openModal } from "../../actions/modal_actions";
 
-const mapStateToProps = (state, ownProps) => {
-    let currentUserId = state.session.id;
+const mapStateToProps = (state) => {
     return ({
         pins: Object.values(state.entities.pins),
-        user: state.entities.users[currentUserId]
+        user: state.entities.users[state.session.id]
     });
 };
 

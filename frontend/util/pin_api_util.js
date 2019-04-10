@@ -51,10 +51,12 @@ export const fetchBoardPins = (boardIds) => (
     })
   );
   
-export const fetchUsersPins = (userIds) => (
-  $.ajax({
-    url: `/api/pins`,
-    method: 'GET',
-    data: { userIds }
-  })
-);
+export const fetchUsersPins = (userIds) => {
+  return(
+    $.ajax({
+      url: `/api/pins`,
+      method: 'GET',
+      data: { userIds }
+    })
+  );
+};

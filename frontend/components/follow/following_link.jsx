@@ -6,7 +6,9 @@ class FollowingLink extends React.Component {
 
     
     componentDidMount(){
-        this.props.fetchUsersPins(this.props.user.following_userIds);
+        if (this.props.user.following_userIds.length > 0){
+            this.props.fetchUsersPins(this.props.user.following_userIds);
+        }
     }
         
     render() {
@@ -46,6 +48,7 @@ class FollowingLink extends React.Component {
                 }
                 i++
         });
+        
         return (
             <>
                 <div className='splash3'>

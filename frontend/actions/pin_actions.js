@@ -34,8 +34,8 @@ export const fetchBoardPins = (boardIds) => dispatch => {
   );
 };
 
-export const fetchUsersPins = () => dispatch => (
-  PinApiUtil.fetchUsersPins().then(pins => dispatch(receiveAllPins(pins)))
+export const fetchUsersPins = (userIds) => dispatch => (
+  PinApiUtil.fetchUsersPins(userIds).then(pins => dispatch(receiveAllPins(pins)))
 );
 
   export const fetchPins = (boardId) => dispatch => { 

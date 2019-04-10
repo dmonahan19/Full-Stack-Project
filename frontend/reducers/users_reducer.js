@@ -38,12 +38,10 @@ const usersReducer = (state = {}, action) => {
         case REMOVE_FOLLOW:
             newState = merge({}, state);
             if (action.follow.following_type === 'User') {
-                if (action.userId){
                     newState[action.userId].follow_ids = newState[action.userId].follow_ids.filter(id => id != action.followId);
                     newState[action.userId].follower_userIds = newState[action.userId].follower_userIds.filter(id => id != action.follow.user_id);
-                }
-                newState[action.follow.user_id].follower_ids = newState[action.follow.user_id].follower_ids.filter(id => id != action.followId);
-                newState[action.follow.user_id].following_userIds = newState[action.follow.user_id].following_userIds.filter(id => id != action.follow.following_id);
+                    newState[action.follow.user_id].follower_ids = newState[action.follow.user_id].follower_ids.filter(id => id != action.followId);
+                    newState[action.follow.user_id].following_userIds = newState[action.follow.user_id].following_userIds.filter(id => id != action.follow.following_id);   
             }
             if (action.follow.following_type === 'Board') {
                 newState[action.follow.user_id].following_boardIds = newState[action.follow.user_id].following_boardIds.filter(id => id != action.follow.following_id);
